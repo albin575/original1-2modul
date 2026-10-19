@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Regulations | Study Notes</title>
+<meta name="description" content="Corporate Regulations – B.Com Study Notes in Malayalam. Companies Act 2013, MOA, AOA, Shares, Debentures, LLP, NCLT, NCLAT, SFIO and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ THEME ============ */
+:root{
+  --g900:#12401a;
+  --g800:#1b5e20;
+  --g700:#2e7d32;
+  --g600:#388e3c;
+  --g500:#4caf50;
+  --g400:#66bb6a;
+  --g300:#a5d6a7;
+  --g200:#c8e6c9;
+  --g100:#e8f5e9;
+  --g50:#f3faf4;
+  --white:#ffffff;
+  --ink:#1c2b21;
+  --muted:#5d7566;
+  --line:#d7e9da;
+  --shadow:0 2px 10px rgba(27,94,32,.07);
+  --shadow-lg:0 12px 34px rgba(27,94,32,.16);
+  --radius:14px;
+  --header-h:66px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--g50);
+  color:var(--ink);
+  font-family:'Noto Sans Malayalam','Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:var(--g700);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ============ HEADER ============ */
+header.site-header{
+  position:fixed;top:0;left:0;right:0;height:var(--header-h);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:12px;
+  padding:0 14px;
+  z-index:1000;
+  box-shadow:var(--shadow);
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;color:var(--g800);
+  font-size:1.02rem;white-space:nowrap;letter-spacing:.2px;
+  flex-shrink:0;
+}
+.brand .logo{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--g500),var(--g800));
+  display:grid;place-items:center;color:#fff;font-size:1rem;font-weight:800;
+  box-shadow:0 4px 12px rgba(46,125,50,.3);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text small{font-size:.62rem;font-weight:600;color:var(--muted);letter-spacing:.7px;text-transform:uppercase}
+
+/* SEARCH */
+.search-wrap{position:relative;flex:1;max-width:520px;margin:0 auto}
+.search-box{
+  display:flex;align-items:center;gap:8px;
+  background:var(--g100);
+  border:1.5px solid var(--g200);
+  border-radius:999px;
+  padding:7px 14px;
+  transition:.2s;
+}
+.search-box:focus-within{
+  background:#fff;border-color:var(--g500);
+  box-shadow:0 0 0 4px rgba(102,187,106,.18);
+}
+.search-box svg{flex-shrink:0;color:var(--g700)}
+#searchInput{
+  border:none;outline:none;background:transparent;
+  width:100%;font-size:.94rem;color:var(--ink);
+  font-family:inherit;padding:2px 0;
+}
+#searchInput::placeholder{color:#7d9385}
+#clearBtn{
+  border:none;background:var(--g300);color:var(--g900);
+  width:22px;height:22px;border-radius:50%;cursor:pointer;
+  display:none;place-items:center;font-size:.85rem;line-height:1;font-weight:700;
+  flex-shrink:0;
+}
+#clearBtn.show{display:grid}
+#clearBtn:hover{background:var(--g400);color:#fff}
+
+/* SEARCH RESULTS */
+#searchResults{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-lg);
+  max-height:min(65vh,540px);
+  overflow-y:auto;overscroll-behavior:contain;
+  display:none;z-index:1001;
+  padding:6px;
+}
+#searchResults.open{display:block}
+.res-meta{
+  padding:8px 12px 6px;font-size:.74rem;font-weight:700;
+  color:var(--muted);letter-spacing:.5px;text-transform:uppercase;
+  position:sticky;top:0;background:#fff;z-index:2;
+}
+.res-item{
+  display:block;width:100%;text-align:left;
+  border:none;background:transparent;cursor:pointer;
+  padding:10px 12px;border-radius:10px;
+  font-family:inherit;font-size:.88rem;color:var(--ink);
+  line-height:1.55;transition:.12s;
+  border-left:3px solid transparent;
+}
+.res-item:hover,.res-item:focus{
+  background:var(--g100);border-left-color:var(--g500);outline:none;
+}
+.res-item .res-title{
+  display:block;font-weight:700;color:var(--g800);
+  font-size:.82rem;margin-bottom:2px;
+}
+.res-item .res-snip{color:var(--muted);font-size:.84rem;display:block}
+.res-item mark{background:#ffe98a;color:var(--ink);border-radius:3px;padding:0 2px;font-weight:700}
+.res-empty{padding:26px 16px;text-align:center;color:var(--muted);font-size:.9rem}
+.res-empty b{color:var(--g800)}
+
+/* HEADER BUTTONS */
+.hdr-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.icon-btn{
+  border:1.5px solid var(--g200);background:#fff;color:var(--g800);
+  width:40px;height:40px;border-radius:11px;cursor:pointer;
+  display:grid;place-items:center;transition:.18s;
+}
+.icon-btn:hover{background:var(--g100);border-color:var(--g400);transform:translateY(-1px)}
+#menuBtn{display:none}
+
+/* ============ LAYOUT ============ */
+.layout{display:flex;padding-top:var(--header-h);min-height:100vh}
+
+/* SIDEBAR */
+aside.sidebar{
+  width:284px;flex-shrink:0;
+  position:fixed;top:var(--header-h);bottom:0;left:0;
+  background:#fff;border-right:1px solid var(--line);
+  overflow-y:auto;overscroll-behavior:contain;
+  padding:14px 12px 90px;
+  z-index:900;
+  transition:transform .28s cubic-bezier(.4,0,.2,1);
+}
+aside.sidebar::-webkit-scrollbar{width:8px}
+aside.sidebar::-webkit-scrollbar-thumb{background:var(--g300);border-radius:8px}
+aside.sidebar::-webkit-scrollbar-track{background:var(--g50)}
+.side-title{
+  font-size:.68rem;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--muted);
+  padding:6px 10px 8px;
+}
+.nav-group{border-radius:10px;margin-bottom:4px;overflow:hidden}
+.nav-group>summary{
+  list-style:none;cursor:pointer;
+  padding:10px 12px;border-radius:10px;
+  font-weight:700;font-size:.88rem;color:var(--g900);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  transition:.15s;user-select:none;
+}
+.nav-group>summary::-webkit-details-marker{display:none}
+.nav-group>summary:hover{background:var(--g100)}
+.nav-group>summary::after{
+  content:'';width:7px;height:7px;
+  border-right:2px solid var(--g600);border-bottom:2px solid var(--g600);
+  transform:rotate(45deg);transition:.2s;flex-shrink:0;margin-right:2px;
+}
+.nav-group[open]>summary::after{transform:rotate(-135deg)}
+.nav-group[open]>summary{background:var(--g100);color:var(--g800)}
+.nav-links{padding:2px 0 8px}
+.nav-links a{
+  display:block;padding:6px 12px 6px 22px;
+  font-size:.82rem;color:var(--muted);
+  border-left:2px solid transparent;
+  margin-left:10px;border-radius:0 8px 8px 0;
+  transition:.14s;text-decoration:none;
+}
+.nav-links a:hover{background:var(--g50);color:var(--g800);text-decoration:none}
+.nav-links a.active{
+  color:var(--g800);font-weight:700;
+  background:var(--g100);border-left-color:var(--g500);
+}
+
+/* MAIN */
+main.content{
+  flex:1;min-width:0;
+  margin-left:284px;
+  padding:26px 30px 120px;
+  max-width:1080px;
+}
+@media(min-width:1500px){main.content{margin-left:284px;padding-right:calc(30px + (100vw - 284px - 1080px)/2)}}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,var(--g700),var(--g500));
+  color:#fff;border-radius:20px;
+  padding:34px 30px;margin-bottom:28px;
+  box-shadow:0 14px 36px rgba(46,125,50,.24);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;right:-60px;top:-60px;
+  width:220px;height:220px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+}
+.hero::before{
+  content:'';position:absolute;right:40px;bottom:-80px;
+  width:150px;height:150px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+}
+.hero h1{margin:0 0 6px;font-size:1.75rem;font-weight:800;letter-spacing:.2px;position:relative;z-index:1}
+.hero p{margin:0;opacity:.94;font-size:.95rem;position:relative;z-index:1}
+.hero .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative;z-index:1}
+.hero .pill{
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);
+  padding:4px 12px;border-radius:999px;font-size:.76rem;font-weight:600;
+}
+
+/* MODULE */
+.module{margin-bottom:44px;scroll-margin-top:calc(var(--header-h) + 16px)}
+.module-head{margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--g200)}
+.module-badge{
+  display:inline-block;background:var(--g100);color:var(--g800);
+  font-size:.68rem;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;
+  padding:4px 12px;border-radius:999px;margin-bottom:8px;
+  border:1px solid var(--g200);
+}
+.module-head h1{margin:0;font-size:1.5rem;color:var(--g900);font-weight:800;line-height:1.35}
+.module-sub{margin:4px 0 0;color:var(--muted);font-size:.9rem}
+
+/* TOPIC CARD */
+.topic{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 24px;margin-bottom:18px;
+  box-shadow:var(--shadow);
+  scroll-margin-top:calc(var(--header-h) + 16px);
+  transition:box-shadow .2s,border-color .2s;
+}
+.topic:hover{box-shadow:0 6px 20px rgba(27,94,32,.1)}
+.topic.hit{border-color:var(--g500);box-shadow:0 0 0 4px rgba(102,187,106,.2)}
+.topic h2{
+  margin:0 0 14px;font-size:1.18rem;color:var(--g800);
+  font-weight:800;line-height:1.4;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.topic h2::before{
+  content:'';flex-shrink:0;width:5px;height:20px;margin-top:5px;
+  border-radius:3px;background:linear-gradient(180deg,var(--g400),var(--g700));
+}
+.topic h3{
+  margin:20px 0 8px;font-size:1rem;color:var(--g800);font-weight:700;
+  line-height:1.45;
+}
+.topic h3:first-child{margin-top:0}
+.topic h4{
+  margin:16px 0 6px;font-size:.94rem;color:var(--g700);font-weight:700;
+}
+.topic p{margin:0 0 10px}
+.topic ul,.topic ol{margin:0 0 12px;padding-left:22px}
+.topic li{margin-bottom:6px}
+.topic li::marker{color:var(--g500);font-weight:700}
+.topic ol>li::marker{color:var(--g700);font-weight:700}
+
+/* CALLOUT */
+.note{
+  background:var(--g50);border-left:4px solid var(--g500);
+  border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;
+  font-size:.92rem;
+}
+.note strong{color:var(--g800)}
+.key{
+  background:#fff8e1;border-left:4px solid #f9a825;
+  border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;
+  font-size:.92rem;
+}
+.key strong{color:#8d6708}
+.example{
+  background:#eaf4ff;border-left:4px solid #2f80ed;
+  border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;
+  font-size:.92rem;
+}
+.example strong{color:#1a5fb4}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:10px;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:380px;background:#fff}
+th{
+  background:var(--g700);color:#fff;font-weight:700;
+  text-align:left;padding:10px 14px;white-space:nowrap;
+}
+td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:var(--g50)}
+tbody tr:hover{background:var(--g100)}
+
+/* TAGS */
+.tag{
+  display:inline-block;background:var(--g100);color:var(--g800);
+  border:1px solid var(--g200);border-radius:6px;
+  padding:1px 8px;font-size:.78rem;font-weight:700;margin-right:4px;
+}
+
+/* SEARCH HIGHLIGHT */
+mark.sh{
+  background:#ffe98a;color:var(--ink);
+  border-radius:3px;padding:0 2px;font-weight:700;
+  animation:flash 1.6s ease-out;
+}
+@keyframes flash{
+  0%{background:#ffd54f}
+  60%{background:#ffe98a}
+  100%{background:#ffe98a}
+}
+
+/* FLOATING BUTTONS */
+.floaters{
+  position:fixed;right:18px;bottom:18px;
+  display:flex;flex-direction:column;gap:10px;z-index:950;
+}
+.fab{
+  display:inline-flex;align-items:center;gap:8px;
+  border:none;cursor:pointer;font-family:inherit;
+  padding:12px 18px;border-radius:999px;
+  font-weight:700;font-size:.86rem;
+  box-shadow:0 8px 22px rgba(27,94,32,.28);
+  transition:.2s;text-decoration:none;white-space:nowrap;
+}
+.fab:hover{transform:translateY(-3px);text-decoration:none}
+.fab-insta{
+  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  color:#fff;
+}
+.fab-insta:hover{box-shadow:0 12px 28px rgba(220,39,67,.42)}
+.fab-top{
+  background:#fff;color:var(--g800);
+  border:1.5px solid var(--g200);
+  width:46px;height:46px;padding:0;justify-content:center;
+  align-self:flex-end;font-size:1.1rem;
+}
+.fab-top:hover{background:var(--g100)}
+
+/* FOOTER */
+footer.site-footer{
+  margin-left:284px;
+  padding:30px 30px 110px;
+  text-align:center;color:var(--muted);font-size:.85rem;
+  border-top:1px solid var(--line);
+  background:#fff;
+}
+footer.site-footer a{font-weight:700}
+
+/* BACKDROP */
+#backdrop{
+  position:fixed;inset:0;background:rgba(18,64,26,.42);
+  backdrop-filter:blur(2px);z-index:880;
+  opacity:0;pointer-events:none;transition:.25s;
+}
+#backdrop.show{opacity:1;pointer-events:auto}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  aside.sidebar{transform:translateX(-100%);box-shadow:var(--shadow-lg);width:300px}
+  aside.sidebar.open{transform:translateX(0)}
+  main.content{margin-left:0;padding:20px 18px 120px}
+  footer.site-footer{margin-left:0}
+  #menuBtn{display:grid}
+  .brand-text small{display:none}
+}
+@media(max-width:720px){
+  :root{--header-h:60px}
+  header.site-header{padding:0 10px;gap:8px}
+  .brand .logo{width:30px;height:30px;font-size:.86rem;border-radius:9px}
+  .brand{font-size:.86rem}
+  .search-wrap{max-width:none}
+  .search-box{padding:6px 11px}
+  #searchInput{font-size:.86rem}
+  .hero{padding:24px 20px;border-radius:16px}
+  .hero h1{font-size:1.32rem}
+  .hero p{font-size:.86rem}
+  .topic{padding:18px 16px;border-radius:12px}
+  .topic h2{font-size:1.04rem}
+  .module-head h1{font-size:1.24rem}
+  body{font-size:15px}
+  .fab{padding:11px 15px;font-size:.8rem}
+  .fab-top{width:42px;height:42px}
+  .floaters{right:12px;bottom:12px}
+}
+@media(max-width:420px){
+  .brand-text{display:none}
+  #searchResults{max-height:70vh}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <button class="icon-btn" id="menuBtn" aria-label="Menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+
+  <a class="brand" href="#top">
+    <span class="logo">CR</span>
+    <span class="brand-text">
+      Corporate Regulations
+      <small>B.Com Study Notes</small>
+    </span>
+  </a>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="searchInput" placeholder="Search notes… (ഉദാ: MOA, NCLT, Debenture)" autocomplete="off" spellcheck="false" aria-label="Search notes">
+      <button id="clearBtn" aria-label="Clear search">×</button>
+    </div>
+    <div id="searchResults" role="listbox" aria-label="Search results"></div>
+  </div>
+
+  <div class="hdr-actions">
+    <a class="icon-btn" href="https://www.instagram.com/albin___baby___?igsh=MTN4cXprb3A2dm8ybg==" target="_blank" rel="noopener" title="Feedback on Instagram" aria-label="Feedback on Instagram">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
+</header>
+
+<div id="backdrop"></div>
+
+<div class="layout" id="top">
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Contents</div>
+
+  <details class="nav-group" open>
+    <summary>Module 1 · Introduction</summary>
+    <div class="nav-links">
+      <a href="#t-company">കമ്പനി (Company)</a>
+      <a href="#t-characteristics">സവിശേഷതകൾ</a>
+      <a href="#t-act2013">Companies Act, 2013</a>
+      <a href="#t-nclt">NCLT</a>
+      <a href="#t-nclat">NCLAT</a>
+      <a href="#t-sc">Supreme Court</a>
+      <a href="#t-sfio">SFIO</a>
+      <a href="#t-llp">LLP</a>
+      <a href="#t-compare">Company vs LLP</a>
+      <a href="#t-questions">Exam Questions</a>
+      <a href="#t-revision">Quick Revision</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Corporate Veil</summary>
+    <div class="nav-links">
+      <a href="#t-veil">Corporate Veil</a>
+      <a href="#t-lifting">Lifting of Corporate Veil</a>
+      <a href="#t-circumstances">Circumstances</a>
+      <a href="#t-incorporation">Incorporation</a>
+      <a href="#t-adv">Advantages</a>
+      <a href="#t-disadv">Disadvantages</a>
+      <a href="#t-veil-diff">Difference</a>
+      <a href="#t-veil-points">Key Points</a>
+      <a href="#t-veil-summary">Summary</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Company Formation</summary>
+    <div class="nav-links">
+      <a href="#t-formation">Formation of Company</a>
+      <a href="#t-capital-raising">Raising of Capital</a>
+      <a href="#t-10a">Section 10A</a>
+      <a href="#t-promoter">Promoter</a>
+      <a href="#t-promoter-legal">Legal Position</a>
+      <a href="#t-promoter-duties">Duties</a>
+      <a href="#t-incorporation-proc">Incorporation Procedure</a>
+      <a href="#t-opc">One Person Company</a>
+      <a href="#t-formation-points">Key Points</a>
+      <a href="#t-formation-questions">Exam Questions</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Memorandum of Association</summary>
+    <div class="nav-links">
+      <a href="#t-moa">Meaning of MOA</a>
+      <a href="#t-moa-forms">Forms of MOA</a>
+      <a href="#t-moa-objectives">Objectives</a>
+      <a href="#t-moa-clauses">Clauses of MOA</a>
+      <a href="#t-moa-alteration">Alteration of MOA</a>
+      <a href="#t-ultra-vires">Doctrine of Ultra Vires</a>
+      <a href="#t-ultra-importance">Importance</a>
+      <a href="#t-moa-points">Key Points</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Articles of Association</summary>
+    <div class="nav-links">
+      <a href="#t-aoa">Meaning of AOA</a>
+      <a href="#t-entrenchment">Entrenchment</a>
+      <a href="#t-printing">Printing &amp; Signing</a>
+      <a href="#t-model-articles">Model Articles</a>
+      <a href="#t-aoa-contents">Contents of AOA</a>
+      <a href="#t-aoa-alteration">Alteration of AOA</a>
+      <a href="#t-aoa-limitations">Limitations</a>
+      <a href="#t-moa-aoa-diff">MOA vs AOA</a>
+      <a href="#t-aoa-legal">Legal Effect</a>
+      <a href="#t-ratification">Ratification</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Notice &amp; Indoor Management</summary>
+    <div class="nav-links">
+      <a href="#t-constructive">Constructive Notice</a>
+      <a href="#t-indoor">Indoor Management</a>
+      <a href="#t-indoor-exceptions">Exceptions</a>
+      <a href="#t-legal-effect">Legal Effect of MOA/AOA</a>
+      <a href="#t-conversion">Conversion of Companies</a>
+      <a href="#t-cn-im-diff">Difference</a>
+      <a href="#t-cn-points">Key Points</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Prospectus</summary>
+    <div class="nav-links">
+      <a href="#t-prospectus">Meaning</a>
+      <a href="#t-pros-contents">Contents</a>
+      <a href="#t-pros-types">Types</a>
+      <a href="#t-pros-misstatement">Misstatement</a>
+      <a href="#t-pros-liability">Liabilities</a>
+      <a href="#t-pros-importance">Importance</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Shares</summary>
+    <div class="nav-links">
+      <a href="#t-shares">Meaning of Share</a>
+      <a href="#t-share-types">Types of Shares</a>
+      <a href="#t-pref-kinds">Preference Share Kinds</a>
+      <a href="#t-transfer">Transfer of Shares</a>
+      <a href="#t-transmission">Transmission</a>
+      <a href="#t-transfer-diff">Transfer vs Transmission</a>
+      <a href="#t-shares-points">Key Points</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Share Capital</summary>
+    <div class="nav-links">
+      <a href="#t-share-capital">Meaning</a>
+      <a href="#t-capital-kinds">Kinds of Capital</a>
+      <a href="#t-alteration-capital">Alteration</a>
+      <a href="#t-reduction-capital">Reduction</a>
+      <a href="#t-alt-red-diff">Alteration vs Reduction</a>
+      <a href="#t-voting">Voting Rights</a>
+      <a href="#t-capital-points">Key Points</a>
+    </div>
+  </details>
+
+  <details class="nav-group">
+    <summary>Debenture</summary>
+    <div class="nav-links">
+      <a href="#t-debenture">Meaning</a>
+      <a href="#t-deb-features">Features</a>
+      <a href="#t-deb-rules">Rules</a>
+      <a href="#t-deb-types">Types</a>
+      <a href="#t-charge">Fixed &amp; Floating Charge</a>
+      <a href="#t-crystallisation">Crystallisation</a>
+      <a href="#t-deb-share-diff">Debenture vs Share</a>
+    </div>
+  </details>
+</aside>
+
+<!-- ============ MAIN ============ -->
+<main class="content">
+
+  <div class="hero">
+    <h1>📘 Corporate Regulations</h1>
+    <p>B.Com Study Notes — Companies Act 2013, MOA, AOA, Shares, Debentures, LLP, NCLT / NCLAT, SFIO &amp; more.</p>
+    <div class="pills">
+      <span class="pill">10 Modules</span>
+      <span class="pill">90+ Topics</span>
+      <span class="pill">Exam Questions</span>
+      <span class="pill">Quick Revision</span>
+    </div>
+  </div>
+
+  <!-- ================= MODULE 1 ================= -->
+  <section class="module" id="module-1">
+    <div class="module-head">
+      <span class="module-badge">Module 1</span>
+      <h1>Introduction to Company Law</h1>
+      <p class="module-sub">കമ്പനീസ് ആക്ട് 2013 (Companies Act, 2013)</p>
+    </div>
+
+    <article class="topic" id="t-company">
+      <h2>1. കമ്പനി (Company)</h2>
+      <h3>കമ്പനിയുടെ നിർവചനം (Definition of Company)</h3>
+      <p>ഒരു പൊതുവായ ബിസിനസ് ലക്ഷ്യം നേടുന്നതിനായി നിയമപ്രകാരം രൂപീകരിക്കുന്ന വ്യക്തികളുടെ സംഘടനയാണ് കമ്പനി.</p>
+      <p>കമ്പനിയിലെ അംഗങ്ങൾ പണമോ പണത്തിന് തുല്യമായ ആസ്തികളോ നിക്ഷേപിച്ച് ബിസിനസ് പ്രവർത്തനങ്ങൾ നടത്തുന്നു.</p>
+      <div class="note">
+        <strong>Companies Act, 2013 – Section 2(20)</strong> പ്രകാരം: 2013-ലെ കമ്പനീസ് ആക്ട് പ്രകാരമോ അതിനു മുമ്പുള്ള ഏതെങ്കിലും കമ്പനി നിയമപ്രകാരമോ രജിസ്റ്റർ ചെയ്ത് രൂപീകരിച്ച സ്ഥാപനത്തെയാണ് കമ്പനി എന്നു പറയുന്നത്.
+      </div>
+      <h3>പ്രധാന കാര്യങ്ങൾ</h3>
+      <ul>
+        <li>കമ്പനി നിയമപ്രകാരം രൂപീകരിക്കപ്പെടുന്നു.</li>
+        <li>കമ്പനിക്ക് അംഗങ്ങളിൽ നിന്ന് സ്വതന്ത്രമായ നിയമപരമായ വ്യക്തിത്വമുണ്ട്.</li>
+        <li>കമ്പനിക്ക് സ്വന്തം പേരിൽ ബിസിനസ് നടത്താം.</li>
+        <li>കമ്പനിക്ക് സ്വത്തുക്കൾ സ്വന്തമാക്കാം.</li>
+        <li>കമ്പനിയുടെ പ്രവർത്തനങ്ങൾ ഡയറക്ടർമാർ നിയന്ത്രിക്കുന്നു.</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കൂട്ടം വ്യക്തികൾ ചേർന്ന് ഒരു ബിസിനസ് സ്ഥാപനം രജിസ്റ്റർ ചെയ്ത് പ്രവർത്തിപ്പിക്കുന്നത്.</div>
+    </article>
+
+    <article class="topic" id="t-characteristics">
+      <h2>2. രജിസ്റ്റർ ചെയ്ത കമ്പനിയുടെ സവിശേഷതകൾ</h2>
+      <p>ഒരു രജിസ്റ്റർ ചെയ്ത കമ്പനിയുടെ പ്രധാന സവിശേഷതകൾ താഴെപ്പറയുന്നവയാണ്.</p>
+
+      <h3>1. Separate Legal Entity (സ്വതന്ത്ര നിയമപരമായ വ്യക്തിത്വം)</h3>
+      <p>കമ്പനിക്കും അതിലെ അംഗങ്ങൾക്കും വ്യത്യസ്തമായ നിയമപരമായ നിലനിൽപ്പുണ്ട്. അതായത്, കമ്പനിയും അതിന്റെ ഉടമസ്ഥരും നിയമത്തിന്റെ മുന്നിൽ വ്യത്യസ്ത വ്യക്തികളാണ്.</p>
+      <ul>
+        <li>കമ്പനിക്ക് സ്വന്തം പേരിൽ സ്വത്തുക്കൾ വാങ്ങാം.</li>
+        <li>കരാറുകളിൽ ഏർപ്പെടാം.</li>
+        <li>കടം വാങ്ങാം.</li>
+        <li>സ്വന്തം പേരിൽ കേസ് കൊടുക്കാം.</li>
+      </ul>
+      <div class="key"><strong>പ്രധാന കേസ്:</strong> Salomon v. Salomon &amp; Co. Ltd. (1897) — കമ്പനിക്ക് അതിന്റെ അംഗങ്ങളിൽ നിന്ന് സ്വതന്ത്രമായ നിയമപരമായ വ്യക്തിത്വമുണ്ടെന്ന് സ്ഥാപിച്ച പ്രധാന കേസാണിത്.</div>
+
+      <h3>2. Limited Liability (പരിമിതമായ ബാധ്യത)</h3>
+      <p>കമ്പനിയിലെ അംഗങ്ങളുടെ സാമ്പത്തിക ബാധ്യത പരിമിതമായിരിക്കും. ഷെയറുകളാൽ പരിമിതപ്പെടുത്തിയ കമ്പനിയിൽ അംഗങ്ങളുടെ ബാധ്യത അവർ എടുത്ത ഷെയറുകളിൽ അടയ്ക്കാൻ ബാക്കിയുള്ള തുക വരെ മാത്രമാണ്.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു വ്യക്തി ₹10,000 മൂല്യമുള്ള ഷെയറുകൾ വാങ്ങി ₹8,000 അടച്ചിട്ടുണ്ടെങ്കിൽ, സാധാരണയായി ബാക്കിയുള്ള ₹2,000 മാത്രമാണ് ആ ഷെയറുമായി ബന്ധപ്പെട്ട ബാധ്യത.</div>
+      <p><strong>പ്രധാന ആശയം:</strong> അംഗങ്ങളുടെ വ്യക്തിഗത സ്വത്തുക്കൾ സാധാരണയായി കമ്പനിയുടെ കടങ്ങൾ തീർക്കാൻ ഉപയോഗിക്കേണ്ടതില്ല.</p>
+
+      <h3>3. Perpetual Succession (തുടർച്ചയായ നിലനിൽപ്പ്)</h3>
+      <p>കമ്പനിയിലെ അംഗങ്ങൾ മാറിയാലും കമ്പനിയുടെ നിലനിൽപ്പ് തുടരുന്നതാണ് Perpetual Succession. താഴെപ്പറയുന്ന സാഹചര്യങ്ങൾ കമ്പനിയുടെ നിലനിൽപ്പിനെ ബാധിക്കില്ല:</p>
+      <ul>
+        <li>അംഗങ്ങളുടെ മരണം</li>
+        <li>അംഗങ്ങളുടെ വിരമിക്കൽ</li>
+        <li>അംഗങ്ങളുടെ പാപ്പരത്തം</li>
+        <li>ഷെയർഹോൾഡർമാരുടെ മാറ്റം</li>
+      </ul>
+      <div class="note"><strong>പ്രധാന ആശയം:</strong> “Members may come and go, but the company continues to exist.” — അംഗങ്ങൾ വരുകയും പോകുകയും ചെയ്താലും കമ്പനി നിയമപരമായി അവസാനിപ്പിക്കുന്നതുവരെ നിലനിൽക്കും.</div>
+
+      <h3>4. Common Seal (പൊതു മുദ്ര)</h3>
+      <p>കമ്പനിയുടെ ഔദ്യോഗിക മുദ്രയാണ് Common Seal. കമ്പനിയുടെ ഔദ്യോഗിക രേഖകൾ അംഗീകരിക്കുന്നതിന് ഇത് ഉപയോഗിക്കാം.</p>
+      <div class="key"><strong>പ്രധാന കാര്യം:</strong> 2015-ലെ നിയമഭേദഗതിക്കുശേഷം കമ്പനികൾക്ക് Common Seal നിർബന്ധമല്ല. <strong>Common Seal is Optional.</strong></div>
+
+      <h3>5. Transferability of Shares (ഷെയറുകളുടെ കൈമാറ്റം)</h3>
+      <p>കമ്പനിയിലെ ഷെയറുകൾ ഒരു വ്യക്തിയിൽ നിന്ന് മറ്റൊരാളിലേക്ക് കൈമാറ്റം ചെയ്യാനുള്ള സൗകര്യമാണിത്.</p>
+      <ul>
+        <li><strong>Public Company:</strong> ഷെയറുകൾ സാധാരണയായി സ്വതന്ത്രമായി കൈമാറ്റം ചെയ്യാം.</li>
+        <li><strong>Private Company:</strong> ഷെയറുകളുടെ കൈമാറ്റത്തിന് നിയന്ത്രണങ്ങളുണ്ട്.</li>
+      </ul>
+
+      <h3>6. Capacity to Sue and Be Sued (കേസ് കൊടുക്കാനും നേരിടാനുമുള്ള കഴിവ്)</h3>
+      <p>കമ്പനിക്ക് സ്വന്തം പേരിൽ നിയമനടപടികൾ സ്വീകരിക്കാനും നിയമനടപടികൾ നേരിടാനും സാധിക്കും.</p>
+      <ul>
+        <li>കമ്പനിക്ക് മറ്റുള്ളവർക്കെതിരെ കേസ് കൊടുക്കാം.</li>
+        <li>മറ്റുള്ളവർക്ക് കമ്പനിക്കെതിരെ കേസ് കൊടുക്കാം.</li>
+      </ul>
+
+      <h3>7. Artificial Legal Person (കൃത്രിമ നിയമവ്യക്തി)</h3>
+      <p>കമ്പനി നിയമം സൃഷ്ടിച്ച ഒരു കൃത്രിമ വ്യക്തിയാണ്. കമ്പനിക്ക് മനുഷ്യനെപ്പോലെ ശാരീരികമായ നിലനിൽപ്പില്ല. എന്നാൽ നിയമപരമായ അവകാശങ്ങളും ബാധ്യതകളുമുണ്ട്. കമ്പനിയുടെ പ്രവർത്തനങ്ങൾ Board of Directors മുഖേനയാണ് നടത്തപ്പെടുന്നത്.</p>
+    </article>
+
+    <article class="topic" id="t-act2013">
+      <h2>3. Companies Act, 2013</h2>
+      <p>ഇന്ത്യയിലെ കമ്പനികളുടെ രൂപീകരണം, നടത്തിപ്പ്, നിയന്ത്രണം, പിരിച്ചുവിടൽ തുടങ്ങിയ കാര്യങ്ങൾ നിയന്ത്രിക്കുന്ന പ്രധാന നിയമമാണ് Companies Act, 2013.</p>
+
+      <h3>1. Flexibility (വഴക്കം)</h3>
+      <p>കമ്പനികളുടെ ഭരണനിർവഹണത്തിൽ കൂടുതൽ ഇളവുകൾ നൽകുന്നു. നിയമം നടപ്പിലാക്കുന്നതിന് ആവശ്യമായ ചട്ടങ്ങൾ രൂപീകരിക്കാൻ കേന്ദ്ര സർക്കാരിന് അധികാരം നൽകുന്നു.</p>
+
+      <h3>2. Wider Scope (വിപുലമായ വ്യാപ്തി)</h3>
+      <p>വിവിധ തരത്തിലുള്ള കമ്പനികളെ നിയന്ത്രിക്കുന്നതിനുള്ള വ്യവസ്ഥകൾ ഈ നിയമത്തിൽ ഉൾപ്പെടുത്തിയിട്ടുണ്ട്. നിയമത്തിൽ വ്യക്തമാക്കിയ സാഹചര്യങ്ങളിൽ മറ്റു സ്ഥാപനങ്ങൾക്കും ചില വ്യവസ്ഥകൾ ബാധകമാകാം.</p>
+
+      <h3>3. Liberal Administration (ഉദാരമായ ഭരണസംവിധാനം)</h3>
+      <p>അനാവശ്യമായ സർക്കാർ ഇടപെടലുകൾ കുറച്ച് കമ്പനികൾക്ക് കൂടുതൽ പ്രവർത്തനസ്വാതന്ത്ര്യം നൽകുന്നു.</p>
+
+      <h3>4. Strict Punishment (കർശനമായ ശിക്ഷകൾ)</h3>
+      <p>കമ്പനി നിയമങ്ങൾ ലംഘിക്കുന്നവർക്കെതിരെ പിഴയും മറ്റ് നിയമനടപടികളും സ്വീകരിക്കാൻ വ്യവസ്ഥകളുണ്ട്. <strong>ലക്ഷ്യം:</strong> നിയമപാലനവും ഉത്തരവാദിത്തവും ഉറപ്പാക്കുക.</p>
+
+      <h3>5. Strong Administrative Framework (ശക്തമായ ഭരണസംവിധാനം)</h3>
+      <p>കമ്പനികളുമായി ബന്ധപ്പെട്ട തർക്കങ്ങൾ പരിഹരിക്കാൻ പ്രത്യേക സംവിധാനങ്ങൾ ഏർപ്പെടുത്തിയിട്ടുണ്ട്. <strong>ഉദാഹരണം:</strong> NCLT, NCLAT</p>
+
+      <h3>6. Support for Globalization (ആഗോളവൽക്കരണത്തിനുള്ള പിന്തുണ)</h3>
+      <p>ഇന്ത്യൻ കമ്പനികൾക്ക് അന്താരാഷ്ട്ര ബിസിനസ് പ്രവർത്തനങ്ങളിൽ പങ്കെടുക്കാൻ സഹായിക്കുന്ന വ്യവസ്ഥകൾ ഉൾപ്പെടുത്തിയിട്ടുണ്ട്. <strong>ഉദാഹരണം:</strong> Cross-border Mergers.</p>
+
+      <h3>7. CSR and Corporate Governance</h3>
+      <ul>
+        <li><strong>CSR – Corporate Social Responsibility:</strong> സാമൂഹിക ഉത്തരവാദിത്ത പ്രവർത്തനങ്ങൾക്ക് കമ്പനികൾ പ്രാധാന്യം നൽകണം. നിയമത്തിൽ നിർദേശിച്ച മാനദണ്ഡങ്ങൾ പാലിക്കുന്ന കമ്പനികൾക്ക് CSR സംബന്ധിച്ച വ്യവസ്ഥകൾ ബാധകമാണ്.</li>
+        <li><strong>Corporate Governance:</strong> കമ്പനികളുടെ ഭരണത്തിൽ സുതാര്യത, ഉത്തരവാദിത്തം, നിയമപാലനം എന്നിവ ഉറപ്പാക്കുന്നു.</li>
+      </ul>
+
+      <h3>8. Use of Information Technology (വിവരസാങ്കേതികവിദ്യയുടെ ഉപയോഗം)</h3>
+      <p>കമ്പനികളുടെ പ്രവർത്തനങ്ങളിൽ വിവരസാങ്കേതികവിദ്യയുടെ ഉപയോഗം പ്രോത്സാഹിപ്പിക്കുന്നു.</p>
+      <ul>
+        <li>Online Registration</li>
+        <li>Electronic Filing</li>
+        <li>Digital Communication</li>
+        <li>Electronic Records</li>
+      </ul>
+
+      <h3>9. Ease of Doing Business (ബിസിനസ് നടത്താനുള്ള എളുപ്പം)</h3>
+      <p>കമ്പനി രജിസ്ട്രേഷനും മറ്റു നടപടിക്രമങ്ങളും ലളിതമാക്കാൻ സഹായിക്കുന്നു. ഇതിലൂടെ ബിസിനസ് ആരംഭിക്കുന്നതും നടത്തുന്നതും കൂടുതൽ എളുപ്പമാകുന്നു.</p>
+    </article>
+
+    <article class="topic" id="t-nclt">
+      <h2>4. National Company Law Tribunal (NCLT)</h2>
+      <p>ദേശീയ കമ്പനി നിയമ ട്രൈബ്യൂണൽ — കമ്പനികളുമായി ബന്ധപ്പെട്ട നിയമപരമായ തർക്കങ്ങൾ പരിഹരിക്കുന്നതിനായി കേന്ദ്ര സർക്കാർ രൂപീകരിച്ച ഒരു <strong>Quasi-Judicial Body</strong> ആണ് NCLT.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>കമ്പനികളുമായി ബന്ധപ്പെട്ട തർക്കങ്ങൾ പരിഹരിക്കുന്നു.</li>
+        <li>കമ്പനീസ് ആക്ട് പ്രകാരമുള്ള വിവിധ വിഷയങ്ങളിൽ തീരുമാനമെടുക്കുന്നു.</li>
+        <li>കമ്പനികളുടെ ലയനം, പുനഃസംഘടന തുടങ്ങിയ വിഷയങ്ങൾ പരിഗണിക്കുന്നു.</li>
+        <li>നിയമപ്രകാരം അധികാരം നൽകിയിട്ടുള്ള പാപ്പരത്ത നടപടികളും കൈകാര്യം ചെയ്യുന്നു.</li>
+        <li>NCLT-യുടെ തലവൻ <strong>President</strong> ആണ്.</li>
+      </ol>
+      <h3>യോഗ്യത</h3>
+      <p>NCLT President ആകുന്ന വ്യക്തി കുറഞ്ഞത് അഞ്ച് വർഷമെങ്കിലും ഹൈക്കോടതി ജഡ്ജിയായി സേവനമനുഷ്ഠിച്ചിരിക്കണം.</p>
+      <div class="note"><strong>ഓർക്കുക:</strong> NCLT = Company Dispute Resolution</div>
+    </article>
+
+    <article class="topic" id="t-nclat">
+      <h2>5. National Company Law Appellate Tribunal (NCLAT)</h2>
+      <p>ദേശീയ കമ്പനി നിയമ അപ്പലേറ്റ് ട്രൈബ്യൂണൽ — NCLT പുറപ്പെടുവിക്കുന്ന ഉത്തരവുകൾക്കെതിരെ അപ്പീൽ നൽകുന്നതിനുള്ള സംവിധാനമാണ് NCLAT.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>NCLT ഉത്തരവുകൾക്കെതിരായ അപ്പീലുകൾ പരിഗണിക്കുന്നു.</li>
+        <li>കമ്പനികളുമായി ബന്ധപ്പെട്ട അപ്പീൽ തർക്കങ്ങൾ പരിഹരിക്കുന്നു.</li>
+        <li>NCLAT-യുടെ തലവൻ <strong>Chairperson</strong> ആണ്.</li>
+        <li>സുപ്രീം കോടതി ജഡ്ജിയായിരുന്ന വ്യക്തിക്കോ ഹൈക്കോടതി ചീഫ് ജസ്റ്റിസായിരുന്ന വ്യക്തിക്കോ നിയമപ്രകാരമുള്ള മറ്റു യോഗ്യതകൾക്കനുസരിച്ച് ഈ പദവി വഹിക്കാം.</li>
+      </ol>
+      <h3>അപ്പീൽ നൽകാനുള്ള സമയം</h3>
+      <div class="key"><strong>NCLT → NCLAT = 45 Days</strong><br>NCLT ഉത്തരവ് ലഭിച്ച തീയതി മുതൽ സാധാരണയായി 45 ദിവസത്തിനുള്ളിൽ അപ്പീൽ നൽകണം. മതിയായ കാരണമുണ്ടെങ്കിൽ നിയമപ്രകാരം പരമാവധി 45 ദിവസം കൂടി അനുവദിക്കാം.</div>
+    </article>
+
+    <article class="topic" id="t-sc">
+      <h2>6. Supreme Court (സുപ്രീം കോടതി)</h2>
+      <p>NCLAT ഉത്തരവിനെതിരെ നിയമപരമായ ചോദ്യങ്ങളിൽ സുപ്രീം കോടതിയിൽ അപ്പീൽ നൽകാം.</p>
+      <h3>അപ്പീൽ നൽകാനുള്ള സമയം</h3>
+      <div class="key"><strong>NCLAT → Supreme Court = 60 Days</strong><br>NCLAT ഉത്തരവ് ലഭിച്ച തീയതി മുതൽ സാധാരണയായി 60 ദിവസത്തിനുള്ളിൽ അപ്പീൽ സമർപ്പിക്കണം. മതിയായ കാരണമുണ്ടെങ്കിൽ നിയമപ്രകാരം പരമാവധി 60 ദിവസം കൂടി അനുവദിക്കാം.</div>
+      <h3>അപ്പീൽ സംവിധാനം</h3>
+      <p><span class="tag">NCLT</span> → <span class="tag">NCLAT</span> → <span class="tag">Supreme Court</span></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>സ്ഥാപനം</th><th>പ്രധാന പ്രവർത്തനം</th></tr></thead>
+          <tbody>
+            <tr><td>NCLT</td><td>കമ്പനി തർക്കങ്ങളിൽ തീരുമാനമെടുക്കുന്നു</td></tr>
+            <tr><td>NCLAT</td><td>NCLT ഉത്തരവുകൾക്കെതിരെ അപ്പീൽ പരിഗണിക്കുന്നു</td></tr>
+            <tr><td>Supreme Court</td><td>നിയമപരമായ ചോദ്യങ്ങളിലുള്ള അപ്പീലുകൾ പരിഗണിക്കുന്നു</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-sfio">
+      <h2>7. Serious Fraud Investigation Office (SFIO)</h2>
+      <p>ഗുരുതര തട്ടിപ്പ് അന്വേഷണ ഓഫീസ് — കമ്പനികളുമായി ബന്ധപ്പെട്ട ഗുരുതരമായ സാമ്പത്തിക തട്ടിപ്പുകളും ക്രമക്കേടുകളും അന്വേഷിക്കുന്ന പ്രത്യേക ഏജൻസിയാണ് SFIO.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>കേന്ദ്ര സർക്കാരിന്റെ കീഴിലുള്ള അന്വേഷണ ഏജൻസിയാണ്.</li>
+        <li>ഗുരുതരമായ Corporate Frauds അന്വേഷിക്കുന്നു.</li>
+        <li>സാമ്പത്തിക ക്രമക്കേടുകൾ കണ്ടെത്തുന്നു.</li>
+        <li>വിവിധ മേഖലകളിലെ വിദഗ്ധർ ഇതിൽ പ്രവർത്തിക്കുന്നു.</li>
+        <li>കേന്ദ്ര സർക്കാർ ഏൽപ്പിക്കുന്ന കേസുകളിൽ അന്വേഷണം നടത്തുന്നു.</li>
+      </ol>
+      <h3>SFIO-യിലെ വിദഗ്ധർ</h3>
+      <ul>
+        <li>Banking Experts</li>
+        <li>Corporate Law Experts</li>
+        <li>Information Technology Experts</li>
+        <li>Accounting Experts</li>
+        <li>Financial Experts</li>
+      </ul>
+      <div class="key"><strong>പ്രധാന കാര്യം:</strong> Companies Act, 2013-ലെ <strong>Section 212</strong> പ്രകാരം SFIO അന്വേഷണം ഏറ്റെടുത്ത വിഷയത്തിൽ മറ്റു അന്വേഷണ ഏജൻസികൾ അതേ നിയമപ്രകാരമുള്ള അന്വേഷണം തുടരരുതെന്ന വ്യവസ്ഥയുണ്ട്. എന്നാൽ മറ്റ് നിയമങ്ങളിലെ എല്ലാ അന്വേഷണ അധികാരങ്ങളും ഇതിലൂടെ ഇല്ലാതാകുന്നില്ല.</div>
+      <div class="note"><strong>ഓർക്കുക:</strong> SFIO = Investigation of Serious Corporate Frauds</div>
+    </article>
+
+    <article class="topic" id="t-llp">
+      <h2>8. Limited Liability Partnership (LLP)</h2>
+      <p>പരിമിത ബാധ്യതയുള്ള പങ്കാളിത്ത സ്ഥാപനം — കമ്പനിയുടെയും സാധാരണ പാർട്ണർഷിപ്പിന്റെയും സവിശേഷതകൾ സംയോജിപ്പിച്ച ബിസിനസ് സംവിധാനമാണ് LLP.</p>
+      <div class="note"><strong>നിയമം:</strong> Limited Liability Partnership Act, 2008</div>
+      <h3>LLP-യുടെ പ്രധാന സവിശേഷതകൾ</h3>
+
+      <h4>1. Separate Legal Entity</h4>
+      <p>LLP-ക്കും അതിലെ പാർട്ണർമാർക്കും വ്യത്യസ്തമായ നിയമപരമായ വ്യക്തിത്വമുണ്ട്.</p>
+
+      <h4>2. Limited Liability</h4>
+      <p>പാർട്ണർമാരുടെ ബാധ്യത സാധാരണയായി അവരുടെ സമ്മതിച്ച സംഭാവനയുമായി ബന്ധപ്പെട്ട് പരിമിതമായിരിക്കും. എന്നാൽ സ്വന്തം തെറ്റായ പ്രവൃത്തികൾക്കും വഞ്ചനയ്ക്കും നിയമപ്രകാരം വ്യക്തിപരമായ ബാധ്യത ഉണ്ടാകാം.</p>
+
+      <h4>3. Perpetual Succession</h4>
+      <p>പാർട്ണർമാർ മാറിയാലും LLP-യുടെ നിലനിൽപ്പ് തുടരുന്നു.</p>
+
+      <h4>4. Separate Law</h4>
+      <p>LLP പ്രവർത്തിക്കുന്നത് LLP Act, 2008 പ്രകാരമാണ്. Indian Partnership Act, 1932 സാധാരണയായി LLP-കൾക്ക് ബാധകമല്ല.</p>
+
+      <h4>5. No Mutual Agency</h4>
+      <p>ഒരു പാർട്ണർ മറ്റു പാർട്ണർമാരുടെ ഏജന്റല്ല. ഒരു പാർട്ണറുടെ പ്രവൃത്തിക്ക് മറ്റു പാർട്ണർമാർ വ്യക്തിപരമായി ബാധ്യസ്ഥരാകണമെന്നില്ല. എന്നാൽ ഓരോ പാർട്ണറും LLP-യുടെ ബിസിനസുമായി ബന്ധപ്പെട്ട കാര്യങ്ങളിൽ LLP-യുടെ ഏജന്റാണ്.</p>
+    </article>
+
+    <article class="topic" id="t-compare">
+      <h2>9. Company and LLP – Comparison</h2>
+      <p>കമ്പനിയും LLP-യും തമ്മിലുള്ള വ്യത്യാസം:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>അടിസ്ഥാനം</th><th>Company</th><th>LLP</th></tr></thead>
+          <tbody>
+            <tr><td>നിയമം</td><td>Companies Act, 2013</td><td>LLP Act, 2008</td></tr>
+            <tr><td>ഉടമസ്ഥർ</td><td>Shareholders / Members</td><td>Partners</td></tr>
+            <tr><td>നിയന്ത്രണം</td><td>Board of Directors</td><td>Partners / Designated Partners</td></tr>
+            <tr><td>നിയമപരമായ വ്യക്തിത്വം</td><td>Separate Legal Entity</td><td>Separate Legal Entity</td></tr>
+            <tr><td>ബാധ്യത</td><td>സാധാരണയായി Limited</td><td>സാധാരണയായി Limited</td></tr>
+            <tr><td>തുടർച്ചയായ നിലനിൽപ്പ്</td><td>ഉണ്ട്</td><td>ഉണ്ട്</td></tr>
+            <tr><td>രൂപീകരണം</td><td>Registration / Incorporation</td><td>Registration / Incorporation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-questions">
+      <h2>10. പ്രധാനപ്പെട്ട പരീക്ഷാ ചോദ്യങ്ങൾ</h2>
+      <h3>2 Marks – Very Short Answer Questions</h3>
+      <ol>
+        <li>Define Company.</li>
+        <li>What is Separate Legal Entity?</li>
+        <li>What is Limited Liability?</li>
+        <li>Define Perpetual Succession.</li>
+        <li>What is Common Seal?</li>
+        <li>What is NCLT?</li>
+        <li>What is NCLAT?</li>
+        <li>What is SFIO?</li>
+        <li>Define LLP.</li>
+        <li>What is Corporate Governance?</li>
+      </ol>
+      <h3>5 Marks – Short Essay Questions</h3>
+      <ol>
+        <li>Explain the characteristics of a registered company.</li>
+        <li>Explain the important features of Companies Act, 2013.</li>
+        <li>Explain the functions of NCLT.</li>
+        <li>Differentiate between NCLT and NCLAT.</li>
+        <li>Explain the features of LLP.</li>
+        <li>Explain the role of SFIO.</li>
+      </ol>
+      <h3>10 Marks – Essay Questions</h3>
+      <ol>
+        <li>Define Company and explain the characteristics of a registered company.</li>
+        <li>Explain the salient features of Companies Act, 2013.</li>
+        <li>Explain the role of NCLT, NCLAT and Supreme Court in corporate dispute resolution.</li>
+        <li>Explain the meaning and characteristics of Limited Liability Partnership.</li>
+      </ol>
+      <div class="note"><strong>കുറിപ്പ്:</strong> മുകളിലെ മാർക്ക് വിഭജനം പഠനസൗകര്യത്തിനുള്ള മാതൃകയാണ്. യഥാർത്ഥ പരീക്ഷയിലെ മാർക്ക് വിഭജനം ചോദ്യപേപ്പറിനെ ആശ്രയിച്ചിരിക്കും.</div>
+    </article>
+
+    <article class="topic" id="t-revision">
+      <h2>11. Quick Revision Notes</h2>
+      <p>പരീക്ഷയ്ക്ക് മുമ്പ് ഓർത്തിരിക്കേണ്ട കാര്യങ്ങൾ:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Topic</th><th>Important Point</th></tr></thead>
+          <tbody>
+            <tr><td>Company</td><td>Section 2(20), Companies Act, 2013</td></tr>
+            <tr><td>Separate Legal Entity</td><td>Salomon v. Salomon (1897)</td></tr>
+            <tr><td>Limited Liability</td><td>ബാധ്യത പരിമിതമാണ്</td></tr>
+            <tr><td>Perpetual Succession</td><td>തുടർച്ചയായ നിലനിൽപ്പ്</td></tr>
+            <tr><td>Common Seal</td><td>Optional</td></tr>
+            <tr><td>Public Company</td><td>Shares generally freely transferable</td></tr>
+            <tr><td>Artificial Person</td><td>Created by Law</td></tr>
+            <tr><td>NCLT</td><td>Company Law Tribunal</td></tr>
+            <tr><td>NCLAT</td><td>Appellate Tribunal</td></tr>
+            <tr><td>NCLT → NCLAT</td><td>45 Days</td></tr>
+            <tr><td>NCLAT → Supreme Court</td><td>60 Days</td></tr>
+            <tr><td>SFIO</td><td>Serious Fraud Investigation</td></tr>
+            <tr><td>LLP</td><td>LLP Act, 2008</td></tr>
+            <tr><td>LLP</td><td>Separate Legal Entity</td></tr>
+            <tr><td>CSR</td><td>Corporate Social Responsibility</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>⭐ പരീക്ഷയ്ക്ക് ഏറ്റവും പ്രധാനപ്പെട്ട ഭാഗങ്ങൾ</h3>
+      <ol>
+        <li>Characteristics of a Registered Company – 7 പ്രധാന സവിശേഷതകൾ.</li>
+        <li>Features of Companies Act, 2013 – 9 പ്രധാന സവിശേഷതകൾ.</li>
+        <li>NCLT and NCLAT – നിർവചനം, പ്രവർത്തനങ്ങൾ, വ്യത്യാസങ്ങൾ.</li>
+        <li>SFIO – നിർവചനവും പ്രധാന പ്രവർത്തനങ്ങളും.</li>
+        <li>LLP – നിർവചനവും സവിശേഷതകളും.</li>
+        <li>Separate Legal Entity – Salomon v. Salomon Case.</li>
+      </ol>
+    </article>
+  </section>
+
+  <!-- ================= CORPORATE VEIL ================= -->
+  <section class="module" id="module-veil">
+    <div class="module-head">
+      <span class="module-badge">Part 2</span>
+      <h1>Corporate Veil, Lifting of Corporate Veil &amp; Incorporation</h1>
+    </div>
+
+    <article class="topic" id="t-veil">
+      <h2>1. കോർപ്പറേറ്റ് വെയിൽ (Corporate Veil)</h2>
+      <h3>അർത്ഥം (Meaning)</h3>
+      <p>ഒരു കമ്പനിക്ക് അതിന്റെ ഉടമകളിൽ നിന്നും ഓഹരി ഉടമകളിൽ നിന്നും വേറിട്ട നിയമപരമായ നിലനിൽപ്പുണ്ട്. ഇതിനെ <strong>Separate Legal Entity</strong> എന്ന് പറയുന്നു.</p>
+      <p>കമ്പനിക്കും അതിന്റെ അംഗങ്ങൾക്കും ഇടയിലുള്ള നിയമപരമായ സംരക്ഷണ കവചത്തെയാണ് <strong>കോർപ്പറേറ്റ് വെയിൽ (Corporate Veil)</strong> എന്ന് വിളിക്കുന്നത്.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li><strong>Separate Legal Entity:</strong> കമ്പനിയും അതിന്റെ ഉടമകളും നിയമപരമായി വ്യത്യസ്ത വ്യക്തികളാണ്.</li>
+        <li><strong>Limited Liability:</strong> ഓഹരി ഉടമകളുടെ ബാധ്യത സാധാരണയായി അവർ നൽകാനുള്ള ഓഹരി തുകയിലേക്ക് പരിമിതമാണ്.</li>
+        <li><strong>Legal Protection:</strong> കമ്പനിയുടെ കടങ്ങൾക്ക് ഓഹരി ഉടമകൾ സാധാരണയായി വ്യക്തിപരമായി ഉത്തരവാദികളല്ല.</li>
+      </ol>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനിക്ക് ₹10 ലക്ഷം കടമുണ്ടെന്ന് കരുതുക. കമ്പനിക്ക് കടം തിരിച്ചടയ്ക്കാൻ കഴിയാതെ വന്നാൽ, സാധാരണ സാഹചര്യത്തിൽ ഓഹരി ഉടമകൾ അവരുടെ വ്യക്തിപരമായ സ്വത്ത് ഉപയോഗിച്ച് കമ്പനിയുടെ കടം വീട്ടേണ്ടതില്ല.</div>
+      <div class="note"><strong>ചുരുക്കത്തിൽ:</strong> കമ്പനിക്കും ഉടമകൾക്കും ഇടയിലുള്ള നിയമപരമായ സംരക്ഷണമാണ് കോർപ്പറേറ്റ് വെയിൽ.</div>
+    </article>
+
+    <article class="topic" id="t-lifting">
+      <h2>2. ലിഫ്റ്റിങ് ഓഫ് കോർപ്പറേറ്റ് വെയിൽ (Lifting of Corporate Veil)</h2>
+      <h3>അർത്ഥം (Meaning)</h3>
+      <p>ഒരു കമ്പനിയെ തട്ടിപ്പ്, നികുതി വെട്ടിപ്പ്, മറ്റ് നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾ എന്നിവയ്ക്കായി ദുരുപയോഗം ചെയ്യുമ്പോൾ, കോടതി കമ്പനിയുടെ നിയമപരമായ സംരക്ഷണ കവചം നീക്കി അതിന് പിന്നിൽ പ്രവർത്തിക്കുന്ന വ്യക്തികളെ കണ്ടെത്തുന്നു.</p>
+      <p>ഈ നടപടിയെയാണ് <strong>Lifting or Piercing of Corporate Veil</strong> എന്ന് വിളിക്കുന്നത്. ഇതിലൂടെ കുറ്റക്കാരായ ഡയറക്ടർമാരെയോ അംഗങ്ങളെയോ നിയമപരമായി ഉത്തരവാദികളാക്കാൻ കഴിയും.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു വ്യക്തി നികുതി അടയ്ക്കാതിരിക്കാൻ വേണ്ടി മാത്രം ഒരു കമ്പനി രൂപീകരിക്കുന്നു. കോടതിക്ക് ഇത് തട്ടിപ്പാണെന്ന് ബോധ്യപ്പെട്ടാൽ കമ്പനിയുടെ കോർപ്പറേറ്റ് വെയിൽ നീക്കി ആ വ്യക്തിയെ ഉത്തരവാദിയാക്കാം.</div>
+      <h3>പ്രധാന ലക്ഷ്യങ്ങൾ</h3>
+      <ol>
+        <li>തട്ടിപ്പുകൾ തടയുക.</li>
+        <li>നികുതി വെട്ടിപ്പ് തടയുക.</li>
+        <li>നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾ കണ്ടെത്തുക.</li>
+        <li>കുറ്റക്കാരെ ഉത്തരവാദികളാക്കുക.</li>
+        <li>പൊതുജനങ്ങളുടെയും നിക്ഷേപകരുടെയും താൽപര്യങ്ങൾ സംരക്ഷിക്കുക.</li>
+      </ol>
+      <div class="note"><strong>ചുരുക്കത്തിൽ:</strong> കമ്പനിയുടെ മറവിൽ നടക്കുന്ന നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾ കണ്ടെത്തി യഥാർത്ഥ കുറ്റക്കാരെ ഉത്തരവാദികളാക്കുന്ന നടപടിയാണ് ലിഫ്റ്റിങ് ഓഫ് കോർപ്പറേറ്റ് വെയിൽ.</div>
+    </article>
+
+    <article class="topic" id="t-circumstances">
+      <h2>3. കോർപ്പറേറ്റ് വെയിൽ നീക്കം ചെയ്യുന്ന സാഹചര്യങ്ങൾ</h2>
+      <p>കോർപ്പറേറ്റ് വെയിൽ നീക്കം ചെയ്യുന്ന സാഹചര്യങ്ങളെ പ്രധാനമായും രണ്ടായി തിരിക്കാം:</p>
+      <p><strong>A. Common Law Exceptions</strong> (കോടതിപരമായ സാഹചര്യങ്ങൾ)<br><strong>B. Statutory Exceptions</strong> (നിയമപരമായ സാഹചര്യങ്ങൾ)</p>
+
+      <h3>A. Common Law Exceptions</h3>
+      <h4>1. നികുതി വെട്ടിപ്പ് തടയൽ (Protection of Revenue)</h4>
+      <p>നികുതി അടയ്ക്കുന്നത് ഒഴിവാക്കാൻ കമ്പനി രൂപീകരിക്കുകയോ കമ്പനിയെ ദുരുപയോഗം ചെയ്യുകയോ ചെയ്താൽ കോടതി കോർപ്പറേറ്റ് വെയിൽ നീക്കാം.</p>
+      <h4>2. തട്ടിപ്പുകൾ തടയൽ (Prevention of Fraud)</h4>
+      <p>കമ്പനിയുടെ പേരിൽ തട്ടിപ്പുകളോ മറ്റ് നിയമവിരുദ്ധ പ്രവർത്തനങ്ങളോ നടത്തിയാൽ യഥാർത്ഥ കുറ്റക്കാരെ കണ്ടെത്താൻ കോർപ്പറേറ്റ് വെയിൽ നീക്കാം.</p>
+      <h4>3. ശത്രുരാജ്യ ബന്ധം കണ്ടെത്തൽ (Determination of Enemy Character)</h4>
+      <p>യുദ്ധസമയത്ത് ഒരു കമ്പനിയെ നിയന്ത്രിക്കുന്നത് ശത്രുരാജ്യവുമായി ബന്ധപ്പെട്ട വ്യക്തികളാണോ എന്ന് കണ്ടെത്താൻ കോർപ്പറേറ്റ് വെയിൽ നീക്കാം.</p>
+      <h4>4. തൊഴിൽക്ഷേമ നിയമങ്ങൾ സംരക്ഷിക്കൽ (Avoidance of Welfare Legislation)</h4>
+      <p>തൊഴിലാളികളുടെ അവകാശങ്ങളും ആനുകൂല്യങ്ങളും നിഷേധിക്കുന്നതിനായി കമ്പനി രൂപം ദുരുപയോഗം ചെയ്താൽ കോടതി ഇടപെടാം.</p>
+      <h4>5. ഏജന്റായി പ്രവർത്തിക്കൽ (Company Acting as Agent)</h4>
+      <p>ഒരു കമ്പനി സ്വതന്ത്രമായി പ്രവർത്തിക്കാതെ ഓഹരി ഉടമകളുടെ ഏജന്റായി മാത്രം പ്രവർത്തിക്കുന്നതായി തെളിഞ്ഞാൽ, ബന്ധപ്പെട്ട സാഹചര്യങ്ങളിൽ ഓഹരി ഉടമകളെ ഉത്തരവാദികളാക്കാം.</p>
+
+      <h3>B. Statutory Exceptions</h3>
+      <h4>1. കുറഞ്ഞ അംഗസംഖ്യ പാലിക്കാതിരിക്കൽ (Members Below Statutory Minimum)</h4>
+      <p>പഴയ കമ്പനിനിയമത്തിലെ വ്യവസ്ഥപ്രകാരം Private Company – കുറഞ്ഞത് 2 അംഗങ്ങൾ; Public Company – കുറഞ്ഞത് 7 അംഗങ്ങൾ. അംഗങ്ങളുടെ എണ്ണം നിശ്ചിത പരിധിയിൽ താഴെയായിട്ടും കമ്പനി ആറുമാസത്തിലധികം പ്രവർത്തിച്ചാൽ ചില സാഹചര്യങ്ങളിൽ അംഗങ്ങൾക്ക് വ്യക്തിപരമായ ബാധ്യത ഉണ്ടാകുമായിരുന്നു.</p>
+      <div class="key"><strong>ശ്രദ്ധിക്കുക:</strong> ഇത് Companies Act, 1956-ലെ പഴയ വ്യവസ്ഥയാണ്. Companies Act, 2013 പ്രകാരം One Person Company (OPC) ഒരു അംഗത്തോടെയും രൂപീകരിക്കാം. അതിനാൽ പഴയ വ്യവസ്ഥ നിലവിലെ നിയമമായി പഠിക്കരുത്.</div>
+      <h4>2. അപേക്ഷാ തുക തിരികെ നൽകാതിരിക്കൽ (Failure to Refund Application Money)</h4>
+      <p>ഓഹരികൾ അനുവദിക്കാത്ത സാഹചര്യത്തിൽ നിയമപ്രകാരം അപേക്ഷകർക്ക് തിരികെ നൽകേണ്ട തുക നിശ്ചിത സമയത്തിനുള്ളിൽ തിരിച്ചുനൽകാതിരുന്നാൽ ബന്ധപ്പെട്ട വ്യക്തികൾക്ക് നിയമപരമായ ബാധ്യത ഉണ്ടാകാം.</p>
+      <h4>3. കമ്പനിയുടെ പേര് രേഖപ്പെടുത്താതിരിക്കൽ (Misdescription of Company Name)</h4>
+      <p>ചില സാമ്പത്തിക രേഖകളിൽ കമ്പനിയുടെ പേര് ശരിയായി രേഖപ്പെടുത്താതിരിക്കുന്നത് ബന്ധപ്പെട്ട ഉദ്യോഗസ്ഥർക്ക് വ്യക്തിപരമായ ബാധ്യത ഉണ്ടാക്കാം.</p>
+      <h4>4. ഹോൾഡിങ്, സബ്സിഡറി കമ്പനികൾ (Holding and Subsidiary Companies)</h4>
+      <p>ഒരു കമ്പനി മറ്റൊരു കമ്പനിയെ നിയന്ത്രിക്കുമ്പോൾ അവയെ Holding Company, Subsidiary Company എന്ന് വിളിക്കുന്നു. നിയമപ്രകാരം ആവശ്യമായ സാഹചര്യങ്ങളിൽ ഇവയുടെ സാമ്പത്തിക വിവരങ്ങൾ ഉൾപ്പെടുത്തി Consolidated Financial Statements തയ്യാറാക്കണം.</p>
+      <h4>5. ബന്ധപ്പെട്ട കമ്പനികളിലെ അന്വേഷണം (Investigation into Related Companies)</h4>
+      <p>ഒരു കമ്പനിയിലെ നിയമവിരുദ്ധ പ്രവർത്തനങ്ങളെക്കുറിച്ച് അന്വേഷിക്കുമ്പോൾ അതുമായി ബന്ധപ്പെട്ട മറ്റ് കമ്പനികളിലേക്കും അന്വേഷണം വ്യാപിപ്പിക്കാം.</p>
+      <h4>6. കമ്പനി അവസാനിപ്പിക്കുമ്പോഴുള്ള തട്ടിപ്പ് (Fraudulent Trading During Winding Up)</h4>
+      <p>കമ്പനി അടച്ചുപൂട്ടുന്ന സമയത്ത് കടക്കാർക്ക് പണം നൽകാതിരിക്കാൻ ഉദ്ദേശപൂർവം തട്ടിപ്പ് നടത്തിയാൽ അതിന് ഉത്തരവാദികളായ വ്യക്തികൾക്കെതിരെ നിയമനടപടി സ്വീകരിക്കാം.</p>
+    </article>
+
+    <article class="topic" id="t-incorporation">
+      <h2>4. ഇൻകോർപ്പറേഷൻ (Incorporation)</h2>
+      <h3>അർത്ഥം (Meaning)</h3>
+      <p>Companies Act പ്രകാരം ഒരു കമ്പനിയെ നിയമപരമായി രജിസ്റ്റർ ചെയ്ത് ഒരു പ്രത്യേക നിയമപരമായ വ്യക്തിയായി രൂപീകരിക്കുന്ന പ്രക്രിയയാണ് <strong>Incorporation</strong>.</p>
+      <p>ഇൻകോർപ്പറേഷൻ പൂർത്തിയാകുമ്പോൾ കമ്പനിക്ക് അതിന്റെ അംഗങ്ങളിൽ നിന്ന് വേറിട്ട നിയമപരമായ നിലനിൽപ്പ് ലഭിക്കുന്നു.</p>
+    </article>
+
+    <article class="topic" id="t-adv">
+      <h2>5. ഇൻകോർപ്പറേഷന്റെ നേട്ടങ്ങൾ (Advantages of Incorporation)</h2>
+      <ol>
+        <li><strong>പരിമിതമായ ബാധ്യത (Limited Liability):</strong> ഓഹരി ഉടമകളുടെ ബാധ്യത സാധാരണയായി അവർ നൽകാനുള്ള ഓഹരി തുകയിലേക്ക് പരിമിതമായിരിക്കും.</li>
+        <li><strong>പ്രത്യേക നിയമപരമായ നിലനിൽപ്പ് (Separate Legal Entity):</strong> കമ്പനിയും അതിന്റെ ഉടമകളും നിയമപരമായി വ്യത്യസ്ത വ്യക്തികളാണ്.</li>
+        <li><strong>സ്ഥിരമായ നിലനിൽപ്പ് (Perpetual Succession):</strong> അംഗങ്ങളുടെ മരണം, വിരമിക്കൽ, മാറ്റം എന്നിവ കമ്പനിയുടെ നിലനിൽപ്പിനെ ബാധിക്കില്ല.</li>
+        <li><strong>ഓഹരി കൈമാറ്റം (Transferability of Shares):</strong> പബ്ലിക് കമ്പനികളിൽ നിയമപരമായ നിബന്ധനകൾക്ക് വിധേയമായി ഓഹരികൾ കൈമാറ്റം ചെയ്യാൻ സാധിക്കും.</li>
+        <li><strong>സ്വത്ത് കൈവശം വയ്ക്കാനുള്ള അവകാശം (Ownership of Property):</strong> കമ്പനിക്ക് സ്വന്തം പേരിൽ ഭൂമി, കെട്ടിടം, മറ്റ് സ്വത്തുക്കൾ എന്നിവ വാങ്ങാനും കൈവശം വയ്ക്കാനും കഴിയും.</li>
+        <li><strong>കേസ് നൽകാനും നേരിടാനുമുള്ള അവകാശം (Capacity to Sue and Be Sued):</strong> കമ്പനിക്ക് സ്വന്തം പേരിൽ മറ്റുള്ളവർക്കെതിരെ കേസ് നൽകാനും കമ്പനിക്കെതിരെ മറ്റുള്ളവർക്ക് കേസ് നൽകാനും കഴിയും.</li>
+        <li><strong>പ്രൊഫഷണൽ മാനേജ്മെന്റ് (Professional Management):</strong> കമ്പനിയുടെ പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കാൻ യോഗ്യതയും പരിചയവുമുള്ള മാനേജർമാരെ നിയമിക്കാം.</li>
+        <li><strong>വലിയ മൂലധനം സമാഹരിക്കൽ (Large Capital):</strong> ഓഹരികൾ, കടപ്പത്രങ്ങൾ തുടങ്ങിയ മാർഗങ്ങളിലൂടെ കമ്പനിക്ക് വലിയ മൂലധനം സമാഹരിക്കാൻ കഴിയും.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-disadv">
+      <h2>6. ഇൻകോർപ്പറേഷന്റെ ദോഷങ്ങൾ / പരിമിതികൾ</h2>
+      <ol>
+        <li><strong>ഉയർന്ന ചെലവ് (High Cost):</strong> കമ്പനി രൂപീകരിക്കുന്നതിനും നിയമപരമായ നടപടികൾ പൂർത്തിയാക്കുന്നതിനും ചെലവ് ആവശ്യമാണ്.</li>
+        <li><strong>സങ്കീർണ്ണമായ നിയമനടപടികൾ (Complex Legal Formalities):</strong> കമ്പനി രൂപീകരണത്തിനും നടത്തിപ്പിനും വിവിധ നിയമങ്ങളും നടപടിക്രമങ്ങളും പാലിക്കേണ്ടതുണ്ട്.</li>
+        <li><strong>പൗരത്വ അവകാശങ്ങളുടെ അഭാവം (No Citizenship Rights):</strong> കമ്പനി ഒരു നിയമപരമായ വ്യക്തിയാണെങ്കിലും സാധാരണ മനുഷ്യർക്ക് ലഭിക്കുന്ന പൗരത്വ അവകാശങ്ങൾ കമ്പനിക്ക് ലഭിക്കില്ല.</li>
+        <li><strong>കോർപ്പറേറ്റ് വെയിൽ നീക്കം ചെയ്യാനുള്ള സാധ്യത (Lifting of Corporate Veil):</strong> കമ്പനിയെ നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾക്ക് ഉപയോഗിച്ചാൽ കോടതി കോർപ്പറേറ്റ് വെയിൽ നീക്കാം.</li>
+        <li><strong>ദുരുപയോഗത്തിനുള്ള സാധ്യത (Possibility of Misuse):</strong> കമ്പനിയുടെ പേരിൽ നിക്ഷേപകരെയും പൊതുജനങ്ങളെയും വഞ്ചിക്കാനുള്ള സാധ്യതയുണ്ട്.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-veil-diff">
+      <h2>7. Corporate Veil &amp; Lifting of Corporate Veil – വ്യത്യാസം</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Corporate Veil</th><th>Lifting of Corporate Veil</th></tr></thead>
+          <tbody>
+            <tr><td>നിയമപരമായ സംരക്ഷണ കവചമാണ്.</td><td>സംരക്ഷണ കവചം നീക്കുന്ന നടപടിയാണ്.</td></tr>
+            <tr><td>കമ്പനിയെയും അംഗങ്ങളെയും വേർതിരിക്കുന്നു.</td><td>കമ്പനിക്ക് പിന്നിലെ യഥാർത്ഥ വ്യക്തികളെ കണ്ടെത്തുന്നു.</td></tr>
+            <tr><td>അംഗങ്ങളുടെ പരിമിത ബാധ്യത സംരക്ഷിക്കുന്നു.</td><td>ബന്ധപ്പെട്ട വ്യക്തികൾക്ക് വ്യക്തിപരമായ ബാധ്യത ഉണ്ടാകാം.</td></tr>
+            <tr><td>കമ്പനിയുടെ സാധാരണ നിയമപരമായ സവിശേഷതയാണ്.</td><td>പ്രത്യേക നിയമപരമായ സാഹചര്യങ്ങളിൽ പ്രയോഗിക്കുന്നു.</td></tr>
+            <tr><td>Separate Legal Entity എന്ന തത്ത്വവുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.</td><td>Fraud, Tax Evasion തുടങ്ങിയ നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾ തടയാൻ ഉപയോഗിക്കുന്നു.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-veil-points">
+      <h2>8. പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന പോയിന്റുകൾ</h2>
+      <h3>Corporate Veil</h3>
+      <ul>
+        <li>Separate Legal Entity</li>
+        <li>Limited Liability</li>
+        <li>Legal Protection</li>
+      </ul>
+      <h3>Lifting of Corporate Veil</h3>
+      <ul>
+        <li>Prevention of Fraud</li>
+        <li>Protection of Revenue</li>
+        <li>Determination of Enemy Character</li>
+        <li>Avoidance of Welfare Legislation</li>
+        <li>Company Acting as Agent</li>
+      </ul>
+      <h3>Advantages of Incorporation</h3>
+      <ul>
+        <li>Limited Liability</li>
+        <li>Separate Legal Entity</li>
+        <li>Perpetual Succession</li>
+        <li>Transferability of Shares</li>
+        <li>Ownership of Property</li>
+        <li>Capacity to Sue and Be Sued</li>
+        <li>Professional Management</li>
+        <li>Large Capital</li>
+      </ul>
+      <h3>Disadvantages of Incorporation</h3>
+      <ul>
+        <li>High Cost</li>
+        <li>Legal Formalities</li>
+        <li>No Citizenship Rights</li>
+        <li>Lifting of Corporate Veil</li>
+        <li>Possibility of Misuse</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-veil-summary">
+      <h2>9. ചുരുക്കം (Summary)</h2>
+      <p>ഒരു കമ്പനിക്കും അതിന്റെ ഉടമകൾക്കും ഇടയിലുള്ള നിയമപരമായ സംരക്ഷണമാണ് <strong>Corporate Veil</strong>.</p>
+      <p>കമ്പനിയെ തട്ടിപ്പുകൾക്കും മറ്റ് നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾക്കും ഉപയോഗിക്കുമ്പോൾ ഈ സംരക്ഷണ കവചം നീക്കി യഥാർത്ഥ കുറ്റക്കാരെ ഉത്തരവാദികളാക്കുന്ന നടപടിയാണ് <strong>Lifting of Corporate Veil</strong>.</p>
+      <p>ഒരു കമ്പനിയെ നിയമപരമായി രജിസ്റ്റർ ചെയ്ത് പ്രത്യേക നിയമപരമായ നിലനിൽപ്പ് നൽകുന്ന പ്രക്രിയയാണ് <strong>Incorporation</strong>.</p>
+      <p>ഇൻകോർപ്പറേഷൻ വഴി കമ്പനിക്ക് Limited Liability, Separate Legal Entity, Perpetual Succession തുടങ്ങിയ നിരവധി നേട്ടങ്ങൾ ലഭിക്കുന്നു. എന്നാൽ ഉയർന്ന ചെലവ്, സങ്കീർണ്ണമായ നിയമനടപടികൾ, ദുരുപയോഗത്തിനുള്ള സാധ്യത തുടങ്ങിയ പരിമിതികളും ഉണ്ട്.</p>
+    </article>
+  </section>
+
+  <!-- ================= COMPANY FORMATION ================= -->
+  <section class="module" id="module-formation">
+    <div class="module-head">
+      <span class="module-badge">Part 3</span>
+      <h1>Company Formation</h1>
+      <p class="module-sub">കമ്പനിയുടെ രൂപീകരണം (Formation of a Company)</p>
+    </div>
+
+    <article class="topic" id="t-formation">
+      <h2>1. കമ്പനിയുടെ രൂപീകരണം (Formation of Company)</h2>
+      <p>ഒരു പുതിയ കമ്പനി നിയമപരമായി നിലവിൽ കൊണ്ടുവരുന്ന പ്രക്രിയയാണ് കമ്പനിയുടെ രൂപീകരണം (Company Formation).</p>
+      <p>ഒരു കമ്പനി രൂപീകരിക്കുന്നതിന് മുൻകൈ എടുക്കുന്ന വ്യക്തിയാണ് <strong>പ്രൊമോട്ടർ (Promoter)</strong>. കമ്പനിയുടെ സ്വഭാവം, ആവശ്യമായ മൂലധനം, മാനേജ്മെന്റ് തുടങ്ങിയ കാര്യങ്ങൾ തീരുമാനിക്കുന്നത് പ്രൊമോട്ടറാണ്.</p>
+      <h3>കമ്പനിയുടെ രൂപീകരണത്തിലെ മൂന്ന് ഘട്ടങ്ങൾ</h3>
+      <ol>
+        <li><strong>പ്രൊമോഷൻ (Promotion):</strong> ഒരു പുതിയ കമ്പനി രൂപീകരിക്കുന്നതിനുള്ള ആശയം കണ്ടെത്തുകയും അതിനാവശ്യമായ പ്രാഥമിക പ്രവർത്തനങ്ങൾ നടത്തുകയും ചെയ്യുന്ന ഘട്ടം.</li>
+        <li><strong>ഇൻകോർപ്പറേഷൻ (Incorporation):</strong> കമ്പനിയെ നിയമപരമായി രജിസ്റ്റർ ചെയ്യുന്ന ഘട്ടം. രജിസ്ട്രേഷൻ പൂർത്തിയാകുന്നതോടെ കമ്പനിക്ക് പ്രത്യേക നിയമപരമായ നിലനിൽപ്പ് ലഭിക്കുന്നു.</li>
+        <li><strong>മൂലധന സമാഹരണം (Raising of Capital):</strong> കമ്പനിയുടെ പ്രവർത്തനങ്ങൾക്ക് ആവശ്യമായ പണം അഥവാ മൂലധനം കണ്ടെത്തുന്ന ഘട്ടം.</li>
+      </ol>
+      <h3>കമ്പനിയിലെ കുറഞ്ഞ അംഗങ്ങളുടെ എണ്ണം</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>കമ്പനിയുടെ തരം</th><th>കുറഞ്ഞ അംഗങ്ങൾ</th></tr></thead>
+          <tbody>
+            <tr><td>Private Company</td><td>2</td></tr>
+            <tr><td>Public Company</td><td>7</td></tr>
+            <tr><td>One Person Company (OPC)</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-capital-raising">
+      <h2>2. മൂലധന സമാഹരണം (Raising of Capital)</h2>
+      <p>ഒരു കമ്പനിയുടെ ബിസിനസ് പ്രവർത്തനങ്ങൾക്ക് ആവശ്യമായ പണം കണ്ടെത്തുന്ന പ്രക്രിയയാണ് മൂലധന സമാഹരണം. പ്രധാനമായും രണ്ട് രീതികളുണ്ട്.</p>
+
+      <h3>A. പബ്ലിക് ഓഫർ (Public Offer)</h3>
+      <p>പൊതുജനങ്ങൾക്ക് ഷെയറുകൾ വാങ്ങാനുള്ള അവസരം നൽകുന്ന രീതിയാണ് പബ്ലിക് ഓഫർ.</p>
+      <ul>
+        <li>പൊതുജനങ്ങളിൽ നിന്ന് മൂലധനം സമാഹരിക്കുന്നു.</li>
+        <li>പ്രോസ്പെക്റ്റസ് (Prospectus) മുഖേന ഷെയറുകൾ ഓഫർ ചെയ്യാം.</li>
+        <li>Companies Act, 2013-ലെ <strong>Section 23</strong> പ്രകാരമുള്ള വ്യവസ്ഥകൾ ബാധകമാണ്.</li>
+        <li>പൊതുവിപണിയിലെ സെക്യൂരിറ്റീസ് ഇഷ്യൂകൾ SEBI നിയന്ത്രണങ്ങൾക്ക് വിധേയമാണ്.</li>
+      </ul>
+
+      <h3>B. പ്രൈവറ്റ് പ്ലേസ്‌മെന്റ് (Private Placement)</h3>
+      <p>കമ്പനി മുൻകൂട്ടി തിരഞ്ഞെടുക്കുന്ന നിശ്ചിത വ്യക്തികൾക്ക് ഷെയറുകളോ മറ്റ് സെക്യൂരിറ്റികളോ നൽകുന്ന രീതിയാണ് പ്രൈവറ്റ് പ്ലേസ്‌മെന്റ്.</p>
+      <ol>
+        <li>പൊതുജനങ്ങൾക്ക് നേരിട്ട് ഓഫർ നൽകുന്നില്ല.</li>
+        <li>തിരഞ്ഞെടുക്കപ്പെട്ട വ്യക്തികൾക്ക് മാത്രമാണ് ഓഫർ നൽകുന്നത്.</li>
+        <li>സാധാരണയായി ഒരു സാമ്പത്തിക വർഷത്തിൽ ഓരോ തരത്തിലുള്ള സെക്യൂരിറ്റികൾക്കും പരമാവധി <strong>200 വ്യക്തികൾക്ക്</strong> ഓഫർ നൽകാം. നിയമപ്രകാരമുള്ള ചില വിഭാഗങ്ങളെ ഈ പരിധിയിൽ ഉൾപ്പെടുത്തില്ല.</li>
+        <li>പണം ക്യാഷായി സ്വീകരിക്കാൻ പാടില്ല.</li>
+        <li>ചെക്ക്, ഡിമാൻഡ് ഡ്രാഫ്റ്റ്, ബാങ്ക് ട്രാൻസ്ഫർ തുടങ്ങിയ മാർഗങ്ങളിലൂടെ പണം സ്വീകരിക്കാം.</li>
+        <li>അപേക്ഷാ പണം ലഭിച്ച് <strong>60 ദിവസത്തിനുള്ളിൽ</strong> സെക്യൂരിറ്റികൾ അലോട്ട് ചെയ്യണം.</li>
+        <li>അലോട്ട് ചെയ്യാൻ കഴിയാത്തപക്ഷം അടുത്ത <strong>15 ദിവസത്തിനുള്ളിൽ</strong> പണം തിരികെ നൽകണം.</li>
+        <li>നിശ്ചിത സമയത്തിനുള്ളിൽ പണം തിരികെ നൽകിയില്ലെങ്കിൽ <strong>12% വാർഷിക പലിശ</strong> നൽകണം.</li>
+      </ol>
+
+      <h3>Public Offer &amp; Private Placement – വ്യത്യാസം</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Public Offer</th><th>Private Placement</th></tr></thead>
+          <tbody>
+            <tr><td>പൊതുജനങ്ങൾക്ക് ഓഫർ നൽകുന്നു.</td><td>തിരഞ്ഞെടുക്കപ്പെട്ട വ്യക്തികൾക്ക് ഓഫർ നൽകുന്നു.</td></tr>
+            <tr><td>വ്യാപകമായി മൂലധനം സമാഹരിക്കാം.</td><td>പരിമിതമായ വ്യക്തികളിൽ നിന്ന് മൂലധനം സമാഹരിക്കുന്നു.</td></tr>
+            <tr><td>പ്രോസ്പെക്റ്റസ് ഉപയോഗിക്കാം.</td><td>Private Placement Offer Letter ഉപയോഗിക്കുന്നു.</td></tr>
+            <tr><td>പൊതുവിപണിയുമായി ബന്ധപ്പെട്ട നിയന്ത്രണങ്ങൾ ബാധകമാണ്.</td><td>Section 42-ലെ വ്യവസ്ഥകൾ ബാധകമാണ്.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-10a">
+      <h2>3. ബിസിനസ് ആരംഭിക്കുന്നതിനുള്ള പ്രഖ്യാപനം (Section 10A)</h2>
+      <p>ഷെയർ ക്യാപിറ്റലുള്ള, Section 10A ബാധകമായ കമ്പനികൾ ബിസിനസ് ആരംഭിക്കുന്നതിന് മുൻപ് രജിസ്ട്രാർക്ക് സമർപ്പിക്കേണ്ട പ്രഖ്യാപനമാണിത്.</p>
+      <h3>പ്രധാന കാര്യങ്ങൾ</h3>
+      <ol>
+        <li>കമ്പനി ഇൻകോർപ്പറേറ്റ് ചെയ്ത് <strong>180 ദിവസത്തിനുള്ളിൽ</strong> ഡിക്ലറേഷൻ ഫയൽ ചെയ്യണം.</li>
+        <li>മെമ്മോറാണ്ടത്തിൽ ഒപ്പിട്ട സബ്സ്ക്രൈബർമാർ തങ്ങളുടെ ഷെയറുകളുടെ തുക നൽകിയിരിക്കണം.</li>
+        <li>കമ്പനിയുടെ രജിസ്റ്റേർഡ് ഓഫീസ് സംബന്ധിച്ച പരിശോധനാ വിവരങ്ങൾ നിയമപ്രകാരം ഫയൽ ചെയ്തിരിക്കണം.</li>
+        <li>ഡിക്ലറേഷൻ നൽകാതെ ബിസിനസ് ആരംഭിക്കാനോ കടം വാങ്ങാനുള്ള അധികാരം വിനിയോഗിക്കാനോ പാടില്ല.</li>
+        <li>നിയമം പാലിച്ചില്ലെങ്കിൽ പിഴയും കമ്പനിയുടെ പേര് രജിസ്റ്ററിൽ നിന്ന് നീക്കം ചെയ്യാനുള്ള നടപടികളും ഉണ്ടാകാം.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-promoter">
+      <h2>4. പ്രൊമോട്ടർ (Promoter)</h2>
+      <h3>നിർവചനം (Definition)</h3>
+      <p>ഒരു കമ്പനി രൂപീകരിക്കുന്നതിന് മുൻകൈ എടുക്കുകയും അതിനാവശ്യമായ പ്രവർത്തനങ്ങൾ നടത്തുകയും ചെയ്യുന്ന വ്യക്തിയാണ് പ്രൊമോട്ടർ.</p>
+      <h3>Section 2(69) പ്രകാരം പ്രൊമോട്ടർ എന്നത്:</h3>
+      <ul>
+        <li>പ്രോസ്പെക്റ്റസിലോ വാർഷിക റിട്ടേണിലോ പ്രൊമോട്ടറായി തിരിച്ചറിയപ്പെടുന്ന വ്യക്തി.</li>
+        <li>കമ്പനിയുടെ പ്രവർത്തനങ്ങളിൽ നേരിട്ടോ അല്ലാതെയോ നിയന്ത്രണമുള്ള വ്യക്തി.</li>
+        <li>ആരുടെ നിർദ്ദേശങ്ങൾക്കനുസരിച്ചാണോ ഡയറക്ടർ ബോർഡ് സാധാരണയായി പ്രവർത്തിക്കുന്നത് ആ വ്യക്തി.</li>
+      </ul>
+      <div class="key"><strong>Exception:</strong> പ്രൊഫഷണൽ സേവനത്തിന്റെ ഭാഗമായി മാത്രം ഉപദേശം നൽകുന്ന ചാർട്ടേഡ് അക്കൗണ്ടന്റ്, അഡ്വക്കേറ്റ്, കമ്പനി സെക്രട്ടറി തുടങ്ങിയവരെ അതിന്റെ പേരിൽ മാത്രം പ്രൊമോട്ടറായി കണക്കാക്കില്ല.</div>
+      <h3>പ്രൊഫഷണൽ പ്രൊമോട്ടർ (Professional Promoter)</h3>
+      <p>കമ്പനികൾ രൂപീകരിക്കുന്നത് ഒരു തൊഴിലായി സ്വീകരിക്കുകയും രജിസ്ട്രേഷനുശേഷം കമ്പനിയുടെ നിയന്ത്രണം ബന്ധപ്പെട്ട വ്യക്തികൾക്ക് കൈമാറുകയും ചെയ്യുന്നവരാണ് പ്രൊഫഷണൽ പ്രൊമോട്ടർമാർ.</p>
+    </article>
+
+    <article class="topic" id="t-promoter-legal">
+      <h2>5. പ്രൊമോട്ടറുടെ നിയമപരമായ സ്ഥാനം (Legal Position of Promoter)</h2>
+      <p>കമ്പനി രൂപീകരിക്കുന്നതിന് മുൻപ് കമ്പനി നിയമപരമായി നിലവിലില്ല. അതുകൊണ്ട് പ്രൊമോട്ടറെ കമ്പനിയുടെ ഏജന്റായോ പൂർണ്ണമായ ട്രസ്റ്റിയായോ കണക്കാക്കാൻ സാധിക്കില്ല.</p>
+      <p>എന്നാൽ പ്രൊമോട്ടർ കമ്പനിക്കുവേണ്ടി വിശ്വാസത്തോടും സത്യസന്ധതയോടും പ്രവർത്തിക്കേണ്ട വ്യക്തിയാണ്. ഈ സ്ഥാനത്തെ <strong>Fiduciary Position (വിശ്വാസാധിഷ്ഠിത സ്ഥാനം)</strong> എന്ന് വിളിക്കുന്നു.</p>
+      <h3>പ്രധാന പോയിന്റുകൾ</h3>
+      <ol>
+        <li>പ്രൊമോട്ടർ കമ്പനിയുടെ ഏജന്റല്ല (Not an Agent).</li>
+        <li>പ്രൊമോട്ടർ പൂർണ്ണമായ ട്രസ്റ്റിയല്ല (Not a Trustee).</li>
+        <li>പ്രൊമോട്ടർ ഫിഡ്യൂഷ്യറി സ്ഥാനത്താണ് പ്രവർത്തിക്കുന്നത്.</li>
+        <li>കമ്പനിയുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കണം.</li>
+        <li>രഹസ്യ ലാഭം നേടാൻ പാടില്ല.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-promoter-duties">
+      <h2>6. പ്രൊമോട്ടറുടെ ചുമതലകൾ (Duties of Promoter)</h2>
+      <h3>1. രഹസ്യ ലാഭം നേടരുത് (No Secret Profit)</h3>
+      <p>കമ്പനി രൂപീകരണവുമായി ബന്ധപ്പെട്ട ഇടപാടുകളിൽ നിന്ന് രഹസ്യമായി ലാഭം നേടാൻ പാടില്ല.</p>
+      <h3>2. താൽപര്യങ്ങൾ വെളിപ്പെടുത്തണം (Disclosure of Interest)</h3>
+      <p>കമ്പനിയുമായി നടത്തുന്ന ഇടപാടുകളിലെ വ്യക്തിപരമായ താൽപര്യങ്ങൾ ബന്ധപ്പെട്ടവരോട് പൂർണ്ണമായി വെളിപ്പെടുത്തണം.</p>
+      <h3>3. സത്യസന്ധമായി പ്രവർത്തിക്കണം (Act Honestly)</h3>
+      <p>കമ്പനിയുടെ താൽപര്യങ്ങൾ സംരക്ഷിച്ചുകൊണ്ട് സത്യസന്ധമായി പ്രവർത്തിക്കണം.</p>
+      <h3>4. തെറ്റായ വിവരങ്ങൾ നൽകരുത് (No Misrepresentation)</h3>
+      <p>പ്രോസ്പെക്റ്റസിലോ മറ്റ് രേഖകളിലോ തെറ്റായ വിവരങ്ങൾ നൽകരുത്.</p>
+      <h3>5. വഞ്ചന നടത്തരുത് (No Fraud)</h3>
+      <p>കമ്പനിയെയോ നിക്ഷേപകരെയോ വഞ്ചിക്കുന്ന പ്രവർത്തനങ്ങളിൽ ഏർപ്പെടരുത്.</p>
+    </article>
+
+    <article class="topic" id="t-incorporation-proc">
+      <h2>7. കമ്പനിയുടെ ഇൻകോർപ്പറേഷൻ (Incorporation of Company)</h2>
+      <p>കമ്പനിയെ നിയമപരമായി രജിസ്റ്റർ ചെയ്യുന്ന പ്രക്രിയയാണ് ഇൻകോർപ്പറേഷൻ. കമ്പനിയുടെ രജിസ്ട്രേഷൻ നടത്തുന്നത് <strong>Registrar of Companies (ROC)</strong> ആണ്.</p>
+      <h3>രജിസ്ട്രേഷന് ആവശ്യമായ പ്രധാന രേഖകൾ</h3>
+      <ol>
+        <li><strong>Memorandum of Association (MOA):</strong> കമ്പനിയുടെ പ്രധാന ലക്ഷ്യങ്ങൾ, അധികാരപരിധി തുടങ്ങിയ അടിസ്ഥാന വിവരങ്ങൾ ഉൾക്കൊള്ളുന്ന രേഖ.</li>
+        <li><strong>Articles of Association (AOA):</strong> കമ്പനിയുടെ ആഭ്യന്തര മാനേജ്‌മെന്റുമായി ബന്ധപ്പെട്ട നിയമങ്ങളും ചട്ടങ്ങളും ഉൾക്കൊള്ളുന്ന രേഖ.</li>
+        <li><strong>Registered Office Details:</strong> കമ്പനിയുടെ രജിസ്റ്റേർഡ് ഓഫീസുമായി ബന്ധപ്പെട്ട വിവരങ്ങൾ.</li>
+        <li><strong>Subscribers' Details:</strong> കമ്പനി രൂപീകരിക്കുന്നതിനായി മെമ്മോറാണ്ടത്തിൽ ഒപ്പിടുന്ന വ്യക്തികളുടെ വിവരങ്ങൾ.</li>
+        <li><strong>First Directors' Details:</strong> കമ്പനിയുടെ ആദ്യ ഡയറക്ടർമാരുടെ വിവരങ്ങൾ.</li>
+        <li><strong>Declaration:</strong> നിയമപ്രകാരം ആവശ്യമായ പ്രഖ്യാപനങ്ങളും സത്യവാങ്മൂലങ്ങളും.</li>
+      </ol>
+      <h3>Certificate of Incorporation</h3>
+      <p>കമ്പനി രജിസ്റ്റർ ചെയ്തതായി രജിസ്ട്രാർ നൽകുന്ന ഔദ്യോഗിക സർട്ടിഫിക്കറ്റാണ് <strong>Certificate of Incorporation</strong>.</p>
+      <p>ഇതിനെ കമ്പനിയുടെ <strong>ജനന സർട്ടിഫിക്കറ്റ് (Birth Certificate of Company)</strong> എന്ന് വിശേഷിപ്പിക്കുന്നു. ഈ സർട്ടിഫിക്കറ്റ് ലഭിക്കുന്നതോടെ കമ്പനി പ്രത്യേക നിയമപരമായ വ്യക്തിയായി നിലവിൽ വരുന്നു.</p>
+    </article>
+
+    <article class="topic" id="t-opc">
+      <h2>8. വൺ പേഴ്‌സൺ കമ്പനി (One Person Company – OPC)</h2>
+      <p>ഒരു വ്യക്തിക്ക് മാത്രം അംഗമായി കമ്പനി രൂപീകരിക്കാൻ കഴിയുന്ന സംവിധാനമാണ് One Person Company (OPC).</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>ഒരു അംഗം മാത്രം മതി.</li>
+        <li>കമ്പനിക്ക് പ്രത്യേക നിയമപരമായ നിലനിൽപ്പുണ്ട്.</li>
+        <li>ഒരു നോമിനിയെ (Nominee) നിർദ്ദേശിക്കണം.</li>
+        <li>നോമിനിയുടെ ലിഖിത സമ്മതം ആവശ്യമാണ്.</li>
+        <li>അംഗത്തിന്റെ മരണമോ നിയമപരമായ അയോഗ്യതയോ ഉണ്ടായാൽ നോമിനിക്ക് അംഗത്വം ലഭിക്കുന്നതിനുള്ള വ്യവസ്ഥയുണ്ട്.</li>
+        <li>നിയമപ്രകാരം നോമിനിയെ മാറ്റാൻ സാധിക്കും.</li>
+        <li>നോമിനിയുടെ മാറ്റം രജിസ്ട്രാറെ അറിയിക്കണം.</li>
+        <li>നോമിനിയുടെ മാറ്റം മാത്രം മെമ്മോറാണ്ടത്തിലെ ഔപചാരികമായ Alteration ആയി കണക്കാക്കില്ല.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-formation-points">
+      <h2>📝 പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന പോയിന്റുകൾ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ചോദ്യം</th><th>ഉത്തരം</th></tr></thead>
+          <tbody>
+            <tr><td>കമ്പനിയുടെ രൂപീകരണത്തിന് മുൻകൈ എടുക്കുന്നത് ആര്?</td><td>Promoter</td></tr>
+            <tr><td>കമ്പനി രൂപീകരണത്തിലെ പ്രധാന ഘട്ടങ്ങൾ എത്ര?</td><td>3</td></tr>
+            <tr><td>ആദ്യ ഘട്ടം ഏത്?</td><td>Promotion</td></tr>
+            <tr><td>രണ്ടാം ഘട്ടം ഏത്?</td><td>Incorporation</td></tr>
+            <tr><td>മൂന്നാം ഘട്ടം ഏത്?</td><td>Raising of Capital</td></tr>
+            <tr><td>പ്രൈവറ്റ് കമ്പനിയിലെ കുറഞ്ഞ അംഗങ്ങൾ?</td><td>2</td></tr>
+            <tr><td>പബ്ലിക് കമ്പനിയിലെ കുറഞ്ഞ അംഗങ്ങൾ?</td><td>7</td></tr>
+            <tr><td>OPC-യിലെ കുറഞ്ഞ അംഗങ്ങൾ?</td><td>1</td></tr>
+            <tr><td>Promoter-ന്റെ നിർവചനം ഏത് സെക്ഷനിൽ?</td><td>Section 2(69)</td></tr>
+            <tr><td>Private Placement ഏത് സെക്ഷൻ?</td><td>Section 42</td></tr>
+            <tr><td>Public Offer സംബന്ധിച്ച സെക്ഷൻ?</td><td>Section 23</td></tr>
+            <tr><td>Commencement of Business ഏത് സെക്ഷൻ?</td><td>Section 10A</td></tr>
+            <tr><td>ബിസിനസ് ആരംഭിക്കുന്നതിനുള്ള ഡിക്ലറേഷൻ എത്ര ദിവസത്തിനുള്ളിൽ?</td><td>180 ദിവസം</td></tr>
+            <tr><td>Private Placement അലോട്ട്‌മെന്റ് കാലാവധി?</td><td>60 ദിവസം</td></tr>
+            <tr><td>അലോട്ട് ചെയ്യാനായില്ലെങ്കിൽ റീഫണ്ട് കാലാവധി?</td><td>അടുത്ത 15 ദിവസം</td></tr>
+            <tr><td>റീഫണ്ട് വൈകിയാൽ പലിശ?</td><td>12% പ്രതിവർഷം</td></tr>
+            <tr><td>കമ്പനിയുടെ Birth Certificate എന്നറിയപ്പെടുന്നത്?</td><td>Certificate of Incorporation</td></tr>
+            <tr><td>കമ്പനിയുടെ രജിസ്ട്രേഷൻ നടത്തുന്നത് ആര്?</td><td>Registrar of Companies</td></tr>
+            <tr><td>പ്രൊമോട്ടറുടെ നിയമപരമായ സ്ഥാനം?</td><td>Fiduciary Position</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-formation-questions">
+      <h2>⭐ പ്രധാനപ്പെട്ട പരീക്ഷാ ചോദ്യങ്ങൾ</h2>
+      <h3>2 മാർക്ക് ചോദ്യങ്ങൾ</h3>
+      <ol>
+        <li>What is Promotion?</li>
+        <li>Who is a Promoter?</li>
+        <li>What is Incorporation?</li>
+        <li>What is Private Placement?</li>
+        <li>What is Public Offer?</li>
+        <li>What is Certificate of Incorporation?</li>
+        <li>What is One Person Company?</li>
+        <li>What is Fiduciary Position?</li>
+      </ol>
+      <h3>5 മാർക്ക് ചോദ്യങ്ങൾ</h3>
+      <ol>
+        <li>Explain the stages of Company Formation.</li>
+        <li>Explain the duties of a Promoter.</li>
+        <li>Explain the legal position of a Promoter.</li>
+        <li>Distinguish between Public Offer and Private Placement.</li>
+        <li>Explain the features of One Person Company.</li>
+      </ol>
+      <h3>10 മാർക്ക് ചോദ്യങ്ങൾ</h3>
+      <ol>
+        <li>Explain the different stages in the formation of a company.</li>
+        <li>Define Promoter. Explain the legal position and duties of a Promoter.</li>
+        <li>Explain the procedure and documents required for the incorporation of a company.</li>
+      </ol>
+      <div class="note"><strong>📌 ചുരുക്കത്തിൽ:</strong> ഒരു കമ്പനി രൂപീകരിക്കുന്നതിൽ പ്രധാനമായും മൂന്ന് ഘട്ടങ്ങളുണ്ട്: Promotion, Incorporation, Raising of Capital. <strong>Promotion → Incorporation → Raising of Capital</strong></div>
+    </article>
+  </section>
+
+  <!-- ================= MOA ================= -->
+  <section class="module" id="module-moa">
+    <div class="module-head">
+      <span class="module-badge">Part 4</span>
+      <h1>Memorandum of Association (MOA)</h1>
+      <p class="module-sub">മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷൻ</p>
+    </div>
+
+    <article class="topic" id="t-moa">
+      <h2>1. മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷൻ എന്നാൽ എന്ത്?</h2>
+      <p>ഒരു കമ്പനിയുടെ ലക്ഷ്യങ്ങൾ, അധികാരങ്ങൾ, പ്രവർത്തനപരിധി എന്നിവ വ്യക്തമാക്കുന്ന അടിസ്ഥാന നിയമരേഖയാണ് <strong>മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷൻ (MOA)</strong>.</p>
+      <p>ഇതിനെ കമ്പനിയുടെ <strong>മാഗ്നകാർട്ട (Magna Carta)</strong> അഥവാ <strong>ചാർട്ടർ (Charter)</strong> എന്നും വിളിക്കുന്നു.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ul>
+        <li>കമ്പനിയുടെ ഏറ്റവും പ്രധാനപ്പെട്ട അടിസ്ഥാന രേഖയാണ് MOA.</li>
+        <li>കമ്പനിയുടെ ലക്ഷ്യങ്ങളും പ്രവർത്തനപരിധിയും വ്യക്തമാക്കുന്നു.</li>
+        <li>കമ്പനിയും പുറത്തുള്ള വ്യക്തികളും തമ്മിലുള്ള ബന്ധം നിർവചിക്കുന്നു.</li>
+        <li>കമ്പനിക്ക് ചെയ്യാൻ കഴിയുന്ന പ്രവർത്തനങ്ങളുടെ പരിധി നിശ്ചയിക്കുന്നു.</li>
+        <li>കമ്പനി രൂപീകരണത്തിന് ആവശ്യമായ പ്രധാന രേഖകളിലൊന്നാണ്.</li>
+      </ul>
+      <h3>MOA ഒപ്പിടേണ്ട അംഗങ്ങളുടെ എണ്ണം</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>കമ്പനിയുടെ തരം</th><th>കുറഞ്ഞ അംഗങ്ങൾ</th></tr></thead>
+          <tbody>
+            <tr><td>Public Company</td><td>7</td></tr>
+            <tr><td>Private Company</td><td>2</td></tr>
+            <tr><td>One Person Company (OPC)</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>MOA-യിൽ സബ്സ്ക്രൈബർമാർ നിയമപ്രകാരം സാക്ഷ്യപ്പെടുത്തി ഒപ്പിടണം. ഇലക്ട്രോണിക് രീതിയിലും ഇത് തയ്യാറാക്കാം.</p>
+    </article>
+
+    <article class="topic" id="t-moa-forms">
+      <h2>2. മെമ്മോറാണ്ടത്തിന്റെ ഫോമുകൾ (Forms of MOA)</h2>
+      <p>Companies Act, 2013-ലെ <strong>Schedule I</strong> പ്രകാരം MOA-യ്ക്ക് അഞ്ച് മാതൃകാ ഫോമുകളുണ്ട്.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Table</th><th>കമ്പനിയുടെ തരം</th></tr></thead>
+          <tbody>
+            <tr><td>Table A</td><td>Company Limited by Shares</td></tr>
+            <tr><td>Table B</td><td>Company Limited by Guarantee without Share Capital</td></tr>
+            <tr><td>Table C</td><td>Company Limited by Guarantee with Share Capital</td></tr>
+            <tr><td>Table D</td><td>Unlimited Company without Share Capital</td></tr>
+            <tr><td>Table E</td><td>Unlimited Company with Share Capital</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-moa-objectives">
+      <h2>3. മെമ്മോറാണ്ടത്തിന്റെ ലക്ഷ്യങ്ങൾ (Objectives of MOA)</h2>
+      <ol>
+        <li>കമ്പനിയുടെ പ്രവർത്തനലക്ഷ്യങ്ങൾ വ്യക്തമാക്കുക.</li>
+        <li>കമ്പനിയുടെ അധികാരപരിധി നിർണയിക്കുക.</li>
+        <li>നിക്ഷേപകർക്ക് കമ്പനിയെക്കുറിച്ച് വിവരങ്ങൾ നൽകുക.</li>
+        <li>കടം നൽകുന്ന സ്ഥാപനങ്ങൾക്ക് കമ്പനിയുടെ പ്രവർത്തനങ്ങളെക്കുറിച്ച് ധാരണ നൽകുക.</li>
+        <li>ഷെയർഹോൾഡർമാരുടെയും കടം നൽകിയവരുടെയും താൽപ്പര്യങ്ങൾ സംരക്ഷിക്കുക.</li>
+        <li>കമ്പനിയുടെ അധികാരപരിധിക്ക് പുറത്തുള്ള പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കുക.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-moa-clauses">
+      <h2>4. മെമ്മോറാണ്ടത്തിലെ പ്രധാന ക്ലോസുകൾ (Clauses / Contents of MOA)</h2>
+      <p>MOA-യിൽ പ്രധാനമായും <strong>6 ക്ലോസുകൾ</strong> ഉൾപ്പെടുന്നു.</p>
+
+      <h3>1. Name Clause (നെയിം ക്ലോസ്)</h3>
+      <p>കമ്പനിയുടെ പേര് വ്യക്തമാക്കുന്ന ക്ലോസാണിത്.</p>
+      <ul>
+        <li>പബ്ലിക് കമ്പനിയുടെ പേരിനൊപ്പം <strong>Limited</strong> ചേർക്കണം.</li>
+        <li>പ്രൈവറ്റ് കമ്പനിയുടെ പേരിനൊപ്പം <strong>Private Limited</strong> ചേർക്കണം.</li>
+        <li>നിലവിലുള്ള കമ്പനികളുടെ പേരുമായി തെറ്റിദ്ധരിപ്പിക്കുന്ന സാമ്യം പാടില്ല.</li>
+        <li>സർക്കാർ സ്ഥാപനമാണെന്ന് തെറ്റിദ്ധരിപ്പിക്കുന്ന പേര് ഉപയോഗിക്കാൻ പാടില്ല.</li>
+        <li>നിയമപ്രകാരം ചില കമ്പനികൾക്ക് പേരിന്റെ അവസാനത്തിലുള്ള Limited എന്ന പദം ഒഴിവാക്കാൻ ഇളവുണ്ട്.</li>
+      </ul>
+
+      <h3>2. Registered Office Clause (രജിസ്റ്റേർഡ് ഓഫീസ് ക്ലോസ്)</h3>
+      <p>കമ്പനിയുടെ രജിസ്റ്റേർഡ് ഓഫീസ് സ്ഥിതി ചെയ്യുന്ന സംസ്ഥാനം വ്യക്തമാക്കുന്ന ക്ലോസാണിത്.</p>
+      <ul>
+        <li>കമ്പനിയുടെ ഔദ്യോഗിക വിലാസവുമായി ബന്ധപ്പെട്ട ക്ലോസാണ്.</li>
+        <li>നിയമപരമായ നോട്ടീസുകളും കത്തുകളും രജിസ്റ്റേർഡ് ഓഫീസിലേക്ക് അയയ്ക്കാം.</li>
+        <li>കമ്പനി രൂപീകരിച്ച് <strong>30 ദിവസത്തിനുള്ളിൽ</strong> രജിസ്റ്റേർഡ് ഓഫീസ് ഉണ്ടായിരിക്കണം.</li>
+      </ul>
+
+      <h3>3. Object Clause (ഒബ്ജക്റ്റ് ക്ലോസ്)</h3>
+      <p>കമ്പനി രൂപീകരിക്കുന്നതിന്റെ പ്രധാന ലക്ഷ്യങ്ങൾ വ്യക്തമാക്കുന്ന ക്ലോസാണിത്.</p>
+      <ul>
+        <li>കമ്പനി എന്ത് ബിസിനസ് നടത്തുമെന്ന് വ്യക്തമാക്കുന്നു.</li>
+        <li>കമ്പനിയുടെ പ്രവർത്തനപരിധി നിർണയിക്കുന്നു.</li>
+        <li>കമ്പനി അതിന്റെ നിയമപരമായ ലക്ഷ്യങ്ങൾക്കനുസരിച്ച് പ്രവർത്തിക്കണം.</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> വസ്ത്രവ്യാപാരം നടത്താൻ രൂപീകരിച്ച കമ്പനിയുടെ MOA-യിൽ വസ്ത്രവ്യാപാരം പ്രധാന ലക്ഷ്യമായി രേഖപ്പെടുത്താം.</div>
+
+      <h3>4. Liability Clause (ലയബിലിറ്റി ക്ലോസ്)</h3>
+      <p>കമ്പനിയിലെ അംഗങ്ങളുടെ ബാധ്യതയുടെ പരിധി (Extent of Liability) വ്യക്തമാക്കുന്നു.</p>
+      <ul>
+        <li><strong>Limited by Shares</strong> കമ്പനിയിൽ അംഗങ്ങളുടെ ബാധ്യത സാധാരണയായി അവരുടെ ഷെയറുകളിൽ അടയ്ക്കാൻ ബാക്കിയുള്ള തുകയിലേക്ക് പരിമിതമാണ്.</li>
+        <li><strong>Limited by Guarantee</strong> കമ്പനിയിൽ അംഗങ്ങളുടെ ബാധ്യത അവർ ഉറപ്പുനൽകിയ തുകയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.</li>
+        <li><strong>Unlimited Company</strong>-യിൽ അംഗങ്ങളുടെ ബാധ്യതയ്ക്ക് ഇത്തരത്തിലുള്ള നിയമപരമായ പരിധിയില്ല.</li>
+      </ul>
+
+      <h3>5. Capital Clause (ക്യാപ്പിറ്റൽ ക്ലോസ്)</h3>
+      <p>കമ്പനിയുടെ Authorised Share Capital സംബന്ധിച്ച വിവരങ്ങൾ വ്യക്തമാക്കുന്നു. ഇതിൽ ഉൾപ്പെടുന്നത്:</p>
+      <ul>
+        <li>അംഗീകൃത ഓഹരി മൂലധനം.</li>
+        <li>ഓഹരികളുടെ എണ്ണം.</li>
+        <li>ഓരോ ഓഹരിയുടെയും മുഖവില (Face Value).</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> Authorised Capital = ₹10,00,000 · Number of Shares = 1,00,000 · Face Value = ₹10</div>
+
+      <h3>6. Subscription Clause (സബ്സ്ക്രിപ്ഷൻ ക്ലോസ്)</h3>
+      <p>കമ്പനി രൂപീകരിക്കാൻ സബ്സ്ക്രൈബർമാർ സമ്മതം അറിയിക്കുന്ന ക്ലോസാണിത്.</p>
+      <ul>
+        <li>കമ്പനി രൂപീകരിക്കാനുള്ള അംഗങ്ങളുടെ സമ്മതം രേഖപ്പെടുത്തുന്നു.</li>
+        <li>അംഗങ്ങളുടെ പേരും ആവശ്യമായ മറ്റ് വിവരങ്ങളും ഉൾപ്പെടുന്നു.</li>
+        <li>അംഗങ്ങൾ ഏറ്റെടുക്കുന്ന ഷെയറുകളുടെ എണ്ണം രേഖപ്പെടുത്തുന്നു.</li>
+        <li>OPC-യിൽ ഏക അംഗം മരണപ്പെടുകയോ കരാറിൽ ഏർപ്പെടാൻ അശക്തനാകുകയോ ചെയ്താൽ അംഗമാകേണ്ട നോമിനിയെക്കുറിച്ചുള്ള വിവരങ്ങളും നിയമപ്രകാരം നൽകണം.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-moa-alteration">
+      <h2>5. മെമ്മോറാണ്ടത്തിൽ മാറ്റം വരുത്തൽ (Alteration of MOA)</h2>
+      <p>കമ്പനിയുടെ ആവശ്യങ്ങൾക്കനുസരിച്ച് നിയമപരമായ നടപടിക്രമങ്ങൾ പാലിച്ച് MOA-യിൽ മാറ്റങ്ങൾ വരുത്താം.</p>
+
+      <h3>1. Alteration of Name Clause (പേര് മാറ്റം)</h3>
+      <ul>
+        <li>സാധാരണയായി Special Resolution പാസാക്കണം.</li>
+        <li>Special Resolution പാസാക്കാൻ കുറഞ്ഞത് <strong>75% വോട്ടുകളുടെ</strong> പിന്തുണ ആവശ്യമാണ്.</li>
+        <li>ആവശ്യമായ സാഹചര്യങ്ങളിൽ കേന്ദ്ര സർക്കാരിന്റെ അനുമതി വേണം.</li>
+        <li>പേര് മാറ്റം രജിസ്റ്റർ ചെയ്തശേഷം പുതിയ Certificate of Incorporation ലഭിക്കും.</li>
+      </ul>
+
+      <h3>2. Alteration of Registered Office Clause (ഓഫീസ് മാറ്റം)</h3>
+      <ul>
+        <li>ഒരേ നഗരത്തിനുള്ളിലെ മാറ്റത്തിന് സാധാരണയായി പ്രത്യേക പ്രമേയം ആവശ്യമില്ല.</li>
+        <li>ഒരു സംസ്ഥാനത്തിനുള്ളിൽ അധികാരപരിധി മാറുന്ന ചില സാഹചര്യങ്ങളിൽ Regional Director-ന്റെ അനുമതി ആവശ്യമാണ്.</li>
+        <li>ഒരു സംസ്ഥാനത്തിൽനിന്ന് മറ്റൊരു സംസ്ഥാനത്തിലേക്ക് മാറ്റുന്നതിന് Special Resolution-ഉം കേന്ദ്ര സർക്കാരിന്റെ അനുമതിയും ആവശ്യമാണ്.</li>
+        <li>മാറ്റത്തിന്റെ സ്വഭാവമനുസരിച്ച് ROC-യെ നിശ്ചിത സമയപരിധിക്കുള്ളിൽ അറിയിക്കണം.</li>
+      </ul>
+
+      <h3>3. Alteration of Object Clause (ലക്ഷ്യങ്ങളിൽ മാറ്റം)</h3>
+      <ul>
+        <li>Special Resolution പാസാക്കണം.</li>
+        <li>മാറ്റം ROC-യിൽ രജിസ്റ്റർ ചെയ്യണം.</li>
+        <li>പൊതുജനങ്ങളിൽനിന്ന് സമാഹരിച്ച പണം വിനിയോഗിക്കാതെ ശേഷിക്കുന്ന ചില കമ്പനികൾക്ക് അധിക വെളിപ്പെടുത്തൽ വ്യവസ്ഥകൾ ബാധകമാണ്.</li>
+        <li>അത്തരം സാഹചര്യങ്ങളിൽ പത്രങ്ങളിലും വെബ്സൈറ്റിലും വിവരങ്ങൾ പ്രസിദ്ധീകരിക്കുകയും വിയോജിക്കുന്ന ഷെയർഹോൾഡർമാർക്ക് നിയമപ്രകാരമുള്ള Exit Option നൽകുകയും വേണം.</li>
+      </ul>
+
+      <h3>4. Alteration of Liability Clause (ബാധ്യതയിൽ മാറ്റം)</h3>
+      <ul>
+        <li>നിയമപരമായ നടപടിക്രമങ്ങൾ പാലിക്കണം.</li>
+        <li>ആവശ്യമായ Resolution പാസാക്കണം.</li>
+        <li>ബാധകമായ ഫോമുകൾ ROC-യിൽ സമർപ്പിക്കണം.</li>
+        <li>അംഗങ്ങളുടെ ബാധ്യത വർദ്ധിപ്പിക്കുന്നതിന് സാധാരണയായി ബന്ധപ്പെട്ട അംഗത്തിന്റെ രേഖാമൂലമുള്ള സമ്മതം ആവശ്യമാണ്.</li>
+      </ul>
+
+      <h3>5. Alteration of Capital Clause (മൂലധനത്തിൽ മാറ്റം)</h3>
+      <ul>
+        <li><strong>Increase</strong> – അംഗീകൃത ഓഹരി മൂലധനം വർദ്ധിപ്പിക്കൽ.</li>
+        <li><strong>Consolidation</strong> – ചെറിയ മൂല്യമുള്ള ഓഹരികൾ ചേർത്ത് വലിയ മൂല്യമുള്ള ഓഹരികളാക്കൽ.</li>
+        <li><strong>Conversion</strong> – ഓഹരികളെ സ്റ്റോക്കാക്കി മാറ്റൽ.</li>
+        <li><strong>Subdivision</strong> – വലിയ മൂല്യമുള്ള ഓഹരികളെ ചെറിയ മൂല്യമുള്ള ഓഹരികളായി വിഭജിക്കൽ.</li>
+        <li><strong>Cancellation</strong> – ഏറ്റെടുക്കാത്ത ഓഹരികൾ റദ്ദാക്കൽ.</li>
+      </ul>
+      <div class="key"><strong>ശ്രദ്ധിക്കുക:</strong> Companies Act, 2013-ലെ <strong>Section 61</strong> പ്രകാരമുള്ള സാധാരണ മൂലധനമാറ്റങ്ങൾക്ക്, Articles അനുവദിക്കുന്നുവെങ്കിൽ, പൊതുയോഗത്തിലെ Ordinary Resolution മതിയാകാം.</div>
+    </article>
+
+    <article class="topic" id="t-ultra-vires">
+      <h2>6. Doctrine of Ultra Vires</h2>
+      <h3>അർത്ഥം (Meaning)</h3>
+      <p>Ultra Vires എന്ന ലാറ്റിൻ പദത്തിന്റെ അർത്ഥം <strong>Beyond the Powers (അധികാരപരിധിക്ക് അപ്പുറം)</strong> എന്നാണ്.</p>
+      <p>ഒരു കമ്പനി അതിന്റെ MOA അനുവദിക്കുന്ന അധികാരപരിധിക്ക് പുറത്തായി നടത്തുന്ന പ്രവർത്തനങ്ങളെയാണ് <strong>Ultra Vires Acts</strong> എന്ന് വിളിക്കുന്നത്.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ul>
+        <li>കമ്പനിയുടെ MOA-യിലെ അധികാരപരിധിക്ക് പുറത്തുള്ള പ്രവർത്തനങ്ങൾ Ultra Vires ആണ്.</li>
+        <li>അത്തരം പ്രവർത്തനങ്ങൾ നിയമപരമായി അസാധുവാണ് (Void).</li>
+        <li>എല്ലാ ഷെയർഹോൾഡർമാരും സമ്മതിച്ചാലും കമ്പനിയുടെ അധികാരപരിധിക്ക് പുറത്തുള്ള പ്രവർത്തനങ്ങൾ Ratify ചെയ്യാൻ കഴിയില്ല.</li>
+        <li>ഷെയർഹോൾഡർമാരുടെയും കടം നൽകിയവരുടെയും താൽപ്പര്യങ്ങൾ സംരക്ഷിക്കുന്നു.</li>
+        <li>കമ്പനിയുടെ അധികാരദുരുപയോഗം തടയാൻ സഹായിക്കുന്നു.</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനി MOA പ്രകാരം വസ്ത്രനിർമാണം നടത്താനാണ് രൂപീകരിച്ചതെന്ന് കരുതുക. ആ കമ്പനിക്ക് അനുവദിച്ചിരിക്കുന്ന ലക്ഷ്യങ്ങൾക്കും അനുബന്ധ അധികാരങ്ങൾക്കും പുറത്തായി മറ്റൊരു ബിസിനസ് നടത്തിയാൽ അത് Ultra Vires പ്രവർത്തനമാകാം.</div>
+      <h3>Ratification (ശരിവെക്കൽ)</h3>
+      <p>Ratification എന്നാൽ മുമ്പ് നടത്തിയ ഒരു പ്രവർത്തനത്തിന് പിന്നീട് നിയമപരമായ അംഗീകാരം നൽകുന്നതാണ്.</p>
+      <ul>
+        <li><strong>Ultra Vires the Company:</strong> കമ്പനിയുടെ MOA-യിലെ അധികാരപരിധിക്ക് പുറത്തുള്ള പ്രവർത്തനങ്ങൾ ശരിവെക്കാൻ കഴിയില്ല.</li>
+        <li><strong>Ultra Vires the Directors:</strong> കമ്പനിയുടെ അധികാരപരിധിക്കുള്ളിലാണെങ്കിലും ഡയറക്ടർമാർ സ്വന്തം അധികാരം മറികടന്ന് നടത്തിയ പ്രവർത്തനങ്ങൾ ചില സാഹചര്യങ്ങളിൽ ഷെയർഹോൾഡർമാർക്ക് ശരിവെക്കാം.</li>
+        <li><strong>Ultra Vires the Articles:</strong> MOA അനുവദിക്കുന്നതും നിയമവിരുദ്ധമല്ലാത്തതുമായ പ്രവർത്തനങ്ങൾ Articles-ൽ ആവശ്യമായ മാറ്റങ്ങൾ വരുത്തി ചില സാഹചര്യങ്ങളിൽ സാധൂകരിക്കാം.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-ultra-importance">
+      <h2>7. Doctrine of Ultra Vires-ന്റെ പ്രാധാന്യം</h2>
+      <ul>
+        <li><strong>Protection of Shareholders:</strong> ഷെയർഹോൾഡർമാരുടെ നിക്ഷേപം സംരക്ഷിക്കുന്നു.</li>
+        <li><strong>Protection of Creditors:</strong> കടം നൽകിയവരുടെ താൽപ്പര്യങ്ങൾ സംരക്ഷിക്കുന്നു.</li>
+        <li><strong>Prevention of Misuse:</strong> കമ്പനിയുടെ അധികാരദുരുപയോഗം തടയുന്നു.</li>
+        <li><strong>Control of Activities:</strong> കമ്പനിയുടെ പ്രവർത്തനങ്ങൾ നിയമപരമായ പരിധിക്കുള്ളിൽ നിലനിർത്തുന്നു.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-moa-points">
+      <h2>📌 പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന പോയിന്റുകൾ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ചോദ്യം</th><th>ഉത്തരം</th></tr></thead>
+          <tbody>
+            <tr><td>MOA Full Form</td><td>Memorandum of Association</td></tr>
+            <tr><td>MOA അറിയപ്പെടുന്നത്</td><td>Magna Carta / Charter</td></tr>
+            <tr><td>MOA എന്താണ്?</td><td>Company's Fundamental Document</td></tr>
+            <tr><td>MOA-യുടെ പ്രധാന ക്ലോസുകൾ</td><td>6</td></tr>
+            <tr><td>MOA Forms</td><td>5</td></tr>
+            <tr><td>MOA Forms ഉൾപ്പെടുന്ന Schedule</td><td>Schedule I</td></tr>
+            <tr><td>Public Company – Minimum Members</td><td>7</td></tr>
+            <tr><td>Private Company – Minimum Members</td><td>2</td></tr>
+            <tr><td>OPC – Minimum Members</td><td>1</td></tr>
+            <tr><td>ഏറ്റവും പ്രധാനപ്പെട്ട ക്ലോസ്</td><td>Object Clause</td></tr>
+            <tr><td>Ultra Vires Meaning</td><td>Beyond the Powers</td></tr>
+            <tr><td>Ultra Vires Act</td><td>Void</td></tr>
+            <tr><td>Ultra Vires Act Ratify ചെയ്യാമോ?</td><td>ഇല്ല</td></tr>
+            <tr><td>Special Resolution</td><td>കുറഞ്ഞത് 75% വോട്ടുകളുടെ പിന്തുണ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>📝 ചുരുക്കം:</strong> Memorandum of Association (MOA) ഒരു കമ്പനിയുടെ ലക്ഷ്യങ്ങളും അധികാരങ്ങളും പ്രവർത്തനപരിധിയും വ്യക്തമാക്കുന്ന അടിസ്ഥാന നിയമരേഖയാണ്. ഇതിനെ കമ്പനിയുടെ Magna Carta എന്നും വിളിക്കുന്നു. MOA-യിൽ പ്രധാനമായും ആറ് ക്ലോസുകളുണ്ട്: Name Clause, Registered Office Clause, Object Clause, Liability Clause, Capital Clause, Subscription Clause.</div>
+    </article>
+  </section>
+
+  <!-- ================= AOA ================= -->
+  <section class="module" id="module-aoa">
+    <div class="module-head">
+      <span class="module-badge">Part 5</span>
+      <h1>Articles of Association (AOA)</h1>
+      <p class="module-sub">ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ</p>
+    </div>
+
+    <article class="topic" id="t-aoa">
+      <h2>1. ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ (AOA) എന്നാൽ എന്ത്?</h2>
+      <p>ഒരു കമ്പനിയുടെ ആഭ്യന്തര ഭരണനിർവഹണത്തിനും (Internal Management) പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കുന്നതിനും ആവശ്യമായ നിയമങ്ങളും ചട്ടങ്ങളും അടങ്ങിയ രേഖയാണ് <strong>ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ (AOA)</strong>.</p>
+      <p>ഇതിനെ കമ്പനിയുടെ <strong>Internal Rule Book</strong> എന്നും വിളിക്കുന്നു.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>കമ്പനിയുടെ ആഭ്യന്തര പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കുന്നു.</li>
+        <li>അംഗങ്ങളുടെ അവകാശങ്ങളും ചുമതലകളും വ്യക്തമാക്കുന്നു.</li>
+        <li>ഡയറക്ടർമാരുടെ അധികാരങ്ങളും ഉത്തരവാദിത്തങ്ങളും നിർവചിക്കുന്നു.</li>
+        <li>കമ്പനിയുടെ മീറ്റിംഗുകൾ നടത്തുന്നതിനുള്ള നടപടിക്രമങ്ങൾ വ്യക്തമാക്കുന്നു.</li>
+        <li>ഷെയറുകളുടെ ഇഷ്യൂ, ട്രാൻസ്ഫർ തുടങ്ങിയ കാര്യങ്ങൾ നിയന്ത്രിക്കുന്നു.</li>
+        <li>മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷന് (MOA) കീഴ്പ്പെട്ട രേഖയാണ്.</li>
+      </ol>
+      <div class="note"><strong>ഓർമ്മിക്കാൻ:</strong> AOA = കമ്പനിയുടെ ആഭ്യന്തര നിയമങ്ങൾ (Internal Rules).</div>
+    </article>
+
+    <article class="topic" id="t-entrenchment">
+      <h2>2. എന്റ്രെഞ്ച്മെന്റ് ഓഫ് ആർട്ടിക്കിൾസ് (Entrenchment of Articles)</h2>
+      <h3>അർത്ഥം</h3>
+      <p>ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷനിലെ ചില വ്യവസ്ഥകളിൽ മാറ്റം വരുത്തുന്നത് സാധാരണയേക്കാൾ കൂടുതൽ ബുദ്ധിമുട്ടുള്ളതാക്കുന്ന പ്രത്യേക സംവിധാനമാണ് <strong>Entrenchment of Articles</strong>.</p>
+      <p>സാധാരണയായി AOA മാറ്റാൻ Special Resolution ആവശ്യമാണ്. എന്നാൽ Entrenchment ഉള്ള വ്യവസ്ഥകൾ മാറ്റാൻ കൂടുതൽ കർശനമായ നിബന്ധനകൾ പാലിക്കേണ്ടിവരും.</p>
+      <h3>പ്രധാന കാര്യങ്ങൾ</h3>
+      <ol>
+        <li>കമ്പനീസ് ആക്ട് 2013 പ്രകാരമാണ് ഈ സംവിധാനം നിലവിലുള്ളത്.</li>
+        <li>ചില പ്രധാന വ്യവസ്ഥകൾക്ക് കൂടുതൽ സംരക്ഷണം നൽകുന്നു.</li>
+        <li>സാധാരണ Special Resolution-നെക്കാൾ കർശനമായ നടപടിക്രമങ്ങൾ ആവശ്യപ്പെടാം.</li>
+        <li>കമ്പനി രൂപീകരിക്കുന്ന സമയത്തോ പിന്നീട് ഭേദഗതിയിലൂടെയോ ഉൾപ്പെടുത്താം.</li>
+        <li>Entrenchment സംബന്ധിച്ച വിവരം Registrar of Companies (ROC)-നെ അറിയിക്കണം.</li>
+      </ol>
+      <h3>Entrenchment കൊണ്ടുവരുന്നതിനുള്ള അനുമതി</h3>
+      <ul>
+        <li><strong>Private Company:</strong> എല്ലാ അംഗങ്ങളുടെയും സമ്മതം ആവശ്യമാണ്.</li>
+        <li><strong>Public Company:</strong> Special Resolution ആവശ്യമാണ്.</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനിയിലെ പ്രധാനപ്പെട്ട വ്യവസ്ഥ മാറ്റാൻ 90% അംഗങ്ങളുടെ അനുമതി വേണമെന്ന് AOA-യിൽ നിശ്ചയിക്കുന്നത് Entrenchment-ന്റെ ഉദാഹരണമാണ്.</div>
+    </article>
+
+    <article class="topic" id="t-printing">
+      <h2>3. പ്രിന്റിംഗും ഒപ്പിടലും (Printing and Signing of AOA)</h2>
+      <p>ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ തയ്യാറാക്കുമ്പോൾ പാലിക്കേണ്ട കാര്യങ്ങൾ:</p>
+      <ol>
+        <li>രേഖ ശരിയായ രീതിയിൽ തയ്യാറാക്കണം.</li>
+        <li>വ്യവസ്ഥകൾ വ്യക്തമായ പാരഗ്രാഫുകളായി ക്രമീകരിക്കണം.</li>
+        <li>ഓരോ വ്യവസ്ഥയ്ക്കും തുടർച്ചയായ നമ്പറുകൾ നൽകണം.</li>
+        <li>Memorandum of Association-ൽ ഒപ്പിട്ട Subscribers ആർട്ടിക്കിൾസിലും ഒപ്പിടണം.</li>
+        <li>ഒപ്പിടൽ സാക്ഷികളുടെ സാന്നിധ്യത്തിലായിരിക്കണം.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-model-articles">
+      <h2>4. മോഡൽ ആർട്ടിക്കിൾസ് (Model Articles of Association)</h2>
+      <p>Companies Act, 2013-ലെ <strong>Schedule I</strong> പ്രകാരം കമ്പനികൾക്ക് ഉപയോഗിക്കാവുന്ന മാതൃകാ ആർട്ടിക്കിൾസുകളാണ് Model Articles. ഇവ അഞ്ച് ടേബിളുകളായി തിരിച്ചിരിക്കുന്നു.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Table</th><th>ബാധകമായ കമ്പനി</th></tr></thead>
+          <tbody>
+            <tr><td>Table F</td><td>Company Limited by Shares</td></tr>
+            <tr><td>Table G</td><td>Company Limited by Guarantee with Share Capital</td></tr>
+            <tr><td>Table H</td><td>Company Limited by Guarantee without Share Capital</td></tr>
+            <tr><td>Table I</td><td>Unlimited Company with Share Capital</td></tr>
+            <tr><td>Table J</td><td>Unlimited Company without Share Capital</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>ഓർമ്മിക്കാൻ:</strong> F – Limited by Shares · G – Guarantee with Share Capital · H – Guarantee without Share Capital · I – Unlimited with Share Capital · J – Unlimited without Share Capital</div>
+    </article>
+
+    <article class="topic" id="t-aoa-contents">
+      <h2>5. ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷനിലെ ഉള്ളടക്കങ്ങൾ (Contents of AOA)</h2>
+      <p>ഒരു കമ്പനിയുടെ AOA-യിൽ സാധാരണയായി ഉൾപ്പെടുന്ന പ്രധാന കാര്യങ്ങൾ:</p>
+      <ol>
+        <li><strong>Share Capital:</strong> കമ്പനിയുടെ ഓഹരി മൂലധനം സംബന്ധിച്ച നിയമങ്ങൾ.</li>
+        <li><strong>Rights of Shareholders:</strong> ഓഹരി ഉടമകളുടെ അവകാശങ്ങൾ.</li>
+        <li><strong>Issue of Shares:</strong> ഓഹരികൾ വിതരണം ചെയ്യുന്നതിനുള്ള നടപടിക്രമങ്ങൾ.</li>
+        <li><strong>Lien on Shares:</strong> കുടിശ്ശികയുമായി ബന്ധപ്പെട്ട് ഓഹരികളിന്മേലുള്ള കമ്പനിയുടെ അവകാശം.</li>
+        <li><strong>Calls on Shares:</strong> ഓഹരികളുടെ അടയ്ക്കാനുള്ള തുക ആവശ്യപ്പെടുന്ന രീതി.</li>
+        <li><strong>Transfer of Shares:</strong> ഓഹരികളുടെ ഉടമസ്ഥാവകാശം മറ്റൊരാൾക്ക് കൈമാറൽ.</li>
+        <li><strong>Transmission of Shares:</strong> മരണം പോലുള്ള നിയമപരമായ സാഹചര്യങ്ങളിൽ ഓഹരികളുടെ അവകാശം കൈമാറൽ.</li>
+        <li><strong>Forfeiture of Shares:</strong> നിശ്ചിത തുക അടയ്ക്കാത്ത സാഹചര്യത്തിൽ ഓഹരികൾ കണ്ടുകെട്ടൽ.</li>
+        <li><strong>Conversion of Shares into Stock:</strong> ഓഹരികളെ സ്റ്റോക്കാക്കി മാറ്റൽ.</li>
+        <li><strong>Meetings:</strong> കമ്പനി മീറ്റിംഗുകളുടെ നിയമങ്ങളും നടപടിക്രമങ്ങളും.</li>
+        <li><strong>Directors:</strong> ഡയറക്ടർമാരുടെ നിയമനം, അധികാരങ്ങൾ, ചുമതലകൾ.</li>
+        <li><strong>Dividend:</strong> ലാഭവിഹിതം വിതരണം ചെയ്യുന്നതിനുള്ള നിയമങ്ങൾ.</li>
+      </ol>
+      <h3>പ്രൈവറ്റ് കമ്പനികളുടെ പ്രത്യേക വ്യവസ്ഥകൾ</h3>
+      <ul>
+        <li>ഓഹരികളുടെ കൈമാറ്റത്തിന് നിയന്ത്രണങ്ങൾ ഉണ്ടായിരിക്കും.</li>
+        <li>അംഗങ്ങളുടെ പരമാവധി എണ്ണം സാധാരണയായി 200 ആയി പരിമിതപ്പെടുത്തും.</li>
+        <li>പൊതുജനങ്ങളെ കമ്പനിയുടെ സെക്യൂരിറ്റികൾ സബ്സ്ക്രൈബ് ചെയ്യാൻ ക്ഷണിക്കുന്നത് നിരോധിക്കും.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-aoa-alteration">
+      <h2>6. ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷനിൽ മാറ്റം വരുത്തൽ (Alteration of AOA)</h2>
+      <p>കമ്പനിയുടെ ആവശ്യങ്ങൾക്കനുസരിച്ച് AOA-യിലെ വ്യവസ്ഥകളിൽ മാറ്റം വരുത്തുന്നതിനെയാണ് Alteration of Articles എന്ന് പറയുന്നത്.</p>
+      <h3>മാറ്റം വരുത്തുന്ന നടപടിക്രമങ്ങൾ</h3>
+      <ol>
+        <li><strong>Step 1:</strong> കമ്പനിയുടെ General Meeting വിളിച്ചുചേർക്കുക.</li>
+        <li><strong>Step 2:</strong> മാറ്റം വരുത്താനുള്ള നിർദേശം അവതരിപ്പിക്കുക.</li>
+        <li><strong>Step 3:</strong> Special Resolution പാസാക്കുക.</li>
+        <li><strong>Step 4:</strong> ആവശ്യമായ രേഖകൾ 30 ദിവസത്തിനുള്ളിൽ Registrar of Companies (ROC)-ന് സമർപ്പിക്കുക.</li>
+        <li><strong>Step 5:</strong> അംഗീകരിച്ച മാറ്റങ്ങൾ കമ്പനിയുടെ AOA-യിൽ ഉൾപ്പെടുത്തുക.</li>
+      </ol>
+      <div class="key"><strong>ശ്രദ്ധിക്കുക:</strong> Special Resolution-ന് നിയമപ്രകാരം വോട്ട് ചെയ്ത അനുകൂല വോട്ടുകൾ പ്രതികൂല വോട്ടുകളുടെ കുറഞ്ഞത് മൂന്നിരട്ടിയായിരിക്കണം. ഇതിനെ സാധാരണയായി <strong>75% ഭൂരിപക്ഷം</strong> എന്നു പറയുന്നു.</div>
+    </article>
+
+    <article class="topic" id="t-aoa-limitations">
+      <h2>7. AOA മാറ്റം വരുത്തുന്നതിനുള്ള നിയന്ത്രണങ്ങൾ (Limitations of Alteration)</h2>
+      <ol>
+        <li><strong>Companies Act-ന് വിരുദ്ധമാകരുത്:</strong> ആർട്ടിക്കിൾസിലെ മാറ്റങ്ങൾ കമ്പനീസ് ആക്ടിലെ വ്യവസ്ഥകൾക്ക് എതിരാകാൻ പാടില്ല.</li>
+        <li><strong>MOA-യ്ക്ക് വിരുദ്ധമാകരുത്:</strong> മാറ്റങ്ങൾ Memorandum of Association-ലെ വ്യവസ്ഥകൾക്ക് വിരുദ്ധമാകരുത്.</li>
+        <li><strong>നിയമവിരുദ്ധമായിരിക്കരുത്:</strong> നിയമവിരുദ്ധ പ്രവർത്തനങ്ങൾക്ക് അനുമതി നൽകുന്ന മാറ്റങ്ങൾ വരുത്താൻ പാടില്ല.</li>
+        <li><strong>അംഗങ്ങളുടെ ബാധ്യത വർദ്ധിപ്പിക്കരുത്:</strong> നിലവിലുള്ള അംഗങ്ങളുടെ സമ്മതമില്ലാതെ അവരുടെ സാമ്പത്തിക ബാധ്യത വർദ്ധിപ്പിക്കാൻ പാടില്ല.</li>
+        <li><strong>കമ്പനിയുടെ നന്മയ്ക്കായിരിക്കണം:</strong> മാറ്റങ്ങൾ കമ്പനിയുടെ മൊത്തത്തിലുള്ള താൽപര്യങ്ങൾ സംരക്ഷിക്കുന്നതിനായിരിക്കണം.</li>
+        <li><strong>ന്യൂനപക്ഷ അംഗങ്ങളെ അടിച്ചമർത്തരുത്:</strong> Minority Shareholders-ന്റെ അവകാശങ്ങൾ അന്യായമായി ഇല്ലാതാക്കുന്ന മാറ്റങ്ങൾ പാടില്ല.</li>
+        <li><strong>നിലവിലുള്ള കരാറുകൾ ലംഘിക്കരുത്:</strong> കരാർ സംബന്ധിച്ച നിയമപരമായ ബാധ്യതകൾ പാലിക്കണം.</li>
+        <li><strong>Public Company-യെ Private Company ആക്കൽ:</strong> ഇത്തരം മാറ്റങ്ങൾക്ക് നിലവിലുള്ള നിയമപ്രകാരം ആവശ്യമായ അധികാരികളുടെ അംഗീകാരം ലഭിക്കണം.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-moa-aoa-diff">
+      <h2>8. MOA &amp; AOA – വ്യത്യാസങ്ങൾ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>അടിസ്ഥാനം</th><th>MOA</th><th>AOA</th></tr></thead>
+          <tbody>
+            <tr><td>അർത്ഥം</td><td>കമ്പനിയുടെ അടിസ്ഥാന രേഖ</td><td>കമ്പനിയുടെ ആഭ്യന്തര നിയമങ്ങൾ</td></tr>
+            <tr><td>സ്വഭാവം</td><td>Fundamental Charter</td><td>Internal Rule Book</td></tr>
+            <tr><td>ലക്ഷ്യം</td><td>കമ്പനിയുടെ ലക്ഷ്യങ്ങളും പ്രവർത്തനപരിധിയും വ്യക്തമാക്കുന്നു</td><td>ആഭ്യന്തര പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കുന്നു</td></tr>
+            <tr><td>ബന്ധം</td><td>കമ്പനിയുടെ ബാഹ്യബന്ധങ്ങളും പ്രവർത്തനപരിധിയും</td><td>കമ്പനിയും അംഗങ്ങളും തമ്മിലുള്ള ആഭ്യന്തര ബന്ധം</td></tr>
+            <tr><td>സ്ഥാനം</td><td>AOA-യെക്കാൾ ഉയർന്ന സ്ഥാനം</td><td>MOA-യ്ക്ക് കീഴ്പ്പെട്ടത്</td></tr>
+            <tr><td>മാറ്റം</td><td>കൂടുതൽ നിയമപരമായ നിയന്ത്രണങ്ങളുണ്ട്</td><td>താരതമ്യേന എളുപ്പത്തിൽ മാറ്റാം</td></tr>
+            <tr><td>ഉള്ളടക്കം</td><td>Name, Registered Office, Objects, Liability, Capital തുടങ്ങിയ ക്ലോസുകൾ</td><td>Shares, Meetings, Directors, Dividend തുടങ്ങിയ നിയമങ്ങൾ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>എളുപ്പത്തിൽ ഓർമ്മിക്കാൻ:</strong><br>MOA = കമ്പനി എന്ത് ചെയ്യണം? (What the company can do?)<br>AOA = കമ്പനി എങ്ങനെ പ്രവർത്തിക്കണം? (How the company operates?)</div>
+    </article>
+
+    <article class="topic" id="t-aoa-legal">
+      <h2>9. ആർട്ടിക്കിൾസിന്റെ നിയമപരമായ പ്രാധാന്യം (Legal Effect of AOA)</h2>
+      <p>AOA കമ്പനിയുടെ ആഭ്യന്തര പ്രവർത്തനങ്ങളെ നിയന്ത്രിക്കുന്ന നിയമപരമായ രേഖയാണ്.</p>
+      <h3>നിയമപരമായ മുൻഗണന</h3>
+      <p><span class="tag">Companies Act</span> → <span class="tag">MOA</span> → <span class="tag">AOA</span></p>
+      <ol>
+        <li>Companies Act-ന് ഏറ്റവും ഉയർന്ന നിയമപരമായ പ്രാധാന്യമുണ്ട്.</li>
+        <li>MOA കമ്പനിയുടെ പ്രവർത്തനപരിധി നിർണയിക്കുന്നു.</li>
+        <li>AOA കമ്പനിയുടെ ആഭ്യന്തര പ്രവർത്തനങ്ങൾ നിയന്ത്രിക്കുന്നു.</li>
+      </ol>
+      <p>രജിസ്റ്റർ ചെയ്ത MOA-യും AOA-യും കമ്പനിക്കും അംഗങ്ങൾക്കും ഇടയിൽ നിയമപരമായ ബാധ്യത സൃഷ്ടിക്കുന്നു.</p>
+    </article>
+
+    <article class="topic" id="t-ratification">
+      <h2>10. റാറ്റിഫിക്കേഷൻ (Ratification)</h2>
+      <h3>അർത്ഥം</h3>
+      <p>കമ്പനിയുടെ അധികാരപരിധിക്കുള്ളിൽ വരുന്ന ഒരു പ്രവൃത്തിക്ക് പിന്നീട് നിയമപരമായി അംഗീകാരം നൽകുന്നതിനെയാണ് <strong>Ratification</strong> എന്ന് പറയുന്നത്.</p>
+      <h3>പ്രധാന കാര്യങ്ങൾ</h3>
+      <ol>
+        <li>AOA പ്രകാരമുള്ള അധികാരപരിധി ലംഘിച്ചെങ്കിലും MOA-യുടെയും നിയമത്തിന്റെയും പരിധിക്കുള്ളിലുള്ള ചില പ്രവൃത്തികൾക്ക് ആവശ്യമായ അംഗീകാരം പിന്നീട് നൽകാം.</li>
+        <li>MOA-യുടെ അധികാരപരിധിക്ക് പുറത്തുള്ള പ്രവൃത്തികൾക്ക് സാധാരണയായി Ratification നൽകാൻ സാധിക്കില്ല.</li>
+        <li>Companies Act-ന് വിരുദ്ധമായ പ്രവൃത്തികൾ Ratification വഴി സാധൂകരിക്കാൻ കഴിയില്ല.</li>
+      </ol>
+      <div class="note"><strong>ഓർമ്മിക്കാൻ:</strong><br>Beyond AOA, but within MOA and law → ചില സാഹചര്യങ്ങളിൽ Ratification സാധ്യമാണ്.<br>Beyond MOA → Ratification സാധ്യമല്ല.</div>
+
+      <h3>പരീക്ഷയ്ക്ക് പ്രധാനപ്പെട്ട ചോദ്യങ്ങൾ</h3>
+      <h4>2 മാർക്ക് ചോദ്യങ്ങൾ</h4>
+      <ol>
+        <li>What is Articles of Association?</li>
+        <li>What is Entrenchment of Articles?</li>
+        <li>What are Model Articles?</li>
+        <li>What is Ratification?</li>
+        <li>What is meant by Alteration of Articles?</li>
+        <li>What is Table F?</li>
+      </ol>
+      <h4>5 മാർക്ക് ചോദ്യങ്ങൾ</h4>
+      <ol>
+        <li>Explain the contents of Articles of Association.</li>
+        <li>Explain the procedure for alteration of Articles.</li>
+        <li>Explain the limitations of alteration of Articles.</li>
+        <li>Explain the Entrenchment provisions of Articles.</li>
+        <li>Explain the legal effects of Articles of Association.</li>
+      </ol>
+      <h4>10 മാർക്ക് ചോദ്യങ്ങൾ</h4>
+      <ol>
+        <li>Define Articles of Association. Explain its contents and importance.</li>
+        <li>Explain the procedure and limitations of alteration of Articles of Association.</li>
+        <li>Distinguish between Memorandum of Association and Articles of Association.</li>
+      </ol>
+
+      <h3>QUICK REVISION – ഒറ്റനോട്ടത്തിൽ</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>വിഷയം</th><th>ഓർമ്മിക്കേണ്ട കാര്യം</th></tr></thead>
+          <tbody>
+            <tr><td>AOA</td><td>Internal Rule Book</td></tr>
+            <tr><td>നിയമം</td><td>Companies Act, 2013</td></tr>
+            <tr><td>പ്രധാന ഉപയോഗം</td><td>Internal Management</td></tr>
+            <tr><td>Entrenchment</td><td>മാറ്റങ്ങൾ കൂടുതൽ കർശനമാക്കൽ</td></tr>
+            <tr><td>Model Articles</td><td>Schedule I – Tables F to J</td></tr>
+            <tr><td>Alteration</td><td>Special Resolution</td></tr>
+            <tr><td>ROC Filing</td><td>സാധാരണയായി 30 ദിവസത്തിനുള്ളിൽ</td></tr>
+            <tr><td>MOA</td><td>Fundamental Charter</td></tr>
+            <tr><td>AOA</td><td>Subordinate to MOA</td></tr>
+            <tr><td>Ratification</td><td>നിയമപരമായ പരിധിക്കുള്ളിലെ പ്രവൃത്തിക്ക് പിന്നീട് അംഗീകാരം</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="key"><strong>ഏറ്റവും പ്രധാനപ്പെട്ട മൂന്ന് കാര്യങ്ങൾ:</strong><br>1. Articles of Association കമ്പനിയുടെ ആഭ്യന്തര ഭരണനിർവഹണത്തിനുള്ള നിയമങ്ങൾ അടങ്ങിയ രേഖയാണ്.<br>2. Special Resolution വഴി AOA-യിൽ മാറ്റം വരുത്താം. എന്നാൽ Companies Act, MOA എന്നിവയ്ക്ക് വിരുദ്ധമായിരിക്കരുത്.<br>3. MOA കമ്പനിയുടെ പ്രവർത്തനപരിധി വ്യക്തമാക്കുന്നു; AOA ആ പരിധിക്കുള്ളിൽ കമ്പനി എങ്ങനെ പ്രവർത്തിക്കണമെന്ന് വ്യക്തമാക്കുന്നു.</div>
+    </article>
+  </section>
+
+  <!-- ================= CONSTRUCTIVE NOTICE ================= -->
+  <section class="module" id="module-notice">
+    <div class="module-head">
+      <span class="module-badge">Part 6</span>
+      <h1>Constructive Notice &amp; Indoor Management</h1>
+      <p class="module-sub">Doctrine of Constructive Notice · Doctrine of Indoor Management · Conversion</p>
+    </div>
+
+    <article class="topic" id="t-constructive">
+      <h2>1. ഡോക്ട്രിൻ ഓഫ് കൺസ്ട്രക്ടീവ് നോട്ടീസ് (Doctrine of Constructive Notice)</h2>
+      <h3>നിർവചനം (Definition)</h3>
+      <p>ഒരു കമ്പനിയുടെ മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷൻ (MOA), ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ (AOA) എന്നീ രേഖകൾ രജിസ്ട്രാർ ഓഫ് കമ്പനീസിൽ (ROC) രജിസ്റ്റർ ചെയ്തതിനാൽ അവ പൊതുരേഖകളായി (Public Documents) മാറുന്നു. ഈ രേഖകളിലെ വ്യവസ്ഥകൾ കമ്പനിയുമായി ഇടപാടുകൾ നടത്തുന്ന എല്ലാവർക്കും അറിയാമെന്ന് നിയമം അനുമാനിക്കുന്ന തത്ത്വമാണ് <strong>ഡോക്ട്രിൻ ഓഫ് കൺസ്ട്രക്ടീവ് നോട്ടീസ്</strong>.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>MOA, AOA എന്നിവ പൊതുരേഖകളാണ്.</li>
+        <li>കമ്പനിയുമായി ഇടപാടുകൾ നടത്തുന്നവർ ഈ രേഖകൾ പരിശോധിച്ചിട്ടുണ്ടെന്ന് നിയമം അനുമാനിക്കുന്നു.</li>
+        <li>രേഖകളിലെ വ്യവസ്ഥകൾ അറിയില്ലെന്ന് പറഞ്ഞ് ഒരാൾക്ക് നിയമപരമായ ഉത്തരവാദിത്വത്തിൽനിന്ന് എളുപ്പത്തിൽ ഒഴിഞ്ഞുമാറാൻ കഴിയില്ല.</li>
+        <li>ഈ തത്ത്വം പ്രധാനമായും കമ്പനിയുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കുന്നു.</li>
+      </ol>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനിയുടെ AOA പ്രകാരം ഷെയർഹോൾഡർമാരുടെ അനുമതിയില്ലാതെ ഡയറക്ടർക്ക് ₹10 ലക്ഷം വരെ മാത്രമേ കടമെടുക്കാൻ കഴിയൂ എന്ന് കരുതുക. എന്നാൽ ഒരാൾ ഈ വ്യവസ്ഥ പരിശോധിക്കാതെ ഡയറക്ടർക്ക് ₹20 ലക്ഷം കടം നൽകുന്നു. പിന്നീട് AOA-യിലെ വ്യവസ്ഥ അറിയില്ലായിരുന്നു എന്ന് പറഞ്ഞ് അയാൾക്ക് തന്റെ അവകാശവാദം ന്യായീകരിക്കാൻ കഴിയണമെന്നില്ല.</div>
+      <div class="note"><strong>ഓർക്കുക:</strong> പ്രധാന ആശയം – പൊതുരേഖകളിലെ വ്യവസ്ഥകൾ അറിയാമെന്ന് നിയമം അനുമാനിക്കുന്നു. സംരക്ഷണം ലഭിക്കുന്നത് – പ്രധാനമായും കമ്പനിക്ക്.</div>
+    </article>
+
+    <article class="topic" id="t-indoor">
+      <h2>2. ഡോക്ട്രിൻ ഓഫ് ഇൻഡോർ മാനേജ്മെന്റ് (Doctrine of Indoor Management)</h2>
+      <p>ഇതിനെ <strong>ടർക്കൻ റൂൾ (Turquand Rule)</strong> എന്നും വിളിക്കുന്നു.</p>
+      <h3>നിർവചനം (Definition)</h3>
+      <p>ഒരു കമ്പനിയുമായി സത്യസന്ധമായി ഇടപാടുകൾ നടത്തുന്ന പുറത്തുള്ള വ്യക്തിക്ക്, കമ്പനിയുടെ ആഭ്യന്തര നടപടിക്രമങ്ങൾ നിയമപ്രകാരം പാലിച്ചിട്ടുണ്ടെന്ന് വിശ്വസിക്കാൻ കഴിയുന്ന തത്ത്വമാണ് <strong>ഡോക്ട്രിൻ ഓഫ് ഇൻഡോർ മാനേജ്മെന്റ്</strong>.</p>
+      <h3>പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>കമ്പനിയുടെ ആഭ്യന്തര നടപടിക്രമങ്ങൾ കൃത്യമായി പാലിച്ചിട്ടുണ്ടെന്ന് ഔട്ട്സൈഡർക്ക് വിശ്വസിക്കാം.</li>
+        <li>മീറ്റിംഗുകൾ വിളിക്കൽ, പ്രമേയങ്ങൾ പാസാക്കൽ, ആവശ്യമായ അനുമതികൾ നേടൽ തുടങ്ങിയ ആഭ്യന്തര നടപടികൾ ഇതിൽ ഉൾപ്പെടുന്നു.</li>
+        <li>കമ്പനിയുടെ ആഭ്യന്തര കാര്യങ്ങൾ ഓരോന്നും നേരിട്ട് പരിശോധിക്കാൻ ഔട്ട്സൈഡർക്ക് സാധിക്കണമെന്നില്ല.</li>
+        <li>ഈ തത്ത്വം പ്രധാനമായും പുറത്തുനിന്നുള്ള വ്യക്തികളുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കുന്നു.</li>
+      </ol>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനിയുടെ AOA പ്രകാരം ഒരു നിശ്ചിത തുകയ്ക്ക് മുകളിലുള്ള കടം എടുക്കാൻ ഷെയർഹോൾഡർമാരുടെ അനുമതി ആവശ്യമാണ്. കമ്പനി ആവശ്യമായ ആഭ്യന്തര അനുമതികൾ നേടിയിട്ടുണ്ടെന്ന് വിശ്വസിച്ച് ഒരാൾ കമ്പനിക്ക് പണം കടം നൽകുന്നു. അയാൾ സത്യസന്ധമായി ഇടപെട്ടതും മറ്റ് നിയമപരമായ നിബന്ധനകൾ പാലിച്ചതുമാണെങ്കിൽ, ആഭ്യന്തര അനുമതി ലഭിച്ചിരുന്നില്ല എന്ന കാരണത്താൽ മാത്രം അയാളുടെ അവകാശം നിഷേധിക്കാനാവില്ല.</div>
+      <div class="note"><strong>ടർക്കൻ റൂൾ:</strong> Royal British Bank v. Turquand എന്ന കേസുമായി ബന്ധപ്പെട്ടാണ് ഈ തത്ത്വം അറിയപ്പെടുന്നത്.<br><strong>ഓർക്കുക:</strong> പ്രധാന ആശയം – ആഭ്യന്തര നടപടികൾ പാലിച്ചിട്ടുണ്ടെന്ന് ഔട്ട്സൈഡർക്ക് വിശ്വസിക്കാം. സംരക്ഷണം ലഭിക്കുന്നത് – ഔട്ട്സൈഡർക്ക്.</div>
+    </article>
+
+    <article class="topic" id="t-indoor-exceptions">
+      <h2>3. ഡോക്ട്രിൻ ഓഫ് ഇൻഡോർ മാനേജ്മെന്റിന്റെ അപവാദങ്ങൾ</h2>
+      <p>ചില പ്രത്യേക സാഹചര്യങ്ങളിൽ ഔട്ട്സൈഡർക്ക് ഇൻഡോർ മാനേജ്മെന്റ് തത്ത്വത്തിന്റെ സംരക്ഷണം ലഭിക്കില്ല.</p>
+      <h3>1. യഥാർത്ഥ അറിവ് (Actual Knowledge)</h3>
+      <p>കമ്പനിയുടെ ആഭ്യന്തര നടപടികളിൽ ക്രമക്കേടുണ്ടെന്ന് ഔട്ട്സൈഡർക്ക് നേരത്തേ അറിയാമായിരുന്നാൽ ഈ സംരക്ഷണം ലഭിക്കില്ല.</p>
+      <h3>2. അലംഭാവം (Negligence)</h3>
+      <p>ഒരു ഇടപാടിൽ ക്രമക്കേടുണ്ടെന്ന് സംശയിക്കാനുള്ള സാഹചര്യങ്ങളുണ്ടായിട്ടും ആവശ്യമായ അന്വേഷണം നടത്താതിരുന്നാൽ സംരക്ഷണം നഷ്ടപ്പെടാം.</p>
+      <h3>3. വ്യാജരേഖ (Forgery)</h3>
+      <p>വ്യാജമായി നിർമ്മിച്ച രേഖകളുടെ അടിസ്ഥാനത്തിലുള്ള ഇടപാടുകൾക്ക് സാധാരണയായി ഈ തത്ത്വത്തിന്റെ സംരക്ഷണം ലഭിക്കില്ല.</p>
+      <h3>4. അധികാരമില്ലാത്ത വ്യക്തിയുടെ പ്രവൃത്തി (Acts Outside Authority)</h3>
+      <p>കമ്പനിക്കുവേണ്ടി ഒരു പ്രത്യേക ഇടപാട് നടത്താൻ അധികാരമില്ലാത്ത വ്യക്തി അത് നടത്തുമ്പോൾ, ആ ഇടപാടിന് ഇൻഡോർ മാനേജ്മെന്റ് തത്ത്വത്തിന്റെ സംരക്ഷണം സ്വാഭാവികമായി ലഭിക്കില്ല.</p>
+      <h3>5. സംശയാസ്പദമായ സാഹചര്യങ്ങൾ (Suspicious Circumstances)</h3>
+      <p>ഒരു ഇടപാടിൽ അസാധാരണമായ സാഹചര്യങ്ങളോ വ്യക്തമായ മുന്നറിയിപ്പുകളോ ഉണ്ടായിട്ടും ഔട്ട്സൈഡർ അവ അവഗണിച്ചാൽ സംരക്ഷണം ലഭിക്കാതിരിക്കാം.</p>
+      <div class="key"><strong>ഓർക്കുക:</strong> ഈ അപവാദങ്ങളിൽ വ്യാജരേഖ, യഥാർത്ഥ അറിവ്, അലംഭാവം എന്നിവ പരീക്ഷയിൽ പ്രത്യേകം ശ്രദ്ധിക്കേണ്ടതാണ്.</div>
+    </article>
+
+    <article class="topic" id="t-legal-effect">
+      <h2>4. MOA, AOA എന്നിവയുടെ നിയമപരമായ പ്രഭാവം</h2>
+      <p>കമ്പനീസ് ആക്ട്, 2013-ലെ <strong>സെക്ഷൻ 10</strong> പ്രകാരം, രജിസ്റ്റർ ചെയ്ത MOA, AOA എന്നിവ കമ്പനിക്കും അംഗങ്ങൾക്കും ഇടയിൽ നിയമപരമായ ബാധ്യതകൾ സൃഷ്ടിക്കുന്നു.</p>
+      <h3>പ്രധാനപ്പെട്ട നാല് ബന്ധങ്ങൾ</h3>
+      <ol>
+        <li><strong>അംഗങ്ങളും കമ്പനിയും (Members to Company):</strong> അംഗങ്ങൾ MOA, AOA എന്നിവയിലെ ബാധകമായ വ്യവസ്ഥകൾ പാലിക്കേണ്ടതാണ്.</li>
+        <li><strong>കമ്പനിയും അംഗങ്ങളും (Company to Members):</strong> അംഗങ്ങൾക്ക് ലഭിക്കേണ്ട അവകാശങ്ങൾ നൽകാൻ കമ്പനി ബാധ്യസ്ഥമാണ്. <em>ഉദാഹരണം:</em> നിയമപരമായി അർഹമായ വോട്ടിംഗ് അവകാശം.</li>
+        <li><strong>അംഗങ്ങൾ തമ്മിലുള്ള ബന്ധം (Members Inter-se):</strong> ആർട്ടിക്കിൾസിലെ ബാധകമായ വ്യവസ്ഥകൾ അംഗങ്ങൾ തമ്മിലുള്ള പരസ്പര അവകാശങ്ങളെയും ബാധ്യതകളെയും നിയന്ത്രിക്കാം.</li>
+        <li><strong>കമ്പനിയും പുറത്തുള്ളവരും (Company to Outsiders):</strong> MOA, AOA എന്നിവ മാത്രം അടിസ്ഥാനമാക്കി ഒരു ഔട്ട്സൈഡർക്ക് കമ്പനിക്കെതിരെ നേരിട്ടുള്ള കരാർ അവകാശം സാധാരണയായി ഉന്നയിക്കാനാവില്ല. <em>ഉദാഹരണം:</em> ആർട്ടിക്കിൾസിൽ ഒരു വ്യക്തിക്ക് ഡയറക്ടറായി നിയമനം നൽകുമെന്ന് പറഞ്ഞിട്ടുണ്ടെങ്കിലും, അതുമാത്രം അയാൾക്ക് കമ്പനിക്കെതിരെ നേരിട്ടുള്ള കരാർ അവകാശം നൽകണമെന്നില്ല.</li>
+      </ol>
+      <div class="note"><strong>ഓർക്കുക:</strong> സെക്ഷൻ 10 പ്രകാരം MOA, AOA എന്നിവ കമ്പനിക്കും അംഗങ്ങൾക്കും ഇടയിൽ നിയമപരമായ ബന്ധം സൃഷ്ടിക്കുന്നു.</div>
+    </article>
+
+    <article class="topic" id="t-conversion">
+      <h2>5. കമ്പനികളുടെ കൺവേർഷൻ (Conversion of Companies)</h2>
+      <h3>നിർവചനം (Definition)</h3>
+      <p>ഒരു കമ്പനിയുടെ നിയമപരമായ വിഭാഗം മാറ്റുന്നതിനെയാണ് <strong>കമ്പനിയുടെ കൺവേർഷൻ</strong> എന്ന് പറയുന്നത്.</p>
+      <p><strong>ഉദാഹരണങ്ങൾ:</strong> പ്രൈവറ്റ് കമ്പനി പബ്ലിക് കമ്പനിയായി മാറുക; പബ്ലിക് കമ്പനി പ്രൈവറ്റ് കമ്പനിയായി മാറുക.</p>
+      <h3>കൺവേർഷന്റെ പ്രധാന നടപടിക്രമങ്ങൾ</h3>
+      <ol>
+        <li>കമ്പനിയുടെ വിഭാഗം മാറ്റാനുള്ള തീരുമാനം എടുക്കുക.</li>
+        <li>ആവശ്യമായ പ്രമേയങ്ങൾ പാസാക്കുക.</li>
+        <li>MOA, AOA എന്നിവയിൽ ആവശ്യമായ ഭേദഗതികൾ വരുത്തുക.</li>
+        <li>നിയമപ്രകാരം ആവശ്യമായ അനുമതികൾ നേടുക.</li>
+        <li>രജിസ്ട്രാർ ഓഫ് കമ്പനീസിന് (ROC) ആവശ്യമായ അപേക്ഷയും രേഖകളും സമർപ്പിക്കുക.</li>
+        <li>രജിസ്ട്രാർ അപേക്ഷ പരിശോധിച്ച് നിയമാനുസൃതമായ നടപടികൾ പൂർത്തിയാക്കുക.</li>
+      </ol>
+      <h3>കൺവേർഷന്റെ ഫലങ്ങൾ</h3>
+      <ul>
+        <li>കമ്പനിയുടെ നിയമപരമായ വിഭാഗം മാറുന്നു.</li>
+        <li>ബാധകമായ നിയമങ്ങളും നിയന്ത്രണങ്ങളും അനുസരിച്ച് കമ്പനി പ്രവർത്തിക്കണം.</li>
+        <li>കൺവേർഷന് മുമ്പുള്ള കടങ്ങളും ബാധ്യതകളും സാധാരണയായി തുടരും.</li>
+        <li>കൺവേർഷൻ നടന്നതുകൊണ്ടുമാത്രം പഴയ കടബാധ്യതകൾ റദ്ദാകില്ല.</li>
+      </ul>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ABC Private Limited എന്ന കമ്പനി നിയമപ്രകാരമുള്ള നടപടികൾ പൂർത്തിയാക്കി ABC Limited എന്ന പബ്ലിക് കമ്പനിയായി മാറുന്നു എന്ന് കരുതുക. കൺവേർഷന് മുമ്പ് കമ്പനിക്കുണ്ടായിരുന്ന കടങ്ങൾ, കൺവേർഷൻ നടന്നതുകൊണ്ടുമാത്രം ഇല്ലാതാകില്ല.</div>
+    </article>
+
+    <article class="topic" id="t-cn-im-diff">
+      <h2>6. Constructive Notice vs Indoor Management</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>അടിസ്ഥാനം</th><th>Constructive Notice</th><th>Indoor Management</th></tr></thead>
+          <tbody>
+            <tr><td>അർത്ഥം</td><td>പൊതുരേഖകളിലെ വ്യവസ്ഥകൾ അറിയാമെന്ന് നിയമം അനുമാനിക്കുന്നു.</td><td>ആഭ്യന്തര നടപടികൾ പാലിച്ചിട്ടുണ്ടെന്ന് ഔട്ട്സൈഡർക്ക് വിശ്വസിക്കാം.</td></tr>
+            <tr><td>പ്രധാന ലക്ഷ്യം</td><td>കമ്പനിയുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കുക.</td><td>പുറത്തുള്ള വ്യക്തികളുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കുക.</td></tr>
+            <tr><td>ബാധകമായ രേഖകൾ</td><td>MOA, AOA</td><td>കമ്പനിയുടെ ആഭ്യന്തര നടപടിക്രമങ്ങൾ</td></tr>
+            <tr><td>പ്രയോജനം ലഭിക്കുന്നവർ</td><td>പ്രധാനമായും കമ്പനി</td><td>നിയമപരമായ നിബന്ധനകൾ പാലിക്കുന്ന സത്യസന്ധരായ ഔട്ട്സൈഡർമാർ</td></tr>
+            <tr><td>സ്വഭാവം</td><td>പൊതുരേഖകളെക്കുറിച്ചുള്ള നിയമപരമായ അനുമാനം</td><td>Constructive Notice തത്ത്വത്തിന്റെ ഒരു പ്രധാന അപവാദം</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-cn-points">
+      <h2>7. പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ</h2>
+      <ol>
+        <li><strong>MOA:</strong> Memorandum of Association.</li>
+        <li><strong>AOA:</strong> Articles of Association.</li>
+        <li><strong>ROC:</strong> Registrar of Companies.</li>
+        <li><strong>Constructive Notice:</strong> പൊതുരേഖകളിലെ വ്യവസ്ഥകൾ അറിയാമെന്ന് നിയമം അനുമാനിക്കുന്നു.</li>
+        <li><strong>Indoor Management:</strong> ആഭ്യന്തര നടപടികൾ പാലിച്ചിട്ടുണ്ടെന്ന് ഔട്ട്സൈഡർക്ക് വിശ്വസിക്കാം.</li>
+        <li><strong>Turquand Rule:</strong> Doctrine of Indoor Management-ന്റെ മറ്റൊരു പേര്.</li>
+        <li><strong>Actual Knowledge:</strong> ക്രമക്കേടിനെക്കുറിച്ച് യഥാർത്ഥ അറിവുണ്ടായിരിക്കുക.</li>
+        <li><strong>Forgery:</strong> വ്യാജരേഖ ചമയ്ക്കൽ.</li>
+        <li><strong>Section 10:</strong> MOA, AOA എന്നിവയുടെ രജിസ്ട്രേഷനിലൂടെ കമ്പനിക്കും അംഗങ്ങൾക്കും ഇടയിൽ നിയമപരമായ ബാധ്യതകൾ സൃഷ്ടിക്കപ്പെടുന്നു.</li>
+        <li><strong>Conversion:</strong> കമ്പനിയുടെ നിയമപരമായ വിഭാഗം മാറ്റൽ.</li>
+        <li><strong>Old Liabilities:</strong> കൺവേർഷനിലൂടെ പഴയ കടബാധ്യതകൾ സ്വയം ഇല്ലാതാകില്ല.</li>
+      </ol>
+      <h3>ചുരുക്കത്തിലുള്ള സംഗ്രഹം</h3>
+      <ul>
+        <li><strong>Doctrine of Constructive Notice:</strong> കമ്പനിയുടെ MOA, AOA എന്നീ പൊതുരേഖകളിലെ വ്യവസ്ഥകൾ അറിയാമെന്ന് നിയമം അനുമാനിക്കുന്നു. ഇത് പ്രധാനമായും കമ്പനിയെ സംരക്ഷിക്കുന്നു.</li>
+        <li><strong>Doctrine of Indoor Management:</strong> കമ്പനിയുടെ ആഭ്യന്തര നടപടികൾ പാലിച്ചിട്ടുണ്ടെന്ന് സത്യസന്ധനായ ഔട്ട്സൈഡർക്ക് വിശ്വസിക്കാം. ഇത് പ്രധാനമായും ഔട്ട്സൈഡറെ സംരക്ഷിക്കുന്നു.</li>
+        <li><strong>Exceptions to Indoor Management:</strong> യഥാർത്ഥ അറിവ്, അലംഭാവം, വ്യാജരേഖ, അധികാരമില്ലാത്ത വ്യക്തിയുടെ പ്രവൃത്തി തുടങ്ങിയ സാഹചര്യങ്ങളിൽ സംരക്ഷണം ലഭിക്കാതിരിക്കാം.</li>
+        <li><strong>Legal Effect of MOA and AOA:</strong> സെക്ഷൻ 10 പ്രകാരം കമ്പനിക്കും അംഗങ്ങൾക്കും ഇടയിൽ നിയമപരമായ ബന്ധവും ബാധ്യതകളും ഉണ്ടാകുന്നു.</li>
+        <li><strong>Conversion of Companies:</strong> പ്രൈവറ്റ് കമ്പനിയെ പബ്ലിക് കമ്പനിയാക്കുകയോ പബ്ലിക് കമ്പനിയെ പ്രൈവറ്റ് കമ്പനിയാക്കുകയോ ചെയ്യാം. കൺവേർഷന് മുമ്പുള്ള കടബാധ്യതകൾ സാധാരണയായി തുടരും.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ================= PROSPECTUS ================= -->
+  <section class="module" id="module-prospectus">
+    <div class="module-head">
+      <span class="module-badge">Part 7</span>
+      <h1>Prospectus</h1>
+      <p class="module-sub">പ്രോസ്പെക്റ്റസ്</p>
+    </div>
+
+    <article class="topic" id="t-prospectus">
+      <h2>1. പ്രോസ്പെക്റ്റസിന്റെ അർത്ഥവും നിർവചനവും</h2>
+      <p>ഒരു പബ്ലിക് കമ്പനി പൊതുജനങ്ങളെ കമ്പനിയുടെ ഷെയറുകളോ ഡിബഞ്ചറുകളോ വാങ്ങാൻ ക്ഷണിച്ചുകൊണ്ട് പുറത്തിറക്കുന്ന രേഖയാണ് <strong>പ്രോസ്പെക്റ്റസ് (Prospectus)</strong>.</p>
+      <h3>പ്രധാന കാര്യങ്ങൾ</h3>
+      <ul>
+        <li>പൊതുജനങ്ങളിൽ നിന്ന് മൂലധനം സമാഹരിക്കാൻ പ്രോസ്പെക്റ്റസ് ഉപയോഗിക്കുന്നു.</li>
+        <li>കമ്പനി ആക്ട്, 2013-ലെ <strong>സെക്ഷൻ 2(70)</strong> പ്രോസ്പെക്റ്റസിന്റെ നിർവചനം നൽകുന്നു.</li>
+        <li>നോട്ടീസ്, സർക്കുലർ, പരസ്യം തുടങ്ങിയവയും പ്രോസ്പെക്റ്റസിന്റെ പരിധിയിൽ വരാം.</li>
+        <li>പ്രൈവറ്റ് കമ്പനികൾക്ക് പൊതുജനങ്ങളെ നേരിട്ട് ഷെയറുകൾ വാങ്ങാൻ ക്ഷണിക്കാൻ കഴിയില്ല.</li>
+        <li>പ്രോസ്പെക്റ്റസിന്റെ ഒരു കോപ്പി രജിസ്ട്രാർ ഓഫ് കമ്പനീസിന് (ROC) സമർപ്പിക്കണം.</li>
+        <li>പ്രോസ്പെക്റ്റസിൽ ആവശ്യമായ ഒപ്പുകളും തീയതിയും ഉണ്ടായിരിക്കണം.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-pros-contents">
+      <h2>2. പ്രോസ്പെക്റ്റസിന്റെ ഉള്ളടക്കം (Contents of Prospectus)</h2>
+      <p>കമ്പനി ആക്ട്, 2013-ലെ <strong>സെക്ഷൻ 26</strong> അനുസരിച്ച് പ്രോസ്പെക്റ്റസിൽ ആവശ്യമായ വിവരങ്ങൾ ഉൾപ്പെടുത്തണം.</p>
+      <ol>
+        <li>കമ്പനിയുടെ പേരും രജിസ്റ്റർ ചെയ്ത ഓഫീസിന്റെ വിവരങ്ങളും.</li>
+        <li>കമ്പനിയുടെ ലക്ഷ്യങ്ങളും ബിസിനസിന്റെ സ്വഭാവവും.</li>
+        <li>ഡയറക്ടർമാരുടെയും പ്രധാന ഉദ്യോഗസ്ഥരുടെയും വിവരങ്ങൾ.</li>
+        <li>പുറത്തിറക്കുന്ന ഷെയറുകളുടെയും ഡിബഞ്ചറുകളുടെയും വിവരങ്ങൾ.</li>
+        <li>കമ്പനിയുടെ സാമ്പത്തിക സ്ഥിതിയും ആവശ്യമായ സാമ്പത്തിക റിപ്പോർട്ടുകളും.</li>
+        <li>നിക്ഷേപവുമായി ബന്ധപ്പെട്ട അപകടസാധ്യതകൾ.</li>
+        <li>SEBI നിർദേശിക്കുന്ന വിവരങ്ങളും റിപ്പോർട്ടുകളും.</li>
+        <li>നിയമങ്ങൾ പാലിക്കുന്നുവെന്ന് വ്യക്തമാക്കുന്ന ആവശ്യമായ പ്രഖ്യാപനങ്ങൾ.</li>
+      </ol>
+      <div class="note"><strong>പ്രധാന കാര്യം:</strong> നിക്ഷേപകർക്ക് ശരിയായ തീരുമാനമെടുക്കാൻ ആവശ്യമായ കൃത്യവും സത്യസന്ധവുമായ വിവരങ്ങൾ പ്രോസ്പെക്റ്റസിൽ ഉണ്ടായിരിക്കണം.</div>
+    </article>
+
+    <article class="topic" id="t-pros-types">
+      <h2>3. പ്രോസ്പെക്റ്റസിന്റെ തരങ്ങൾ (Types of Prospectus)</h2>
+      <p>പ്രധാനമായും നാല് തരത്തിലുള്ള പ്രോസ്പെക്റ്റസുകളുണ്ട്.</p>
+
+      <h3>3.1 ഡീംഡ് പ്രോസ്പെക്റ്റസ് (Deemed Prospectus) – സെക്ഷൻ 25</h3>
+      <p>ഒരു കമ്പനി നേരിട്ട് പൊതുജനങ്ങൾക്ക് സെക്യൂരിറ്റികൾ നൽകാതെ ഇടനിലക്കാർ വഴി വിൽക്കുമ്പോൾ, നിയമത്തിലെ നിബന്ധനകൾ പാലിക്കുന്ന സാഹചര്യത്തിൽ ആ ഓഫറുമായി ബന്ധപ്പെട്ട രേഖയെ ഡീംഡ് പ്രോസ്പെക്റ്റസ് എന്ന് വിളിക്കുന്നു.</p>
+      <ul>
+        <li>ഇടനിലക്കാർ വഴി സെക്യൂരിറ്റികൾ പൊതുജനങ്ങൾക്ക് നൽകുന്നു.</li>
+        <li>ബന്ധപ്പെട്ട രേഖ നിയമപ്രകാരം പ്രോസ്പെക്റ്റസായി കണക്കാക്കപ്പെടുന്നു.</li>
+        <li>പൊതുജനങ്ങൾക്ക് നൽകുന്ന വിവരങ്ങളുടെ സത്യസന്ധത ഉറപ്പാക്കാൻ ഇത് സഹായിക്കുന്നു.</li>
+      </ul>
+
+      <h3>3.2 ഷെൽഫ് പ്രോസ്പെക്റ്റസ് (Shelf Prospectus) – സെക്ഷൻ 31</h3>
+      <p>ഒരു നിശ്ചിത കാലയളവിൽ ഒന്നിലധികം തവണ സെക്യൂരിറ്റികൾ പുറത്തിറക്കാൻ കമ്പനി ഉപയോഗിക്കുന്ന പ്രോസ്പെക്റ്റസാണ് ഷെൽഫ് പ്രോസ്പെക്റ്റസ്.</p>
+      <ul>
+        <li>ഓരോ തവണയും പുതിയ പ്രോസ്പെക്റ്റസ് തയ്യാറാക്കേണ്ട ആവശ്യം കുറയ്ക്കുന്നു.</li>
+        <li>ഇതിന്റെ സാധാരണ പരമാവധി കാലാവധി ഒരു വർഷമാണ്.</li>
+        <li>സാമ്പത്തിക സ്ഥിതിയിൽ പ്രധാനപ്പെട്ട മാറ്റങ്ങളുണ്ടായാൽ അവ വെളിപ്പെടുത്തണം.</li>
+        <li>ആവശ്യമായ മാറ്റങ്ങൾ ഇൻഫർമേഷൻ മെമ്മോറാണ്ടം (Information Memorandum) വഴി അറിയിക്കുന്നു.</li>
+      </ul>
+
+      <h3>3.3 റെഡ് ഹെറിംഗ് പ്രോസ്പെക്റ്റസ് (Red Herring Prospectus) – സെക്ഷൻ 32</h3>
+      <p>സെക്യൂരിറ്റികളുടെ അന്തിമ വിലയോ കൃത്യമായ എണ്ണമോ പോലുള്ള ചില വിവരങ്ങൾ ഉൾപ്പെടുത്താത്ത പ്രോസ്പെക്റ്റസാണ് റെഡ് ഹെറിംഗ് പ്രോസ്പെക്റ്റസ്.</p>
+      <ul>
+        <li>IPO പോലുള്ള പൊതുഓഫറുകളിൽ ഉപയോഗിക്കാം.</li>
+        <li>അന്തിമ വിലയും സെക്യൂരിറ്റികളുടെ എണ്ണവും പിന്നീട് തീരുമാനിക്കപ്പെടാം.</li>
+        <li>സബ്സ്ക്രിപ്ഷൻ ലിസ്റ്റ് തുറക്കുന്നതിന് കുറഞ്ഞത് മൂന്ന് ദിവസം മുമ്പ് രജിസ്ട്രാർക്ക് സമർപ്പിക്കണം.</li>
+        <li>ഓഫർ അവസാനിച്ചതിനുശേഷം അന്തിമ പ്രോസ്പെക്റ്റസ് സമർപ്പിക്കണം.</li>
+      </ul>
+
+      <h3>3.4 അബ്രിഡ്ജ്ഡ് പ്രോസ്പെക്റ്റസ് (Abridged Prospectus) – സെക്ഷൻ 33</h3>
+      <p>പ്രധാനപ്പെട്ട വിവരങ്ങൾ മാത്രം ഉൾപ്പെടുത്തി തയ്യാറാക്കുന്ന പ്രോസ്പെക്റ്റസിന്റെ ചുരുക്കരൂപമാണ് അബ്രിഡ്ജ്ഡ് പ്രോസ്പെക്റ്റസ്.</p>
+      <ul>
+        <li>പ്രോസ്പെക്റ്റസിന്റെ പ്രധാന വിവരങ്ങൾ ചുരുക്കി നൽകുന്നു.</li>
+        <li>നിക്ഷേപകർക്ക് വിവരങ്ങൾ എളുപ്പത്തിൽ മനസ്സിലാക്കാൻ സഹായിക്കുന്നു.</li>
+        <li>ഷെയറുകൾക്കായുള്ള അപേക്ഷാ ഫോമിനൊപ്പം ആവശ്യമായ സാഹചര്യങ്ങളിൽ നൽകുന്നു.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-pros-misstatement">
+      <h2>4. പ്രോസ്പെക്റ്റസിലെ തെറ്റായ പ്രസ്താവനകൾ (Misstatement in Prospectus)</h2>
+      <p>പ്രോസ്പെക്റ്റസിൽ തെറ്റായതോ തെറ്റിദ്ധരിപ്പിക്കുന്നതോ ആയ വിവരങ്ങൾ നൽകുന്നതിനെയാണ് തെറ്റായ പ്രസ്താവനകൾ എന്ന് പറയുന്നത്.</p>
+      <ul>
+        <li>തെറ്റായ വിവരങ്ങൾ നിക്ഷേപകരെ തെറ്റായ തീരുമാനങ്ങളിലേക്ക് നയിക്കാം.</li>
+        <li>പ്രധാനപ്പെട്ട വിവരങ്ങൾ മറച്ചുവയ്ക്കുന്നതും നിയമപരമായ ബാധ്യതയ്ക്ക് കാരണമാകാം.</li>
+        <li>പ്രോസ്പെക്റ്റസിലെ വിവരങ്ങൾ സത്യസന്ധവും കൃത്യവുമായിരിക്കണം.</li>
+      </ul>
+      <div class="key"><strong>ഗോൾഡൻ റൂൾ (Golden Rule):</strong> പ്രോസ്പെക്റ്റസിൽ സത്യമായ വിവരങ്ങൾ മാത്രം നൽകണം. — <em>Truth and nothing but truth.</em></div>
+    </article>
+
+    <article class="topic" id="t-pros-liability">
+      <h2>5. പ്രോസ്പെക്റ്റസിലെ തെറ്റായ പ്രസ്താവനകളുടെ ബാധ്യതകൾ</h2>
+      <p>പ്രോസ്പെക്റ്റസിൽ തെറ്റായ വിവരങ്ങൾ നൽകുന്ന സാഹചര്യത്തിൽ സിവിൽ, ക്രിമിനൽ ബാധ്യതകൾ ഉണ്ടാകാം.</p>
+
+      <h3>5.1 സിവിൽ ബാധ്യത (Civil Liability)</h3>
+      <p>തെറ്റായ വിവരങ്ങൾ കാരണം നിക്ഷേപകന് സാമ്പത്തിക നഷ്ടമുണ്ടായാൽ നിയമത്തിലെ നിബന്ധനകൾക്കനുസരിച്ച് നഷ്ടപരിഹാരം ആവശ്യപ്പെടാം.</p>
+      <ul>
+        <li>കരാർ റദ്ദാക്കാൻ ആവശ്യപ്പെടാം.</li>
+        <li>നൽകിയ പണം തിരികെ ലഭിക്കാൻ ആവശ്യപ്പെടാം.</li>
+        <li>ഉണ്ടായ നഷ്ടത്തിന് നഷ്ടപരിഹാരം ആവശ്യപ്പെടാം.</li>
+        <li>ബാധ്യതയുടെ പരിധി നിയമത്തിലെ വ്യവസ്ഥകളെ ആശ്രയിച്ചിരിക്കും.</li>
+      </ul>
+
+      <h3>5.2 ക്രിമിനൽ ബാധ്യത (Criminal Liability)</h3>
+      <p>പ്രോസ്പെക്റ്റസിൽ മനഃപൂർവം തട്ടിപ്പുനടത്തുകയോ നിയമവിരുദ്ധമായ തെറ്റായ പ്രസ്താവനകൾ നൽകുകയോ ചെയ്താൽ ക്രിമിനൽ ശിക്ഷ ലഭിക്കാം.</p>
+      <ul>
+        <li>തടവുശിക്ഷ ലഭിക്കാം.</li>
+        <li>പിഴ ചുമത്താം.</li>
+        <li>ഗുരുതരമായ തട്ടിപ്പുകൾക്ക് കൂടുതൽ കഠിനമായ ശിക്ഷ ലഭിക്കാം.</li>
+        <li>ഡയറക്ടർമാർ, പ്രൊമോട്ടർമാർ, വിദഗ്ധർ തുടങ്ങിയവർക്ക് അവരുടെ പങ്കും നിയമത്തിലെ വ്യവസ്ഥകളും അനുസരിച്ച് വ്യക്തിപരമായ ഉത്തരവാദിത്വം ഉണ്ടാകാം.</li>
+      </ul>
+      <div class="key"><strong>ശ്രദ്ധിക്കുക:</strong> തടവുശിക്ഷയുടെയും പിഴയുടെയും കൃത്യമായ അളവ് കുറ്റത്തിന്റെ സ്വഭാവവും ബാധകമായ നിയമവകുപ്പും അനുസരിച്ചിരിക്കും.</div>
+    </article>
+
+    <article class="topic" id="t-pros-importance">
+      <h2>6. പ്രോസ്പെക്റ്റസിന്റെ പ്രാധാന്യം &amp; ഉപസംഹാരം</h2>
+      <ol>
+        <li>പൊതുജനങ്ങളിൽ നിന്ന് മൂലധനം സമാഹരിക്കാൻ സഹായിക്കുന്നു.</li>
+        <li>കമ്പനിയെക്കുറിച്ചുള്ള പ്രധാന വിവരങ്ങൾ നിക്ഷേപകർക്ക് നൽകുന്നു.</li>
+        <li>നിക്ഷേപകർക്ക് ശരിയായ തീരുമാനമെടുക്കാൻ സഹായിക്കുന്നു.</li>
+        <li>കമ്പനിയുടെ സുതാര്യതയും വിശ്വാസ്യതയും വർധിപ്പിക്കുന്നു.</li>
+        <li>നിക്ഷേപകരുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കാൻ സഹായിക്കുന്നു.</li>
+      </ol>
+      <div class="note"><strong>ഉപസംഹാരം:</strong> പബ്ലിക് കമ്പനികൾക്ക് പൊതുജനങ്ങളിൽ നിന്ന് മൂലധനം സമാഹരിക്കാൻ സഹായിക്കുന്ന പ്രധാനപ്പെട്ട നിയമരേഖയാണ് പ്രോസ്പെക്റ്റസ്. ഇതിൽ കമ്പനിയെക്കുറിച്ചുള്ള ആവശ്യമായ വിവരങ്ങൾ സത്യസന്ധമായി ഉൾപ്പെടുത്തണം. തെറ്റായ വിവരങ്ങൾ നൽകുന്നത് നിക്ഷേപകർക്ക് നഷ്ടമുണ്ടാക്കുന്നതിനൊപ്പം കമ്പനിക്കും ഉത്തരവാദികളായ വ്യക്തികൾക്കും നിയമപരമായ ബാധ്യതകൾ സൃഷ്ടിക്കും.</div>
+    </article>
+  </section>
+
+  <!-- ================= SHARES ================= -->
+  <section class="module" id="module-shares">
+    <div class="module-head">
+      <span class="module-badge">Part 8</span>
+      <h1>Shares</h1>
+      <p class="module-sub">ഷെയറുകൾ</p>
+    </div>
+
+    <article class="topic" id="t-shares">
+      <h2>1. ഷെയറിന്റെ അർത്ഥവും നിർവചനവും</h2>
+      <p>ഒരു കമ്പനിയുടെ ഷെയർ ക്യാപിറ്റലിന്റെ ഏറ്റവും ചെറിയ യൂണിറ്റാണ് <strong>ഷെയർ (Share)</strong>.</p>
+      <p>കമ്പനീസ് ആക്ട് 2013-ലെ <strong>സെക്ഷൻ 2(84)</strong> പ്രകാരം, കമ്പനിയുടെ ഷെയർ ക്യാപിറ്റലിലെ ഒരു വിഹിതമാണ് ഷെയർ. ഇതിൽ സ്റ്റോക്കും (Stock) ഉൾപ്പെടുന്നു.</p>
+      <h3>ഷെയറിന്റെ പ്രധാന സവിശേഷതകൾ</h3>
+      <ol>
+        <li>കമ്പനിയുടെ മൂലധനത്തിലെ ഒരു വിഹിതമാണ് ഷെയർ.</li>
+        <li>ഷെയർ വാങ്ങുന്ന വ്യക്തിയെ ഷെയർഹോൾഡർ (Shareholder) എന്നു വിളിക്കുന്നു.</li>
+        <li>ഷെയർഹോൾഡർമാർ കമ്പനിയുടെ ഉടമസ്ഥരിൽ ഉൾപ്പെടുന്നു.</li>
+        <li>കമ്പനിയുടെ ലാഭത്തിൽ നിന്ന് ഡിവിഡന്റ് ലഭിക്കാൻ ഇവർക്ക് അർഹതയുണ്ടാകാം.</li>
+        <li>ഫുള്ളി പെയ്ഡ് ഷെയറുകളെ സ്റ്റോക്കാക്കി മാറ്റാൻ സാധിക്കും.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-share-types">
+      <h2>2. ഷെയറുകളുടെ തരങ്ങൾ (Types of Shares)</h2>
+      <p>കമ്പനീസ് ആക്ട് 2013 പ്രകാരം പ്രധാനമായും രണ്ട് തരത്തിലുള്ള ഷെയറുകളുണ്ട്:</p>
+      <ol>
+        <li>ഇക്വിറ്റി ഷെയറുകൾ (Equity Shares)</li>
+        <li>പ്രഫറൻസ് ഷെയറുകൾ (Preference Shares)</li>
+      </ol>
+
+      <h3>2.1 ഇക്വിറ്റി ഷെയറുകൾ (Equity Shares)</h3>
+      <p>ഇക്വിറ്റി ഷെയറുകളെ ഓർഡിനറി ഷെയറുകൾ (Ordinary Shares) എന്നും വിളിക്കുന്നു.</p>
+      <h4>സവിശേഷതകൾ</h4>
+      <ol>
+        <li>സാധാരണയായി കമ്പനിയുടെ ഭരണപരമായ കാര്യങ്ങളിൽ വോട്ടവകാശമുണ്ട്.</li>
+        <li>ഡിവിഡന്റ് നിരക്ക് നിശ്ചിതമല്ല.</li>
+        <li>കമ്പനിയുടെ ലാഭത്തിനനുസരിച്ച് ഡിവിഡന്റ് വ്യത്യാസപ്പെടുന്നു.</li>
+        <li>പ്രഫറൻസ് ഷെയർഹോൾഡർമാർക്ക് നൽകേണ്ട ഡിവിഡന്റിന് മുൻഗണനയുണ്ട്.</li>
+        <li>കമ്പനിയുടെ സാമ്പത്തിക റിസ്ക് കൂടുതലായി വഹിക്കേണ്ടിവരാം.</li>
+        <li>കമ്പനിക്ക് ഉയർന്ന ലാഭമുണ്ടാകുമ്പോൾ കൂടുതൽ റിട്ടേൺ ലഭിക്കാൻ സാധ്യതയുണ്ട്.</li>
+      </ol>
+
+      <h3>2.2 പ്രഫറൻസ് ഷെയറുകൾ (Preference Shares)</h3>
+      <p>ഇക്വിറ്റി ഷെയറുകളെ അപേക്ഷിച്ച് ചില കാര്യങ്ങളിൽ മുൻഗണനാ അവകാശങ്ങളുള്ള ഷെയറുകളാണ് പ്രഫറൻസ് ഷെയറുകൾ.</p>
+      <h4>പ്രധാന മുൻഗണനകൾ</h4>
+      <ol>
+        <li>ഡിവിഡന്റ് ലഭിക്കുന്നതിൽ മുൻഗണന.</li>
+        <li>കമ്പനി അടച്ചുപൂട്ടുമ്പോൾ മൂലധനം തിരികെ ലഭിക്കുന്നതിൽ മുൻഗണന.</li>
+      </ol>
+      <h4>സവിശേഷതകൾ</h4>
+      <ol>
+        <li>സാധാരണയായി നിശ്ചിത നിരക്കിലുള്ള ഡിവിഡന്റാണ് ലഭിക്കുന്നത്.</li>
+        <li>ഇക്വിറ്റി ഷെയർഹോൾഡർമാരെക്കാൾ ഡിവിഡന്റ് ലഭിക്കുന്നതിൽ മുൻഗണനയുണ്ട്.</li>
+        <li>കമ്പനി അടച്ചുപൂട്ടുമ്പോൾ മൂലധനം തിരികെ ലഭിക്കുന്നതിൽ മുൻഗണനയുണ്ട്.</li>
+        <li>സാധാരണയായി വോട്ടവകാശം പരിമിതമാണ്.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-pref-kinds">
+      <h2>3. പ്രഫറൻസ് ഷെയറുകളുടെ ഉപവിഭാഗങ്ങൾ</h2>
+      <p>പ്രഫറൻസ് ഷെയറുകളെ പ്രധാനമായും നാല് വിഭാഗങ്ങളായി പഠിക്കാം.</p>
+
+      <h3>3.1 ക്യുമുലേറ്റീവ് &amp; നോൺ-ക്യുമുലേറ്റീവ് ഷെയറുകൾ</h3>
+      <h4>A. ക്യുമുലേറ്റീവ് പ്രഫറൻസ് ഷെയറുകൾ (Cumulative Preference Shares)</h4>
+      <p>ഒരു വർഷം മതിയായ ലാഭമില്ലാത്തതിനാൽ ഡിവിഡന്റ് നൽകാൻ കഴിയാത്തപക്ഷം, നൽകാത്ത ഡിവിഡന്റ് കുടിശ്ശികയായി കണക്കാക്കുകയും ഭാവിയിൽ വ്യവസ്ഥകൾക്കനുസരിച്ച് നൽകുകയും ചെയ്യുന്ന ഷെയറുകളാണിവ.</p>
+      <h4>B. നോൺ-ക്യുമുലേറ്റീവ് പ്രഫറൻസ് ഷെയറുകൾ (Non-Cumulative Preference Shares)</h4>
+      <p>ഒരു വർഷം ഡിവിഡന്റ് ലഭിക്കാത്തപക്ഷം, ആ വർഷത്തെ ഡിവിഡന്റ് കുടിശ്ശികയായി അടുത്ത വർഷത്തേക്ക് കൊണ്ടുപോകാൻ സാധിക്കാത്ത ഷെയറുകളാണിവ.</p>
+
+      <h3>3.2 പാർട്ടിസിപ്പേറ്റിങ് &amp; നോൺ-പാർട്ടിസിപ്പേറ്റിങ് ഷെയറുകൾ</h3>
+      <h4>A. പാർട്ടിസിപ്പേറ്റിങ് പ്രഫറൻസ് ഷെയറുകൾ (Participating Preference Shares)</h4>
+      <p>നിശ്ചിത ഡിവിഡന്റിന് പുറമെ, വ്യവസ്ഥകൾ അനുവദിക്കുന്ന സാഹചര്യത്തിൽ അധിക ലാഭത്തിലും പങ്കാളിത്തത്തിന് അവകാശമുള്ള ഷെയറുകളാണിവ.</p>
+      <h4>B. നോൺ-പാർട്ടിസിപ്പേറ്റിങ് പ്രഫറൻസ് ഷെയറുകൾ (Non-Participating Preference Shares)</h4>
+      <p>നിശ്ചിത ഡിവിഡന്റിന് പുറമെ അധിക ലാഭത്തിൽ പങ്കാളിത്തത്തിന് അവകാശമില്ലാത്ത ഷെയറുകളാണിവ.</p>
+
+      <h3>3.3 കൺവേർട്ടിബിൾ &amp; നോൺ-കൺവേർട്ടിബിൾ ഷെയറുകൾ</h3>
+      <h4>A. കൺവേർട്ടിബിൾ പ്രഫറൻസ് ഷെയറുകൾ (Convertible Preference Shares)</h4>
+      <p>നിശ്ചിത വ്യവസ്ഥകൾക്കും കാലയളവിനും അനുസരിച്ച് ഇക്വിറ്റി ഷെയറുകളാക്കി മാറ്റാൻ കഴിയുന്ന പ്രഫറൻസ് ഷെയറുകളാണിവ.</p>
+      <h4>B. നോൺ-കൺവേർട്ടിബിൾ പ്രഫറൻസ് ഷെയറുകൾ (Non-Convertible Preference Shares)</h4>
+      <p>ഇക്വിറ്റി ഷെയറുകളാക്കി മാറ്റാൻ സാധിക്കാത്ത പ്രഫറൻസ് ഷെയറുകളാണിവ.</p>
+
+      <h3>3.4 റിഡീമബിൾ &amp; ഇറഡീമബിൾ ഷെയറുകൾ</h3>
+      <h4>A. റിഡീമബിൾ പ്രഫറൻസ് ഷെയറുകൾ (Redeemable Preference Shares)</h4>
+      <p>നിയമപരമായ വ്യവസ്ഥകൾക്കനുസരിച്ച് കമ്പനി നിശ്ചിത കാലയളവിനുശേഷം തിരികെ വാങ്ങുന്ന പ്രഫറൻസ് ഷെയറുകളാണിവ.</p>
+      <ul>
+        <li>നിയമപ്രകാരം ഫുള്ളി പെയ്ഡ് ആയ ഷെയറുകൾ മാത്രമേ റിഡീം ചെയ്യാൻ കഴിയൂ.</li>
+        <li>കമ്പനി നിയമത്തിലെ വ്യവസ്ഥകൾ പാലിച്ചായിരിക്കണം റിഡംപ്ഷൻ നടത്തേണ്ടത്.</li>
+      </ul>
+      <h4>B. ഇറഡീമബിൾ പ്രഫറൻസ് ഷെയറുകൾ (Irredeemable Preference Shares)</h4>
+      <p>തിരികെ വാങ്ങാൻ നിശ്ചിത കാലാവധി ഇല്ലാത്ത ഷെയറുകളെയാണ് ഇറഡീമബിൾ ഷെയറുകൾ എന്നു പറയുന്നത്.</p>
+      <ul>
+        <li>ഇന്ത്യയിൽ കമ്പനീസ് ആക്ട് 2013 പ്രകാരം ഇറഡീമബിൾ പ്രഫറൻസ് ഷെയറുകൾ ഇഷ്യൂ ചെയ്യാൻ അനുവാദമില്ല.</li>
+        <li>പൊതുവായ നിയമവ്യവസ്ഥപ്രകാരം പ്രഫറൻസ് ഷെയറുകൾ സാധാരണയായി 20 വർഷത്തിനുള്ളിൽ റിഡീം ചെയ്യണം; നിയമത്തിൽ പറയുന്ന ചില പ്രത്യേക സാഹചര്യങ്ങൾക്ക് ഒഴിവുകളുണ്ട്.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-transfer">
+      <h2>4. ഷെയറുകളുടെ കൈമാറ്റം (Transfer and Transmission of Shares)</h2>
+      <p>ഷെയറുകളുടെ ഉടമസ്ഥാവകാശം ഒരാളിൽ നിന്ന് മറ്റൊരാളിലേക്ക് മാറുന്നതിനെയാണ് ഷെയർ കൈമാറ്റം എന്നു പറയുന്നത്. ഇതിന് രണ്ട് പ്രധാന രീതികളുണ്ട്:</p>
+      <ol>
+        <li>ട്രാൻസ്ഫർ ഓഫ് ഷെയറുകൾ (Transfer of Shares)</li>
+        <li>ട്രാൻസ്മിഷൻ ഓഫ് ഷെയറുകൾ (Transmission of Shares)</li>
+      </ol>
+
+      <h3>4.1 ട്രാൻസ്ഫർ ഓഫ് ഷെയറുകൾ (Transfer of Shares)</h3>
+      <p>ഷെയർ ഉടമ സ്വന്തം ഇഷ്ടപ്രകാരം മറ്റൊരാൾക്ക് ഷെയറുകളുടെ ഉടമസ്ഥാവകാശം കൈമാറുന്നതിനെയാണ് ട്രാൻസ്ഫർ എന്നു പറയുന്നത്.</p>
+      <h4>സവിശേഷതകൾ</h4>
+      <ol>
+        <li>ഇത് സ്വമനസ്സാലെയുള്ള കൈമാറ്റമാണ്.</li>
+        <li>സാധാരണയായി വിൽപ്പന, സമ്മാനം തുടങ്ങിയവയിലൂടെ നടക്കാം.</li>
+        <li>ബാധകമായ നിയമനടപടികളും കമ്പനിയുടെ ആർട്ടിക്കിൾസിലെ വ്യവസ്ഥകളും പാലിക്കണം.</li>
+        <li>ആവശ്യമായ രേഖകളും അപേക്ഷകളും സമർപ്പിക്കണം.</li>
+        <li>നിയമപ്രകാരം കമ്പനി കൈമാറ്റം അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യാം.</li>
+      </ol>
+      <h4>പ്രധാന നിയമകാര്യങ്ങൾ</h4>
+      <ul>
+        <li>ഭൗതികരൂപത്തിലുള്ള ഷെയറുകളുടെ കൈമാറ്റത്തിന് ബാധകമായ സാഹചര്യങ്ങളിൽ, ഒപ്പിട്ടതും സ്റ്റാമ്പ് ചെയ്തതുമായ ട്രാൻസ്ഫർ ഡീഡും ഷെയർ സർട്ടിഫിക്കറ്റും നിശ്ചിത സമയത്തിനുള്ളിൽ കമ്പനിക്ക് സമർപ്പിക്കണം.</li>
+        <li>സാധാരണയായി ട്രാൻസ്ഫർ ഡീഡ് കമ്പനിക്ക് കൈമാറേണ്ട സമയപരിധി ഒപ്പിട്ട തീയതി മുതൽ <strong>60 ദിവസം</strong> ആണ്.</li>
+        <li>കമ്പനി നിയമപ്രകാരമുള്ള സമയപരിധിക്കുള്ളിൽ ഷെയർ സർട്ടിഫിക്കറ്റ് നൽകണം.</li>
+        <li>കൈമാറ്റം നിരസിക്കുന്ന സാഹചര്യത്തിൽ, നിയമം അനുശാസിക്കുന്ന സമയപരിധിക്കുള്ളിൽ കാരണം അറിയിക്കണം.</li>
+        <li>നിയമപ്രകാരമുള്ള സാഹചര്യങ്ങളിൽ ബന്ധപ്പെട്ട കക്ഷികൾക്ക് നാഷണൽ കമ്പനി ലോ ട്രൈബ്യൂണലിനെ (NCLT) സമീപിക്കാം.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-transmission">
+      <h2>4.2 ട്രാൻസ്മിഷൻ ഓഫ് ഷെയറുകൾ (Transmission of Shares)</h2>
+      <p>സ്വമനസ്സാലെയുള്ള കൈമാറ്റക്കരാർ വഴിയല്ലാതെ, നിയമത്തിന്റെ പ്രവർത്തനഫലമായി ഷെയറുകളുടെ ഉടമസ്ഥാവകാശം മറ്റൊരാളിലേക്ക് മാറുന്നതിനെയാണ് <strong>ട്രാൻസ്മിഷൻ</strong> എന്നു പറയുന്നത്.</p>
+      <h3>ട്രാൻസ്മിഷൻ സംഭവിക്കുന്ന സാഹചര്യങ്ങൾ</h3>
+      <ol>
+        <li>ഷെയർഹോൾഡറുടെ മരണം (Death).</li>
+        <li>പാപ്പരത്തം (Insolvency).</li>
+        <li>മറ്റ് നിയമപരമായ സാഹചര്യങ്ങൾ.</li>
+      </ol>
+      <h3>സവിശേഷതകൾ</h3>
+      <ol>
+        <li>ഇത് നിയമത്തിന്റെ പ്രവർത്തനഫലമായുള്ള കൈമാറ്റമാണ്.</li>
+        <li>സാധാരണയായി പ്രത്യേക ട്രാൻസ്ഫർ ഡീഡ് ആവശ്യമില്ല.</li>
+        <li>മരണപ്പെട്ട ഷെയർഹോൾഡറുടെ അവകാശികൾക്കോ നിയമപരമായ പ്രതിനിധികൾക്കോ ഷെയറുകൾ കൈമാറാം.</li>
+        <li>ആവശ്യമായ നിയമപരമായ രേഖകൾ കമ്പനി ആവശ്യപ്പെടാം.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-transfer-diff">
+      <h2>5. ട്രാൻസ്ഫറും ട്രാൻസ്മിഷനും തമ്മിലുള്ള വ്യത്യാസങ്ങൾ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>അടിസ്ഥാനം</th><th>ട്രാൻസ്ഫർ (Transfer)</th><th>ട്രാൻസ്മിഷൻ (Transmission)</th></tr></thead>
+          <tbody>
+            <tr><td>അർത്ഥം</td><td>സ്വമനസ്സാലെയുള്ള കൈമാറ്റം</td><td>നിയമത്തിന്റെ പ്രവർത്തനഫലമായുള്ള കൈമാറ്റം</td></tr>
+            <tr><td>കാരണം</td><td>വിൽപ്പന, സമ്മാനം തുടങ്ങിയവ</td><td>മരണം, പാപ്പരത്തം തുടങ്ങിയ നിയമപരമായ സാഹചര്യങ്ങൾ</td></tr>
+            <tr><td>സ്വഭാവം</td><td>സ്വമനസ്സാലെയുള്ളത്</td><td>നിയമപരമായി സംഭവിക്കുന്നത്</td></tr>
+            <tr><td>ട്രാൻസ്ഫർ ഡീഡ്</td><td>ബാധകമായ സാഹചര്യങ്ങളിൽ ആവശ്യമാണ്</td><td>സാധാരണയായി ആവശ്യമില്ല</td></tr>
+            <tr><td>കൈമാറ്റം ലഭിക്കുന്നയാൾ</td><td>വാങ്ങുന്നയാൾ അല്ലെങ്കിൽ മറ്റൊരു വ്യക്തി</td><td>നിയമപരമായ അവകാശി അല്ലെങ്കിൽ പ്രതിനിധി</td></tr>
+            <tr><td>നടപടിക്രമം</td><td>ബാധകമായ കൈമാറ്റനടപടികൾ പാലിക്കണം</td><td>നിയമപരമായ അവകാശം തെളിയിക്കുന്ന രേഖകൾ സമർപ്പിക്കണം</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-shares-points">
+      <h2>6. പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ &amp; ചുരുക്കം</h2>
+      <ol>
+        <li><strong>Share:</strong> കമ്പനിയുടെ ഷെയർ ക്യാപിറ്റലിലെ ഒരു വിഹിതം.</li>
+        <li><strong>Equity Shares:</strong> സാധാരണയായി വോട്ടവകാശമുള്ളതും നിശ്ചിതമല്ലാത്ത ഡിവിഡന്റ് ലഭിക്കാവുന്നതുമായ ഷെയറുകൾ.</li>
+        <li><strong>Preference Shares:</strong> ഡിവിഡന്റിലും മൂലധനം തിരികെ ലഭിക്കുന്നതിലും മുൻഗണനയുള്ള ഷെയറുകൾ.</li>
+        <li><strong>Cumulative Preference Shares:</strong> നൽകാത്ത ഡിവിഡന്റ് കുടിശ്ശികയായി നിലനിൽക്കും.</li>
+        <li><strong>Non-Cumulative Preference Shares:</strong> നൽകാത്ത ഡിവിഡന്റ് സാധാരണയായി കുടിശ്ശികയായി നിലനിൽക്കില്ല.</li>
+        <li><strong>Participating Preference Shares:</strong> അധിക ലാഭത്തിൽ പങ്കാളിത്തം ലഭിക്കാം.</li>
+        <li><strong>Convertible Preference Shares:</strong> വ്യവസ്ഥകൾക്കനുസരിച്ച് ഇക്വിറ്റി ഷെയറുകളാക്കി മാറ്റാം.</li>
+        <li><strong>Redeemable Preference Shares:</strong> നിയമപരമായ വ്യവസ്ഥകൾ പാലിച്ച് തിരികെ വാങ്ങാം.</li>
+        <li><strong>Transfer:</strong> സ്വമനസ്സാലെയുള്ള ഷെയർ കൈമാറ്റം.</li>
+        <li><strong>Transmission:</strong> നിയമത്തിന്റെ പ്രവർത്തനഫലമായുള്ള ഷെയർ കൈമാറ്റം.</li>
+      </ol>
+      <div class="note"><strong>ചുരുക്കം:</strong> ഒരു കമ്പനിയുടെ ഷെയർ ക്യാപിറ്റലിലെ ഒരു വിഹിതമാണ് ഷെയർ. പ്രധാനമായും ഇക്വിറ്റി ഷെയറുകളും പ്രഫറൻസ് ഷെയറുകളുമാണ് ഉള്ളത്. പ്രഫറൻസ് ഷെയറുകളെ ക്യുമുലേറ്റീവ്, പാർട്ടിസിപ്പേറ്റിങ്, കൺവേർട്ടിബിൾ, റിഡീമബിൾ തുടങ്ങിയ വിഭാഗങ്ങളായി തിരിക്കാം. ഷെയറുകളുടെ ഉടമസ്ഥാവകാശം സ്വമനസ്സാലെ കൈമാറുന്നതാണ് ട്രാൻസ്ഫർ. നിയമത്തിന്റെ പ്രവർത്തനഫലമായി ഉടമസ്ഥാവകാശം മാറുന്നതാണ് ട്രാൻസ്മിഷൻ.</div>
+    </article>
+  </section>
+
+  <!-- ================= SHARE CAPITAL ================= -->
+  <section class="module" id="module-capital">
+    <div class="module-head">
+      <span class="module-badge">Part 9</span>
+      <h1>Share Capital</h1>
+      <p class="module-sub">ഷെയർ ക്യാപ്പിറ്റൽ</p>
+    </div>
+
+    <article class="topic" id="t-share-capital">
+      <h2>1. ഷെയർ ക്യാപ്പിറ്റൽ – അർത്ഥം</h2>
+      <p>ഒരു കമ്പനി ഷെയറുകൾ ഇഷ്യൂ ചെയ്യുന്നതിലൂടെ സമാഹരിക്കുന്ന മൂലധനമാണ് <strong>ഷെയർ ക്യാപ്പിറ്റൽ (Share Capital)</strong>.</p>
+      <p>ഒരു കമ്പനിയുടെ പ്രധാന സാമ്പത്തിക സ്രോതസ്സുകളിൽ ഒന്നാണ് ഷെയർ ക്യാപ്പിറ്റൽ.</p>
+    </article>
+
+    <article class="topic" id="t-capital-kinds">
+      <h2>2. ഷെയർ ക്യാപ്പിറ്റലിന്റെ വിവിധ തരങ്ങൾ (Kinds of Share Capital)</h2>
+
+      <h3>1. ഓതറൈസ്ഡ് ക്യാപ്പിറ്റൽ (Authorised Capital)</h3>
+      <p>ഒരു കമ്പനിക്ക് അതിന്റെ മെമ്മോറാണ്ടം ഓഫ് അസോസിയേഷനിൽ (MOA) രേഖപ്പെടുത്തിയിട്ടുള്ളതും നിയമാനുസൃതമായി ഇഷ്യൂ ചെയ്യാൻ കഴിയുന്നതുമായ പരമാവധി ഷെയർ ക്യാപ്പിറ്റലാണ് ഓതറൈസ്ഡ് ക്യാപ്പിറ്റൽ.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനിയുടെ ഓതറൈസ്ഡ് ക്യാപ്പിറ്റൽ ₹10 ലക്ഷം ആണെങ്കിൽ, അതിന്റെ അംഗീകൃത പരിധി ₹10 ലക്ഷമാണ്.</div>
+
+      <h3>2. ഇഷ്യൂഡ് ക്യാപ്പിറ്റൽ (Issued Capital)</h3>
+      <p>ഓതറൈസ്ഡ് ക്യാപ്പിറ്റലിൽ നിന്ന് കമ്പനി പൊതുജനങ്ങൾക്കോ നിക്ഷേപകർക്കോ വാങ്ങുന്നതിനായി ഇഷ്യൂ ചെയ്യുന്ന ഭാഗമാണ് ഇഷ്യൂഡ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>3. സബ്സ്ക്രൈബ്ഡ് ക്യാപ്പിറ്റൽ (Subscribed Capital)</h3>
+      <p>കമ്പനി ഇഷ്യൂ ചെയ്ത ഷെയറുകളിൽ നിന്ന് നിക്ഷേപകർ വാങ്ങാൻ സമ്മതിച്ച ഷെയറുകളുടെ ആകെ മൂല്യമാണ് സബ്സ്ക്രൈബ്ഡ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>4. അൺസബ്സ്ക്രൈബ്ഡ് ക്യാപ്പിറ്റൽ (Unsubscribed Capital)</h3>
+      <p>കമ്പനി ഇഷ്യൂ ചെയ്ത ഷെയറുകളിൽ നിന്ന് നിക്ഷേപകർ വാങ്ങാതെ അവശേഷിക്കുന്ന ഭാഗമാണ് അൺസബ്സ്ക്രൈബ്ഡ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>5. കോൾഡ്-അപ്പ് ക്യാപ്പിറ്റൽ (Called-up Capital)</h3>
+      <p>ഷെയർ ഉടമകൾ അടയ്ക്കേണ്ടതിൽ നിന്ന് കമ്പനി അടയ്ക്കാൻ ആവശ്യപ്പെട്ടിട്ടുള്ള തുകയാണ് കോൾഡ്-അപ്പ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>6. അൺകോൾഡ് ക്യാപ്പിറ്റൽ (Uncalled Capital)</h3>
+      <p>ഷെയർ ഉടമകൾ അടയ്ക്കേണ്ടതിൽ നിന്ന് കമ്പനി ഇതുവരെ അടയ്ക്കാൻ ആവശ്യപ്പെടാത്ത തുകയാണ് അൺകോൾഡ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>7. പെയ്ഡ്-അപ്പ് ക്യാപ്പിറ്റൽ (Paid-up Capital)</h3>
+      <p>ഷെയർ ഉടമകൾ അടയ്ക്കേണ്ട തുകയിൽ നിന്ന് യഥാർത്ഥത്തിൽ അടച്ചിട്ടുള്ള തുകയാണ് പെയ്ഡ്-അപ്പ് ക്യാപ്പിറ്റൽ.</p>
+
+      <h3>8. കോൾസ് ഇൻ അരിയർ (Calls in Arrears)</h3>
+      <p>കമ്പനി അടയ്ക്കാൻ ആവശ്യപ്പെട്ടിട്ടും ഷെയർ ഉടമകൾ അടയ്ക്കാതെ കുടിശ്ശികയായി നിലനിൽക്കുന്ന തുകയാണ് കോൾസ് ഇൻ അരിയർ.</p>
+
+      <h3>9. റിസർവ് ക്യാപ്പിറ്റൽ (Reserve Capital)</h3>
+      <p>അൺകോൾഡ് ക്യാപ്പിറ്റലിൽ നിന്ന് കമ്പനി പിരിച്ചെടുക്കുന്നത് ലിക്വിഡേഷൻ സമയത്തേക്ക് മാത്രം മാറ്റിവെക്കാൻ പ്രത്യേക പ്രമേയം വഴി തീരുമാനിക്കുന്ന ഭാഗമാണ് റിസർവ് ക്യാപ്പിറ്റൽ.</p>
+      <div class="key"><strong>പ്രധാന കാര്യം:</strong> റിസർവ് ക്യാപ്പിറ്റൽ സാധാരണ ബിസിനസ് ആവശ്യങ്ങൾക്കായി വിളിച്ചെടുക്കാൻ കഴിയില്ല.</div>
+    </article>
+
+    <article class="topic" id="t-alteration-capital">
+      <h2>3. ഷെയർ ക്യാപ്പിറ്റലിന്റെ ഓൾട്ടറേഷൻ (Alteration of Share Capital)</h2>
+      <h3>അർത്ഥം</h3>
+      <p>കമ്പനീസ് ആക്ട്, 2013-ലെ <strong>സെക്ഷൻ 61</strong> പ്രകാരം, കമ്പനിയുടെ ആർട്ടിക്കിൾസ് ഓഫ് അസോസിയേഷൻ (AOA) അനുവദിക്കുന്നുവെങ്കിൽ, കമ്പനി അതിന്റെ ഷെയർ ക്യാപ്പിറ്റലിൽ നിയമാനുസൃതമായ മാറ്റങ്ങൾ വരുത്താം.</p>
+      <h3>ഷെയർ ക്യാപ്പിറ്റൽ മാറ്റുന്നതിനുള്ള പ്രധാന രീതികൾ</h3>
+      <ol>
+        <li><strong>ക്യാപ്പിറ്റൽ വർധിപ്പിക്കൽ (Increase):</strong> ഓതറൈസ്ഡ് ഷെയർ ക്യാപ്പിറ്റലിന്റെ പരിധി വർധിപ്പിക്കുന്നു.</li>
+        <li><strong>ഷെയറുകൾ ഒന്നിച്ചുചേർക്കൽ (Consolidation):</strong> ചെറിയ മുഖവിലയുള്ള നിരവധി ഷെയറുകൾ ഒന്നിച്ചുചേർത്ത് വലിയ മുഖവിലയുള്ള ഷെയറുകളാക്കുന്നു.</li>
+        <li><strong>ഷെയറുകളെ സ്റ്റോക്കാക്കി മാറ്റൽ (Conversion into Stock):</strong> പൂർണമായി പണമടച്ച ഷെയറുകളെ സ്റ്റോക്കാക്കി മാറ്റുകയും പിന്നീട് വീണ്ടും ഷെയറുകളാക്കുകയും ചെയ്യാം.</li>
+        <li><strong>ഷെയറുകൾ വിഭജിക്കൽ (Sub-division):</strong> വലിയ മുഖവിലയുള്ള ഷെയറുകളെ ചെറിയ മുഖവിലയുള്ള ഷെയറുകളായി വിഭജിക്കുന്നു.</li>
+        <li><strong>ഇഷ്യൂ ചെയ്യാത്ത ഷെയറുകൾ റദ്ദാക്കൽ (Cancellation):</strong> ഇതുവരെ ഇഷ്യൂ ചെയ്യാത്ത ഷെയറുകൾ റദ്ദാക്കാം.</li>
+      </ol>
+      <h3>നടപടിക്രമങ്ങൾ (Procedure)</h3>
+      <ol>
+        <li>കമ്പനിയുടെ AOA ഷെയർ ക്യാപ്പിറ്റലിൽ മാറ്റം വരുത്താൻ അനുവദിക്കണം.</li>
+        <li>ജനറൽ മീറ്റിംഗിൽ ഓർഡിനറി റെസല്യൂഷൻ പാസാക്കണം.</li>
+        <li>ആവശ്യമായ വിവരങ്ങൾ <strong>30 ദിവസത്തിനുള്ളിൽ</strong> രജിസ്ട്രാർ ഓഫ് കമ്പനീസിന് (ROC) സമർപ്പിക്കണം.</li>
+      </ol>
+      <div class="note"><strong>ഓർമ്മിക്കുക:</strong> Alteration of Share Capital – <strong>Section 61</strong> – <strong>Ordinary Resolution</strong>.</div>
+    </article>
+
+    <article class="topic" id="t-reduction-capital">
+      <h2>4. ഷെയർ ക്യാപ്പിറ്റലിന്റെ റിഡക്ഷൻ (Reduction of Share Capital)</h2>
+      <h3>അർത്ഥം</h3>
+      <p>ഒരു കമ്പനിയുടെ നിലവിലുള്ള ഷെയർ ക്യാപ്പിറ്റൽ നിയമാനുസൃതമായി കുറയ്ക്കുന്ന നടപടിയാണ് റിഡക്ഷൻ ഓഫ് ഷെയർ ക്യാപ്പിറ്റൽ.</p>
+      <h3>റിഡക്ഷന്റെ പ്രധാന രീതികൾ</h3>
+      <ol>
+        <li>പൂർണമായി പണമടയ്ക്കാത്ത ഷെയറുകളിലെ അടയ്ക്കാനുള്ള ബാധ്യത കുറയ്ക്കുക.</li>
+        <li>കമ്പനിയുടെ ആസ്തികളുമായി പൊരുത്തപ്പെടാത്ത അധിക പെയ്ഡ്-അപ്പ് ക്യാപ്പിറ്റൽ റദ്ദാക്കുക.</li>
+        <li>ആവശ്യത്തിലധികമുള്ള പെയ്ഡ്-അപ്പ് ക്യാപ്പിറ്റൽ ഷെയർ ഉടമകൾക്ക് തിരികെ നൽകുക.</li>
+      </ol>
+      <h3>നടപടിക്രമങ്ങൾ (Procedure)</h3>
+      <ol>
+        <li>കമ്പനിയുടെ AOA ക്യാപ്പിറ്റൽ കുറയ്ക്കാൻ അനുവദിക്കണം.</li>
+        <li>ജനറൽ മീറ്റിംഗിൽ സ്പെഷ്യൽ റെസല്യൂഷൻ പാസാക്കണം.</li>
+        <li>നാഷണൽ കമ്പനി ലോ ട്രൈബ്യൂണലിന്റെ (NCLT) അംഗീകാരം നേടണം.</li>
+        <li>നിയമം അനുശാസിക്കുന്ന മറ്റ് നടപടിക്രമങ്ങളും പൂർത്തിയാക്കണം.</li>
+      </ol>
+      <div class="key"><strong>ഓർമ്മിക്കുക:</strong> Reduction of Share Capital – <strong>Section 66</strong> – <strong>Special Resolution</strong> – <strong>NCLT Approval</strong>.</div>
+    </article>
+
+    <article class="topic" id="t-alt-red-diff">
+      <h2>5. ഓൾട്ടറേഷനും റിഡക്ഷനും തമ്മിലുള്ള വ്യത്യാസം</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ഓൾട്ടറേഷൻ (Alteration)</th><th>റിഡക്ഷൻ (Reduction)</th></tr></thead>
+          <tbody>
+            <tr><td>ഷെയർ ക്യാപ്പിറ്റലിന്റെ ഘടനയിൽ മാറ്റം വരുത്തുന്നു.</td><td>ഷെയർ ക്യാപ്പിറ്റലിന്റെ അളവ് കുറയ്ക്കുന്നു.</td></tr>
+            <tr><td>കമ്പനീസ് ആക്ട് സെക്ഷൻ 61 ബാധകമാണ്.</td><td>കമ്പനീസ് ആക്ട് സെക്ഷൻ 66 ബാധകമാണ്.</td></tr>
+            <tr><td>സാധാരണയായി ഓർഡിനറി റെസല്യൂഷൻ ആവശ്യമാണ്.</td><td>സ്പെഷ്യൽ റെസല്യൂഷൻ ആവശ്യമാണ്.</td></tr>
+            <tr><td>സാധാരണയായി NCLT അംഗീകാരം ആവശ്യമില്ല.</td><td>NCLT അംഗീകാരം ആവശ്യമാണ്.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="topic" id="t-voting">
+      <h2>6. വോട്ടിംഗ് അവകാശങ്ങൾ (Voting Rights)</h2>
+      <p>വോട്ടിംഗ് അവകാശങ്ങൾ പ്രധാനമായും ഇക്വിറ്റി ഷെയർ ഉടമകൾക്കും പ്രഫറൻസ് ഷെയർ ഉടമകൾക്കും ബാധകമാണ്.</p>
+      <h3>1. ഇക്വിറ്റി ഷെയർ ഉടമകൾ (Equity Shareholders)</h3>
+      <ul>
+        <li>കമ്പനിയുടെ യഥാർത്ഥ ഉടമകളാണ്.</li>
+        <li>സാധാരണയായി കൈവശമുള്ള ഇക്വിറ്റി ഷെയറുകളുടെ അനുപാതത്തിൽ വോട്ടിംഗ് അവകാശമുണ്ട്.</li>
+        <li>കമ്പനിയുടെ പൊതുവായ കാര്യങ്ങളുമായി ബന്ധപ്പെട്ട പ്രമേയങ്ങളിൽ വോട്ട് ചെയ്യാം.</li>
+      </ul>
+      <h3>2. പ്രഫറൻസ് ഷെയർ ഉടമകൾ (Preference Shareholders)</h3>
+      <ul>
+        <li>സാധാരണയായി ഡിവിഡന്റ് ലഭിക്കുന്നതിലും മൂലധനം തിരികെ ലഭിക്കുന്നതിലും മുൻഗണനയുണ്ട്.</li>
+        <li>അവരുടെ അവകാശങ്ങളെ നേരിട്ട് ബാധിക്കുന്ന പ്രമേയങ്ങളിൽ വോട്ട് ചെയ്യാം.</li>
+        <li>കമ്പനിയുടെ ലിക്വിഡേഷൻ, മൂലധന തിരിച്ചടവ് തുടങ്ങിയ ചില പ്രത്യേക കാര്യങ്ങളിലും വോട്ടിംഗ് അവകാശമുണ്ടാകും.</li>
+      </ul>
+      <div class="key"><strong>പ്രത്യേക വ്യവസ്ഥ:</strong> പ്രഫറൻസ് ഷെയർ ഉടമകൾക്ക് തുടർച്ചയായി രണ്ട് വർഷമോ അതിൽ കൂടുതലോ കാലയളവിൽ ഡിവിഡന്റ് നൽകാതിരുന്നാൽ, കമ്പനീസ് ആക്ട് <strong>സെക്ഷൻ 47</strong> പ്രകാരം എല്ലാ പ്രമേയങ്ങളിലും വോട്ട് ചെയ്യാനുള്ള അവകാശം ലഭിക്കും.</div>
+    </article>
+
+    <article class="topic" id="t-capital-points">
+      <h2>7. പരീക്ഷയ്ക്ക് ഓർത്തിരിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ &amp; ഉപസംഹാരം</h2>
+      <ol>
+        <li><strong>Share Capital:</strong> ഷെയറുകൾ ഇഷ്യൂ ചെയ്യുന്നതിലൂടെ സമാഹരിക്കുന്ന മൂലധനം.</li>
+        <li><strong>Authorised Capital:</strong> പരമാവധി അംഗീകൃത ഷെയർ ക്യാപ്പിറ്റൽ.</li>
+        <li><strong>Issued Capital:</strong> പൊതുജനങ്ങൾക്കായി ഇഷ്യൂ ചെയ്ത മൂലധനം.</li>
+        <li><strong>Subscribed Capital:</strong> നിക്ഷേപകർ വാങ്ങാൻ സമ്മതിച്ച ഷെയറുകളുടെ മൂല്യം.</li>
+        <li><strong>Called-up Capital:</strong> കമ്പനി അടയ്ക്കാൻ ആവശ്യപ്പെട്ട തുക.</li>
+        <li><strong>Paid-up Capital:</strong> യഥാർത്ഥത്തിൽ അടച്ച തുക.</li>
+        <li><strong>Calls in Arrears:</strong> അടയ്ക്കേണ്ടതും കുടിശ്ശികയായതുമായ തുക.</li>
+        <li><strong>Alteration of Share Capital:</strong> Section 61.</li>
+        <li><strong>Reduction of Share Capital:</strong> Section 66.</li>
+        <li><strong>Equity Shareholders:</strong> പൊതുവായ വോട്ടിംഗ് അവകാശങ്ങൾ.</li>
+        <li><strong>Preference Shareholders:</strong> നിയമം നിർദേശിക്കുന്ന പ്രത്യേക വോട്ടിംഗ് അവകാശങ്ങൾ.</li>
+      </ol>
+      <div class="note"><strong>ഉപസംഹാരം:</strong> ഒരു കമ്പനിയുടെ സാമ്പത്തിക ഘടനയിൽ ഷെയർ ക്യാപ്പിറ്റലിന് പ്രധാന സ്ഥാനമുണ്ട്. ഇതിന്റെ വിവിധ തരങ്ങൾ, ക്യാപ്പിറ്റലിൽ മാറ്റം വരുത്തുന്നതിനുള്ള നടപടികൾ, ക്യാപ്പിറ്റൽ കുറയ്ക്കുന്നതിനുള്ള നിയമവ്യവസ്ഥകൾ, വിവിധ ഷെയർ ഉടമകളുടെ വോട്ടിംഗ് അവകാശങ്ങൾ എന്നിവ പഠിക്കുന്നത് കോർപ്പറേറ്റ് റെഗുലേഷൻസ് വിഷയത്തിൽ വളരെ പ്രധാനമാണ്.</div>
+    </article>
+  </section>
+
+  <!-- ================= DEBENTURE ================= -->
+  <section class="module" id="module-debenture">
+    <div class="module-head">
+      <span class="module-badge">Part 10</span>
+      <h1>Debenture</h1>
+      <p class="module-sub">ഡിബഞ്ചർ</p>
+    </div>
+
+    <article class="topic" id="t-debenture">
+      <h2>1. ഡിബഞ്ചറിന്റെ അർത്ഥവും നിർവചനവും</h2>
+      <p>ഒരു കമ്പനി പൊതുജനങ്ങളിൽ നിന്നോ സ്ഥാപനങ്ങളിൽ നിന്നോ വായ്പയായി പണം സമാഹരിക്കുമ്പോൾ, ആ കടത്തിന് തെളിവായി നൽകുന്ന രേഖയാണ് <strong>ഡിബഞ്ചർ (Debenture)</strong>.</p>
+      <p>കമ്പനിയുടെ കടബാധ്യതയെ പ്രതിനിധീകരിക്കുന്ന ഒരു സാമ്പത്തിക രേഖയാണിത്.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ഒരു കമ്പനി ₹10,00,000 വായ്പയായി സമാഹരിക്കുകയും അതിന് തെളിവായി ഡിബഞ്ചറുകൾ ഇഷ്യൂ ചെയ്യുകയും ചെയ്യുന്നു. വായ്പ നൽകിയവർ ഡിബഞ്ചർ ഹോൾഡർമാർ എന്നറിയപ്പെടുന്നു.</div>
+      <div class="note"><strong>നിയമപരമായ അടിസ്ഥാനം:</strong> Companies Act, 2013-ലെ <strong>Section 2(30)</strong> ഡിബഞ്ചറിന്റെ നിർവചനവുമായി ബന്ധപ്പെട്ടതാണ്. <strong>Section 71</strong> ഡിബഞ്ചറുകൾ ഇഷ്യൂ ചെയ്യുന്നതുമായി ബന്ധപ്പെട്ട വ്യവസ്ഥകൾ ഉൾക്കൊള്ളുന്നു.</div>
+    </article>
+
+    <article class="topic" id="t-deb-features">
+      <h2>2. ഡിബഞ്ചറുകളുടെ പ്രധാന സവിശേഷതകൾ</h2>
+      <ol>
+        <li><strong>കടത്തിന്റെ തെളിവ്:</strong> കമ്പനി വായ്പ എടുത്തതിന്റെ തെളിവാണ് ഡിബഞ്ചർ.</li>
+        <li><strong>നിശ്ചിത പലിശ:</strong> ഡിബഞ്ചർ ഉടമകൾക്ക് വ്യവസ്ഥകൾ അനുസരിച്ച് പലിശ ലഭിക്കുന്നു.</li>
+        <li><strong>വോട്ടിങ് അവകാശമില്ല:</strong> ഡിബഞ്ചർ ഹോൾഡർമാർക്ക് സാധാരണയായി കമ്പനിയുടെ പൊതുയോഗങ്ങളിൽ വോട്ടിങ് അവകാശമില്ല.</li>
+        <li><strong>തിരിച്ചടവ്:</strong> നിബന്ധനകൾ അനുസരിച്ച് കമ്പനി ഡിബഞ്ചർ തുക തിരിച്ചുനൽകുന്നു.</li>
+        <li><strong>സെക്യൂരിറ്റി:</strong> ചില ഡിബഞ്ചറുകൾ കമ്പനിയുടെ ആസ്തികളിന്മേലുള്ള സുരക്ഷയോടെ ഇഷ്യൂ ചെയ്യുന്നു.</li>
+        <li><strong>ഡിബഞ്ചർ ഹോൾഡർമാർ കടക്കാരാണ്:</strong> അവർ കമ്പനിയുടെ ഉടമകളല്ല; കമ്പനിക്ക് പണം കടം നൽകിയവരാണ്.</li>
+      </ol>
+    </article>
+
+    <article class="topic" id="t-deb-rules">
+      <h2>3. ഡിബഞ്ചറുകൾ ഇഷ്യൂ ചെയ്യുന്നതിനുള്ള നിയമങ്ങൾ</h2>
+
+      <h3>1. വോട്ടിങ് അവകാശം (Voting Rights)</h3>
+      <p>ഡിബഞ്ചർ ഹോൾഡർമാർക്ക് സാധാരണയായി കമ്പനിയുടെ തീരുമാനങ്ങളിൽ വോട്ടിങ് അവകാശമില്ല.</p>
+
+      <h3>2. പലിശ നൽകൽ (Payment of Interest)</h3>
+      <p>ഡിബഞ്ചർ ഇഷ്യൂ ചെയ്യുമ്പോൾ നിശ്ചയിച്ച വ്യവസ്ഥകൾ അനുസരിച്ച് കമ്പനി പലിശ നൽകണം.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> ₹1,000 മുഖവിലയുള്ള ഒരു ഡിബഞ്ചറിന് 10% വാർഷിക പലിശയാണെങ്കിൽ, ഒരു വർഷത്തെ പലിശ ₹100 ആയിരിക്കും.</div>
+
+      <h3>3. ഡിബഞ്ചർ ട്രസ്റ്റി (Debenture Trustee)</h3>
+      <p>ഡിബഞ്ചർ ഹോൾഡർമാരുടെ താൽപര്യങ്ങൾ സംരക്ഷിക്കുന്നതിനായി നിയമിക്കുന്ന വ്യക്തിയോ സ്ഥാപനമോ ആണ് ഡിബഞ്ചർ ട്രസ്റ്റി. ബാധകമായ നിയമങ്ങളും SEBI ചട്ടങ്ങളും അനുസരിച്ച് ട്രസ്റ്റിയെ നിയമിക്കേണ്ടതുണ്ട്.</p>
+
+      <h3>4. ഡിബഞ്ചർ റിഡംഷൻ റിസർവ് (Debenture Redemption Reserve – DRR)</h3>
+      <p>ഡിബഞ്ചറുകൾ തിരിച്ചടയ്ക്കുന്നതിനായി നിയമപ്രകാരം ബാധകമായ ചില കമ്പനികൾ ലാഭത്തിൽനിന്ന് നിശ്ചിത തുക നീക്കിവയ്ക്കേണ്ട റിസർവാണ് DRR.</p>
+      <div class="key"><strong>ശ്രദ്ധിക്കുക:</strong> എല്ലാ കമ്പനികൾക്കും ഒരേ രീതിയിൽ DRR ബാധകമല്ല. കമ്പനിയുടെ വിഭാഗവും നിലവിലുള്ള നിയമങ്ങളും അനുസരിച്ചാണ് വ്യവസ്ഥകൾ ബാധകമാകുന്നത്.</div>
+    </article>
+
+    <article class="topic" id="t-deb-types">
+      <h2>4. ഡിബഞ്ചറുകളുടെ തരങ്ങൾ (Types of Debentures)</h2>
+
+      <h3>1. സെക്യൂർഡ് ഡിബഞ്ചറുകൾ (Secured Debentures)</h3>
+      <p>കമ്പനിയുടെ ആസ്തികളിന്മേൽ ചാർജ് അഥവാ സുരക്ഷ സൃഷ്ടിച്ചുകൊണ്ട് ഇഷ്യൂ ചെയ്യുന്ന ഡിബഞ്ചറുകളാണ് സെക്യൂർഡ് ഡിബഞ്ചറുകൾ.</p>
+      <div class="example"><strong>ഉദാഹരണം:</strong> കമ്പനിയുടെ കെട്ടിടം ഈടായി നൽകി വായ്പ സമാഹരിക്കുന്നത്.</div>
+
+      <h3>2. അൺസെക്യൂർഡ് ഡിബഞ്ചറുകൾ (Unsecured Debentures)</h3>
+      <p>പ്രത്യേക ആസ്തികളുടെ മേൽ സുരക്ഷ സൃഷ്ടിക്കാതെ ഇഷ്യൂ ചെയ്യുന്ന ഡിബഞ്ചറുകളാണ് അൺസെക്യൂർഡ് ഡിബഞ്ചറുകൾ.</p>
+
+      <h3>3. റെഡീമബിൾ ഡിബഞ്ചറുകൾ (Redeemable Debentures)</h3>
+      <p>നിശ്ചിത തീയതിയിലോ നിശ്ചിത കാലയളവിനുശേഷമോ തിരിച്ചടയ്ക്കുന്ന ഡിബഞ്ചറുകളാണ് റെഡീമബിൾ ഡിബഞ്ചറുകൾ.</p>
+
+      <h3>4. ഇറഡീമബിൾ ഡിബഞ്ചറുകൾ (Irredeemable Debentures)</h3>
+      <p>നിശ്ചിത തിരിച്ചടവ് തീയതിയില്ലാത്ത ഡിബഞ്ചറുകളെയാണ് പരമ്പരാഗതമായി ഇറഡീമബിൾ ഡിബഞ്ചറുകൾ എന്ന് വിളിക്കുന്നത്. ഇന്ത്യയിലെ നിലവിലുള്ള കമ്പനി നിയമപ്രകാരം ഇത്തരം ഡിബഞ്ചറുകൾക്ക് പൊതുവായ അനുമതിയുണ്ടെന്ന് കരുതരുത്.</p>
+
+      <h3>5. കൺവേർട്ടിബിൾ ഡിബഞ്ചറുകൾ (Convertible Debentures)</h3>
+      <p>നിശ്ചിത വ്യവസ്ഥകൾ അനുസരിച്ച് ഇക്വിറ്റി ഷെയറുകളാക്കി മാറ്റാൻ കഴിയുന്ന ഡിബഞ്ചറുകളാണ് കൺവേർട്ടിബിൾ ഡിബഞ്ചറുകൾ.</p>
+
+      <h3>6. നോൺ-കൺവേർട്ടിബിൾ ഡിബഞ്ചറുകൾ (Non-Convertible Debentures – NCD)</h3>
+      <p>ഇക്വിറ്റി ഷെയറുകളാക്കി മാറ്റാൻ കഴിയാത്ത ഡിബഞ്ചറുകളാണ് നോൺ-കൺവേർട്ടിബിൾ ഡിബഞ്ചറുകൾ.</p>
+
+      <h3>7. രജിസ്റ്റേർഡ് ഡിബഞ്ചറുകൾ (Registered Debentures)</h3>
+      <p>ഉടമയുടെ പേരും മറ്റ് ആവശ്യമായ വിവരങ്ങളും കമ്പനിയുടെ രേഖകളിൽ രജിസ്റ്റർ ചെയ്തിട്ടുള്ള ഡിബഞ്ചറുകളാണ് രജിസ്റ്റേർഡ് ഡിബഞ്ചറുകൾ.</p>
+
+      <h3>8. ബെയറർ ഡിബഞ്ചറുകൾ (Bearer Debentures)</h3>
+      <p>പരമ്പരാഗതമായി കൈവശം വയ്ക്കുന്ന രേഖയുടെ കൈമാറ്റത്തിലൂടെ ഉടമസ്ഥാവകാശം കൈമാറാവുന്ന ഡിബഞ്ചറുകളാണ് ബെയറർ ഡിബഞ്ചറുകൾ. ഇവയുടെ നിയമപരമായ ലഭ്യതയും കൈമാറ്റരീതിയും ബാധകമായ നിയമങ്ങളെ ആശ്രയിച്ചിരിക്കുന്നു.</p>
+    </article>
+
+    <article class="topic" id="t-charge">
+      <h2>5. ഫിക്സഡ് ചാർജും ഫ്ലോട്ടിങ് ചാർജും (Fixed Charge and Floating Charge)</h2>
+      <p>ഒരു കമ്പനി വായ്പയ്ക്ക് സുരക്ഷ നൽകുന്നതിനായി അതിന്റെ ആസ്തികളിന്മേൽ സൃഷ്ടിക്കുന്ന അവകാശമാണ് <strong>ചാർജ് (Charge)</strong>.</p>
+
+      <h3>1. ഫിക്സഡ് ചാർജ് (Fixed Charge)</h3>
+      <p>കമ്പനിയുടെ നിർദിഷ്ടമായ ഒരു ആസ്തിക്കുമേൽ സൃഷ്ടിക്കുന്ന ചാർജാണ് ഫിക്സഡ് ചാർജ്.</p>
+      <p><strong>ഉദാഹരണങ്ങൾ:</strong> ഭൂമി (Land), കെട്ടിടം (Building), യന്ത്രങ്ങൾ (Machinery)</p>
+      <h4>പ്രധാന സവിശേഷതകൾ</h4>
+      <ul>
+        <li>നിർദിഷ്ട ആസ്തിയിന്മേലാണ് ചാർജ് സൃഷ്ടിക്കുന്നത്.</li>
+        <li>ചാർജിന്റെ വ്യവസ്ഥകൾ അനുസരിച്ച് കമ്പനി ആസ്തി വിൽക്കുന്നതിനോ കൈമാറ്റം ചെയ്യുന്നതിനോ നിയന്ത്രണങ്ങളുണ്ടാകാം.</li>
+        <li>വായ്പ തിരിച്ചടയ്ക്കാത്ത സാഹചര്യത്തിൽ സുരക്ഷയായി നൽകിയ ആസ്തിയിൽനിന്ന് തുക വീണ്ടെടുക്കാൻ വായ്പദാതാവിന് നിയമപരമായ അവകാശങ്ങൾ ഉണ്ടായേക്കാം.</li>
+      </ul>
+
+      <h3>2. ഫ്ലോട്ടിങ് ചാർജ് (Floating Charge)</h3>
+      <p>കമ്പനിയുടെ ബിസിനസ് പ്രവർത്തനങ്ങൾക്കിടെ മാറിക്കൊണ്ടിരിക്കുന്ന ആസ്തികളുടെ ഒരു വിഭാഗത്തിന്മേൽ സൃഷ്ടിക്കുന്ന ചാർജാണ് ഫ്ലോട്ടിങ് ചാർജ്.</p>
+      <p><strong>ഉദാഹരണങ്ങൾ:</strong> അസംസ്കൃത വസ്തുക്കൾ (Raw Materials), സ്റ്റോക്ക് (Stock), ഇൻവെന്ററി (Inventory)</p>
+      <h4>പ്രധാന സവിശേഷതകൾ</h4>
+      <ul>
+        <li>മാറിക്കൊണ്ടിരിക്കുന്ന ആസ്തികളുടെ വിഭാഗത്തിന്മേലാണ് ഇത് ബാധകമാകുന്നത്.</li>
+        <li>സാധാരണ ബിസിനസ് പ്രവർത്തനങ്ങളിൽ കമ്പനി ഈ ആസ്തികൾ കൈകാര്യം ചെയ്യുകയും വിൽക്കുകയും ചെയ്യാം.</li>
+        <li>ചില പ്രത്യേക സാഹചര്യങ്ങളിൽ ഇത് ഫിക്സഡ് ചാർജിന്റെ സ്വഭാവത്തിലേക്ക് മാറുന്നു.</li>
+      </ul>
+
+      <h3>ഫിക്സഡ് ചാർജും ഫ്ലോട്ടിങ് ചാർജും തമ്മിലുള്ള വ്യത്യാസം</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ഫിക്സഡ് ചാർജ്</th><th>ഫ്ലോട്ടിങ് ചാർജ്</th></tr></thead>
+          <tbody>
+            <tr><td>നിർദിഷ്ട ആസ്തിക്കുമേൽ സൃഷ്ടിക്കുന്നു.</td><td>മാറിക്കൊണ്ടിരിക്കുന്ന ആസ്തികളുടെ വിഭാഗത്തിന്മേൽ സൃഷ്ടിക്കുന്നു.</td></tr>
+            <tr><td>ഭൂമി, കെട്ടിടം, യന്ത്രങ്ങൾ എന്നിവ ഉദാഹരണങ്ങളാണ്.</td><td>സ്റ്റോക്ക്, അസംസ്കൃത വസ്തുക്കൾ എന്നിവ ഉദാഹരണങ്ങളാണ്.</td></tr>
+            <tr><td>ആസ്തി കൈകാര്യം ചെയ്യുന്നതിന് കൂടുതൽ നിയന്ത്രണങ്ങളുണ്ടാകാം.</td><td>സാധാരണ ബിസിനസ് പ്രവർത്തനങ്ങളിൽ ആസ്തികൾ കൈകാര്യം ചെയ്യാൻ സാധിക്കും.</td></tr>
+            <tr><td>ആസ്തിയുമായി നേരിട്ട് ബന്ധപ്പെട്ടിരിക്കുന്നു.</td><td>ആസ്തികളുടെ വിഭാഗവുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>ചാർജിന്റെ രജിസ്ട്രേഷൻ (Registration of Charge)</h3>
+      <p>കമ്പനി സൃഷ്ടിക്കുന്ന ചാർജ് ബാധകമായ നിയമപ്രകാരം രജിസ്റ്റർ ചെയ്യേണ്ടതാണ്. Companies Act, 2013-ലെ <strong>Section 77</strong> പ്രകാരം സാധാരണയായി ചാർജ് സൃഷ്ടിച്ച തീയതി മുതൽ <strong>30 ദിവസത്തിനുള്ളിൽ</strong> രജിസ്ട്രേഷനായി അപേക്ഷിക്കണം. നിയമത്തിൽ അനുവദിച്ച സാഹചര്യങ്ങളിൽ അധിക സമയപരിധിയും വ്യവസ്ഥകളും ബാധകമാകാം.</p>
+    </article>
+
+    <article class="topic" id="t-crystallisation">
+      <h2>6. ഫ്ലോട്ടിങ് ചാർജിന്റെ ക്രിസ്റ്റലൈസേഷൻ (Crystallisation of Floating Charge)</h2>
+      <p>ഫ്ലോട്ടിങ് ചാർജ് ഒരു നിർദിഷ്ട ആസ്തികളിന്മേൽ കൂടുതൽ സ്ഥിരമായ ചാർജായി മാറുന്ന പ്രക്രിയയാണ് <strong>ക്രിസ്റ്റലൈസേഷൻ (Crystallisation)</strong>.</p>
+      <h3>ക്രിസ്റ്റലൈസേഷൻ സംഭവിക്കുന്ന സാഹചര്യങ്ങൾ</h3>
+      <ol>
+        <li><strong>വായ്പ തിരിച്ചടവിൽ വീഴ്ച:</strong> കമ്പനി വായ്പയോ പലിശയോ തിരിച്ചടയ്ക്കുന്നതിൽ വീഴ്ച വരുത്തുമ്പോൾ.</li>
+        <li><strong>കമ്പനി അടച്ചുപൂട്ടൽ:</strong> കമ്പനി ലിക്വിഡേഷനിലേക്ക് പോകുമ്പോൾ.</li>
+        <li><strong>കരാർ ലംഘനം:</strong> വായ്പാ കരാറിൽ പറഞ്ഞിരിക്കുന്ന പ്രത്യേക സാഹചര്യങ്ങൾ ഉണ്ടാകുമ്പോൾ.</li>
+      </ol>
+      <h3>ക്രിസ്റ്റലൈസേഷന്റെ ഫലങ്ങൾ</h3>
+      <ul>
+        <li>ഫ്ലോട്ടിങ് ചാർജ് കൂടുതൽ സ്ഥിരമായ ചാർജിന്റെ സ്വഭാവത്തിലേക്ക് മാറുന്നു.</li>
+        <li>ബാധകമായ നിയമവും കരാർ വ്യവസ്ഥകളും അനുസരിച്ച് ബന്ധപ്പെട്ട ആസ്തികളുടെ കൈകാര്യം ചെയ്യുന്നതിൽ കമ്പനിക്ക് നിയന്ത്രണങ്ങൾ ഉണ്ടായേക്കാം.</li>
+        <li>വായ്പദാതാവിന് സുരക്ഷയിന്മേലുള്ള അവകാശങ്ങൾ വിനിയോഗിക്കാൻ സാധിച്ചേക്കാം.</li>
+      </ul>
+    </article>
+
+    <article class="topic" id="t-deb-share-diff">
+      <h2>7. ഡിബഞ്ചറും ഷെയറും തമ്മിലുള്ള വ്യത്യാസം</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ഡിബഞ്ചർ (Debenture)</th><th>ഷെയർ (Share)</th></tr></thead>
+          <tbody>
+            <tr><td>കമ്പനിയുടെ കടത്തെ പ്രതിനിധീകരിക്കുന്നു.</td><td>കമ്പനിയിലെ ഉടമസ്ഥാവകാശത്തിന്റെ ഒരു ഭാഗത്തെ പ്രതിനിധീകരിക്കുന്നു.</td></tr>
+            <tr><td>ഡിബഞ്ചർ ഹോൾഡർ കമ്പനിയുടെ കടക്കാരനാണ്.</td><td>ഷെയർഹോൾഡർ കമ്പനിയുടെ അംഗമാണ്.</td></tr>
+            <tr><td>നിശ്ചിത വ്യവസ്ഥകൾ പ്രകാരം പലിശ ലഭിക്കുന്നു.</td><td>ലാഭവിഹിതം (Dividend) ലഭിക്കാം; അത് പലിശപോലെ ഉറപ്പുള്ളതല്ല.</td></tr>
+            <tr><td>സാധാരണയായി വോട്ടിങ് അവകാശമില്ല.</td><td>ഇക്വിറ്റി ഷെയർഹോൾഡർമാർക്ക് സാധാരണയായി വോട്ടിങ് അവകാശമുണ്ട്.</td></tr>
+            <tr><td>നിബന്ധനകൾ അനുസരിച്ച് തുക തിരിച്ചടയ്ക്കുന്നു.</td><td>ഷെയർ മൂലധനം സാധാരണ വായ്പപോലെ നിശ്ചിത തീയതിയിൽ തിരിച്ചടയ്ക്കുന്നില്ല.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>8. ഉപസംഹാരം (Conclusion):</strong> ഒരു കമ്പനിക്ക് വായ്പയായി പണം സമാഹരിക്കാൻ സഹായിക്കുന്ന പ്രധാനപ്പെട്ട സാമ്പത്തിക ഉപകരണമാണ് ഡിബഞ്ചർ. ഡിബഞ്ചർ ഹോൾഡർമാർ കമ്പനിയുടെ കടക്കാരാണ്. സെക്യൂർഡ്, അൺസെക്യൂർഡ്, കൺവേർട്ടിബിൾ, നോൺ-കൺവേർട്ടിബിൾ തുടങ്ങിയ വിവിധ തരം ഡിബഞ്ചറുകൾ നിലവിലുണ്ട്. ഫിക്സഡ് ചാർജും ഫ്ലോട്ടിങ് ചാർജും കമ്പനിയുടെ ആസ്തികൾക്ക് മേൽ വായ്പദാതാക്കൾക്ക് സുരക്ഷ നൽകുന്നു. ഫ്ലോട്ടിങ് ചാർജ് സ്ഥിരമായ ചാർജിന്റെ സ്വഭാവത്തിലേക്ക് മാറുന്ന പ്രക്രിയയാണ് ക്രിസ്റ്റലൈസേഷൻ.</div>
+    </article>
+  </section>
+
+  <!-- FEEDBACK CARD -->
+  <section class="module" id="feedback">
+    <div class="topic" style="text-align:center;background:linear-gradient(135deg,#e8f5e9,#ffffff);border-color:#c8e6c9">
+      <h2 style="justify-content:center">💬 Feedback &amp; Suggestions</h2>
+      <p>ഈ നോട്ട്സിൽ എന്തെങ്കിലും തിരുത്തലുകളോ നിർദ്ദേശങ്ങളോ ഉണ്ടെങ്കിൽ Instagram-ൽ അറിയിക്കാം.</p>
+      <p style="margin-top:18px">
+        <a class="fab fab-insta" href="https://www.instagram.com/albin___baby___?igsh=MTN4cXprb3A2dm8ybg==" target="_blank" rel="noopener" style="display:inline-flex">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          Send Feedback on Instagram
+        </a>
+      </p>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p><strong>Corporate Regulations</strong> — B.Com Study Notes</p>
+  <p>Prepared for exam preparation · <a href="https://www.instagram.com/albin___baby___?igsh=MTN4cXprb3A2dm8ybg==" target="_blank" rel="noopener">Feedback on Instagram</a></p>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floaters">
+  <a class="fab fab-insta" href="https://www.instagram.com/albin___baby___?igsh=MTN4cXprb3A2dm8ybg==" target="_blank" rel="noopener" title="Send feedback on Instagram">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+    Feedback
+  </a>
+  <button class="fab fab-top" id="topBtn" title="Back to top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- ELEMENTS ---------- */
+  const searchInput  = document.getElementById('searchInput');
+  const resultsBox   = document.getElementById('searchResults');
+  const clearBtn     = document.getElementById('clearBtn');
+  const menuBtn      = document.getElementById('menuBtn');
+  const sidebar      = document.getElementById('sidebar');
+  const backdrop     = document.getElementById('backdrop');
+  const topBtn       = document.getElementById('topBtn');
+
+  /* ---------- BUILD SEARCH INDEX ---------- */
+  const INDEX = [];   // { el, topicId, topicTitle, text }
+  const TOPICS = [];
+
+  document.querySelectorAll('.topic').forEach(function(topic){
+    const h2 = topic.querySelector('h2');
+    const title = h2 ? h2.textContent.trim() : 'Topic';
+    TOPICS.push({ id: topic.id, title: title });
+
+    const blocks = topic.querySelectorAll('p, li, h3, h4, tr');
+    blocks.forEach(function(el){
+      // skip nested duplicates: only take elements whose closest .topic is this topic
+      if (el.closest('.topic') !== topic) return;
+      const txt = (el.textContent || '').replace(/\s+/g,' ').trim();
+      if (txt.length < 3) return;
+      INDEX.push({
+        el: el,
+        topicId: topic.id,
+        topicTitle: title,
+        text: txt
+      });
+    });
+  });
+
+  /* ---------- HELPERS ---------- */
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function escapeReg(s){
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function makeSnippet(text, words){
+    const lower = text.toLowerCase();
+    let pos = -1;
+    for (let i=0;i<words.length;i++){
+      const idx = lower.indexOf(words[i]);
+      if (idx !== -1 && (pos === -1 || idx < pos)) pos = idx;
+    }
+    if (pos === -1) pos = 0;
+    const start = Math.max(0, pos - 55);
+    const end   = Math.min(text.length, pos + 110);
+    let s = text.slice(start, end);
+    if (start > 0) s = '… ' + s;
+    if (end < text.length) s = s + ' …';
+    return s;
+  }
+
+  function markWords(escapedText, words){
+    let out = escapedText;
+    words.forEach(function(w){
+      const re = new RegExp('(' + escapeReg(escapeHtml(w)) + ')', 'gi');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  /* ---------- HIGHLIGHT IN PAGE ---------- */
+  let currentMarks = [];
+
+  function clearPageHighlights(){
+    currentMarks.forEach(function(m){
+      const parent = m.parentNode;
+      if (!parent) return;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    currentMarks = [];
+    document.querySelectorAll('.topic.hit').forEach(function(t){ t.classList.remove('hit'); });
+  }
+
+  function markTextNodes(root, words){
+    if (!root || !words.length) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeValue && n.nodeValue.trim().length) nodes.push(n);
+    }
+    nodes.forEach(function(node){
+      if (node.parentNode && node.parentNode.nodeName === 'MARK') return;
+      const value = node.nodeValue;
+      const lowerVal = value.toLowerCase();
+      let found = false;
+      words.forEach(function(w){
+        if (lowerVal.indexOf(w) !== -1) found = true;
+      });
+      if (!found) return;
+
+      const frag = document.createDocumentFragment();
+      let remaining = value;
+
+      // build a combined regex of all words
+      const re = new RegExp('(' + words.map(escapeReg).join('|') + ')', 'gi');
+      let lastIndex = 0, m;
+      while ((m = re.exec(value)) !== null){
+        if (m.index > lastIndex){
+          frag.appendChild(document.createTextNode(value.slice(lastIndex, m.index)));
+        }
+        const mark = document.createElement('mark');
+        mark.className = 'sh';
+        mark.textContent = m[0];
+        frag.appendChild(mark);
+        currentMarks.push(mark);
+        lastIndex = m.index + m[0].length;
+        if (m[0].length === 0) re.lastIndex++;
+      }
+      if (lastIndex < value.length){
+        frag.appendChild(document.createTextNode(value.slice(lastIndex)));
+      }
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  /* ---------- SEARCH ---------- */
+  let lastResults = [];
+  let debounceTimer = null;
+
+  function doSearch(rawQuery){
+    const q = rawQuery.trim().toLowerCase();
+    resultsBox.innerHTML = '';
+    lastResults = [];
+
+    if (q.length < 2){
+      resultsBox.classList.remove('open');
+      return;
+    }
+
+    const words = q.split(/\s+/).filter(function(w){ return w.length > 0; });
+
+    const matches = [];
+    for (let i=0;i<INDEX.length;i++){
+      const item = INDEX[i];
+      const lowerText = item.text.toLowerCase();
+      let all = true;
+      for (let j=0;j<words.length;j++){
+        if (lowerText.indexOf(words[j]) === -1){ all = false; break; }
+      }
+      if (all) matches.push(item);
+      if (matches.length >= 60) break;
+    }
+
+    // also match topic titles even if body doesn't contain it
+    if (matches.length === 0){
+      TOPICS.forEach(function(t){
+        if (t.title.toLowerCase().indexOf(q) !== -1){
+          const topicEl = document.getElementById(t.id);
+          if (topicEl){
+            matches.push({
+              el: topicEl,
+              topicId: t.id,
+              topicTitle: t.title,
+              text: topicEl.textContent.replace(/\s+/g,' ').trim().slice(0,160)
+            });
+          }
+        }
+      });
+    }
+
+    if (matches.length === 0){
+      resultsBox.innerHTML = '<div class="res-empty">No results for <b>' + escapeHtml(rawQuery) + '</b><br>Try: MOA, NCLT, Debenture, Share Capital</div>';
+      resultsBox.classList.add('open');
+      return;
+    }
+
+    // group header
+    const meta = document.createElement('div');
+    meta.className = 'res-meta';
+    meta.textContent = matches.length + ' result' + (matches.length>1?'s':'') + ' found';
+    resultsBox.appendChild(meta);
+
+    lastResults = matches;
+
+    matches.forEach(function(item, idx){
+      const btn = document.createElement('button');
+      btn.className = 'res-item';
+      btn.type = 'button';
+      btn.dataset.index = idx;
+
+      const snippet = makeSnippet(item.text, words);
+      btn.innerHTML =
+        '<span class="res-title">' + escapeHtml(item.topicTitle) + '</span>' +
+        '<span class="res-snip">' + markWords(escapeHtml(snippet), words) + '</span>';
+
+      btn.addEventListener('click', function(){
+        goToResult(idx);
+      });
+
+      resultsBox.appendChild(btn);
+    });
+
+    resultsBox.classList.add('open');
+    resultsBox.scrollTop = 0;
+  }
+
+  function goToResult(idx){
+    const item = lastResults[idx];
+    if (!item) return;
+
+    const q = searchInput.value.trim().toLowerCase();
+    const words = q.split(/\s+/).filter(function(w){ return w.length > 0; });
+
+    closeResults();
+
+    const topicEl = document.getElementById(item.topicId);
+
+    clearPageHighlights();
+
+    // scroll first, then highlight
+    if (item.el && item.el.scrollIntoView){
+      item.el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+    if (topicEl) topicEl.classList.add('hit');
+
+    setTimeout(function(){
+      if (item.el) markTextNodes(item.el, words);
+      if (topicEl){
+        // if nothing marked inside target, mark the whole topic
+        if (!item.el || !item.el.querySelector('mark.sh')){
+          markTextNodes(topicEl, words);
+        }
+      }
+    }, 320);
+
+    // clear highlight after a while
+    setTimeout(function(){
+      // keep highlight until next search; optionally auto-clear
+    }, 100);
+  }
+
+  function closeResults(){
+    resultsBox.classList.remove('open');
+  }
+
+  /* ---------- EVENTS ---------- */
+  searchInput.addEventListener('input', function(){
+    const val = searchInput.value;
+    clearBtn.classList.toggle('show', val.length > 0);
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function(){ doSearch(val); }, 180);
+  });
+
+  searchInput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){
+      e.preventDefault();
+      if (lastResults.length > 0){
+        goToResult(0);
+      } else {
+        doSearch(searchInput.value);
+      }
+    }
+    if (e.key === 'Escape'){
+      closeResults();
+      searchInput.blur();
+      clearPageHighlights();
+    }
+  });
+
+  clearBtn.addEventListener('click', function(){
+    searchInput.value = '';
+    clearBtn.classList.remove('show');
+    closeResults();
+    clearPageHighlights();
+    searchInput.focus();
+  });
+
+  document.addEventListener('click', function(e){
+    if (!resultsBox.contains(e.target) && !searchInput.contains(e.target) && !clearBtn.contains(e.target)){
+      closeResults();
+    }
+  });
+
+  /* ---------- SIDEBAR ---------- */
+  function openSidebar(){
+    sidebar.classList.add('open');
+    backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar(){
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  menuBtn.addEventListener('click', function(){
+    if (sidebar.classList.contains('open')) closeSidebar();
+    else openSidebar();
+  });
+  backdrop.addEventListener('click', closeSidebar);
+
+  // close sidebar on nav link click (mobile)
+  sidebar.addEventListener('click', function(e){
+    if (e.target.tagName === 'A' && window.innerWidth <= 1024){
+      closeSidebar();
+    }
+  });
+
+  /* ---------- SCROLL SPY ---------- */
+  const navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  const linkMap = {};
+  navLinks.forEach(function(a){
+    linkMap[a.getAttribute('href').slice(1)] = a;
+  });
+
+  let ticking = false;
+  function updateActive(){
+    const scrollPos = window.scrollY + 140;
+    let activeId = null;
+    const topics = document.querySelectorAll('.topic');
+    for (let i=0;i<topics.length;i++){
+      const t = topics[i];
+      if (t.offsetTop <= scrollPos) activeId = t.id;
+      else break;
+    }
+    navLinks.forEach(function(a){ a.classList.remove('active'); });
+    if (activeId && linkMap[activeId]){
+      linkMap[activeId].classList.add('active');
+      // open its parent details
+      const details = linkMap[activeId].closest('details');
+      if (details && !details.open) details.open = true;
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){
+      window.requestAnimationFrame(updateActive);
+      ticking = true;
+    }
+  }, { passive:true });
+
+  /* ---------- BACK TO TOP ---------- */
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({ top:0, behavior:'smooth' });
+  });
+
+  window.addEventListener('scroll', function(){
+    topBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+    topBtn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+  }, { passive:true });
+  topBtn.style.transition = 'opacity .25s';
+  topBtn.style.opacity = '0';
+  topBtn.style.pointerEvents = 'none';
+
+  /* ---------- INITIAL ---------- */
+  updateActive();
+
+  // smooth anchor scrolling with header offset
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: top, behavior:'smooth' });
+    history.replaceState(null, '', '#' + id);
+  });
+
+  /* ---------- KEYBOARD SHORTCUT: "/" to search ---------- */
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== searchInput){
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
